@@ -4,7 +4,7 @@
     <head>
         <meta charset=utf-8 />
         <title>
-             猫头的博客 |  
+            {% if page.title %} {{ page.title }} | {% endif %} 
         </title>
         <link rel="stylesheet" href="/assets/css/default.css" />
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
@@ -18,7 +18,7 @@
                 <div class="logo">
                     <img class="portrait img-circle" src="/assets/images/portrait.jpg" /> 
                 </div>
-                <h1><a href="">猫头的博客</a></h1>
+                <h1><a href="">{{ page.title }}</a></h1>
                 <div class="motto">有一种东西叫做梦想</div>
             </div>
             <div class="input-group input-group-sm header_search">
@@ -42,55 +42,7 @@
                 </li>
             </ul>
             </nav>
-            <section class = "content" >
-<h2> Portfolio </h2>
-    <p>Check out my images below!</p>
-</section>
-
-hehe
-
-<ul class="entries">
-    
-    
-   
-    
-   <li>
-    <a href="/blog/2011/07/09/road">
-        <img src="/assets/images/girl5.jpg" />
-        <h3 > Road and Curb </h3>
-    </a>
-    </li>
-    
-   
-    
-   <li>
-    <a href="/blog/2011/06/05/bridge">
-        <img src="/assets/images/girl4.jpg" />
-        <h3 > Stone Bridge </h3>
-    </a>
-    </li>
-    
-   
-    
-   <li>
-    <a href="/blog/2010/10/01/wing">
-        <img src="/assets/images/girl3.jpg" />
-        <h3 > Wing and a Prayer </h3>
-    </a>
-    </li>
-    
-   
-    
-   <li>
-    <a href="/blog/2010/03/04/bikes">
-        <img src="/assets/images/girl2.jpg" />
-        <h3 > beautiful girl two </h3>
-    </a>
-    </li>
-    
-   
-</ul>
-
+            {{ content }}
             <footer>
             <p>
             @copy; dengbiao 2011 | All Rights Reserved.
