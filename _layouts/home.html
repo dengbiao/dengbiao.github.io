@@ -19,30 +19,24 @@
                     <img class="portrait img-circle" src="/assets/images/portrait.jpg" /> 
                 </div>
                 <h1><a href="">{{ page.title }}</a></h1>
-                <div class="motto">有一种东西叫做梦想</div>
+                <div class="motto">{{ page.motto }}</div>
             </div>
             <div class="input-group input-group-sm header_search">
                 <input type="text" class="form-control">
                 <span class="input-group-addon text">搜索</span>
             </div>
             </header>
-            <nav role="navigation">
-            <ul>
-                <li>
-                <a href="/"> Home </a>
-                </li>
-                <li>
-                <a href="/portfolio/"> Portfolio </a>
-                </li>
-                <li>
-                <a href="/about"> About </a>
-                </li>
-                <li>
-                <a href="/contact"> Contact </a>
-                </li>
+            <nav>
+            <ul class="nav nav-pills  nav-justified">
+
+                <li  class="active"><a href="" >Blog</a></li>
+                <li><a href="">Opinion</a></li>
+                <li><a href="">Accumulation</a></li>
             </ul>
             </nav>
+            <article>
             {{ content }}
+            </article>
             <footer>
             <p>
             @copy; dengbiao 2011 | All Rights Reserved.

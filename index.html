@@ -1,18 +1,13 @@
 ---
 layout: home
 title: 猫头的博客
+motto: 有一种东西叫做梦想
 ---
 
-<section class = "content" >
-<h2> Portfolio </h2>
-    <p>Check out my images below!</p>
-</section>
-
-hehe
 
 <ul class="entries">
     {% for post in site.posts %}
-    {% if post.category == 'girl' %}
+    {% if post.category == 'Blog' %}
    <li>
     <a href="{{ post.url }}">
         <img src="{{ post.image }}" />

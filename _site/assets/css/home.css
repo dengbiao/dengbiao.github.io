@@ -143,9 +143,16 @@ ul.entries a:hover {
     color: #fff;
 }
 
-article {
-    margin-top:20px;
+nav {
+    background:#ffffff;
     width:100%;
+    margin-top:20px;
+    padding:10px 10px 0px 10px;
+}
+
+article {
+    width:100%;
+    background:#ffffff;
 }
 
 footer {
