@@ -18,11 +18,13 @@ motto: 有一种东西叫做梦想
         </span>
     </div>
     <div class="post_item">
+        {% if post.image %}
         <div class="post_img">
             <img src="{{ post.image }}" />
         </div>
+        {% endif %}
         <div class="post_content">
-            {{ post.content }} 
+            {{ post.content | split:'<!--splitline-->' | first }} 
         </div>
         <div class="link clearfix">
             <a href="{{ post.url }}">全文链接</a>

@@ -7,8 +7,11 @@
             {% if page.title %} {{ page.title }}  {% endif %} 
         </title>
         <link rel="stylesheet" href="/assets/css/default.css" />
+        
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="/assets/css/home.css" />
+        
+        <script src="/assets/js/jquery-1.10.2.min.js"></script>
     </head>
 
     <body>
@@ -25,15 +28,20 @@
                 <input type="text" class="form-control">
                 <span class="input-group-addon text">搜索</span>
             </div>
+            <ul class="sidelist">
+                <li><a href="http://weibo.com/dengbiao" class="rss" title="订阅"></a></li>
+                <li><a href="http://dengbiao.github.io/archive.html" class="archive" title="归档"></a></li>
+            </ul>
             </header>
             <nav>
-            <ul>
-
+            <ul class="artical-cate">
                 <li  class="active"><a href="" >Blog</a></li>
                 <li><a href="">Opinion</a></li>
                 <li><a href="">Accumulation</a></li>
             </ul>
             </nav>
+            <div class="clear"></div>
+            <div class="cate-bar"><span id="cateBar" style="left: 0px; width: 47px; overflow: hidden;"></span></div>
             <article>
             {{ content }}
             </article>
@@ -43,6 +51,51 @@
             </p>
             </footer>
         </div>
+        <script type="text/javascript">
+            $(function(){
+                    function animateBar($item,noAni){
+                    var spanLeft = $item.find('a').offset().left;
+                    var conLeft = $item.parent().offset().left;
+                    var left = spanLeft - conLeft-134;
+                    var width = $item.find('a').width() + 8;
+
+                    if(noAni){
+                    $('#cateBar').css({left:left,width:width})
+                    }else{
+                    $('#cateBar').stop().animate({left:left,width:width},300)
+                    }
+                    }
+
+                    var waitForFinalEvent = (function () {
+                        var timers = {};
+                        return function (callback, ms, uniqueId) {
+                        if (!uniqueId) {
+                        uniqueId = "Don't call this twice without a uniqueId";
+                        }
+                        if (timers[uniqueId]) {
+                        clearTimeout (timers[uniqueId]);
+                        }
+                        timers[uniqueId] = setTimeout(callback, ms);
+                        };
+                        })();
+
+                    $('.artical-cate li').mouseenter(function(){
+                            animateBar($(this));
+                            }).mouseleave(function(){
+                                animateBar($('.artical-cate .active'));
+                                });
+
+                    $(window).resize(function(e){
+                            waitForFinalEvent(function(){
+                                animateBar($('.artical-cate .active'));
+                                })
+                            })
+                    animateBar($('.artical-cate .active'),true);
+            });
+        </script>
+
+
+
     </body>
 
 </html>
