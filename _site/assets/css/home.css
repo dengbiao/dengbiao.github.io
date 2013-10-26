@@ -64,6 +64,7 @@ header h1 {
 header h1 a {
     color: #4c4c4c;
     font-size: 26px;
+    font-family: "Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei",\5FAE\8F6F\96C5\9ED1,tahoma,ari;
     text-decoration: none;
 }
 
@@ -192,7 +193,8 @@ nav li a {
 
 article {
     width:100%;
-    padding-top: 65px;
+    margin-top: 30px;
+    padding-top: 30px;
     background:#ffffff;
 }
 
@@ -236,6 +238,19 @@ article {
     float: left;
 }
 
+
+.post_item .title p {
+    font-family: "Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei",\5FAE\8F6F\96C5\9ED1,tahoma,ari;
+}
+.post_item .title p a {
+    color:#373737;
+    font-size:25px;
+}
+
+.post_item .title p a:hover {
+    color:#E7650F;
+}
+
 .post_img img{
     max-width: 100%;
     overflow: hidden;
@@ -244,6 +259,7 @@ article {
 }
 
 .post_content {
+    min-height: 100px;
     font-family: "Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei",\5FAE\8F6F\96C5\9ED1,tahoma,ari
 ;
     color:#737373;

@@ -1,0 +1,48 @@
+---
+layout: default
+---
+<div class="page_container">
+    <div class="date">
+        <span class="month">
+            {{ page.date | date: "%m"  }}
+        </span>
+        <span class="day">
+            {{ page.date | date: "%d" }}
+        </span>
+    </div>
+    <div class="page_item">
+        {% if page.title != '' %}
+        <div class="title">
+            <p><a href="{{ page.url }}">{{ page.title }}</a></p>
+        </div>
+        {% endif %}
+        {% if page.image %}
+        <div class="page_img">
+            <img src="{{ page.image }}" />
+        </div>
+        {% endif %}
+        <div class="page_content">
+            <p>{{ page.content }}</p> 
+        </div>
+
+
+        <div class="page_comments">
+            <!-- Duoshuo Comment BEGIN -->
+            <div class="ds-thread"></div>
+            <script type="text/javascript">
+                var duoshuoQuery = {short_name:"dengbiao"};
+(function() {
+ var ds = document.createElement('script');
+ ds.type = 'text/javascript';ds.async = true;
+ ds.src = 'http://static.duoshuo.com/embed.js';
+ ds.charset = 'UTF-8';
+ (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+ })();
+</script>
+<!-- Duoshuo Comment END -->
+    </div>
+    </div>
+</div>
+<div class="clear"></div>
+

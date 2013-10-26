@@ -1,8 +1,14 @@
 ---
 layout: home
+title: 猫头的博客
+motto: 有一种东西叫做梦想
 ---
+
+
 <ul class="entries">
     {% for post in paginator.posts %}
+    hello</br>
+    {% if post.category == 'Blog' %}
     <li class="entry_item">
     <div class="date">
         <span class="month">
@@ -13,11 +19,6 @@ layout: home
         </span>
     </div>
     <div class="post_item">
-        {% if post.title != '' %}
-            <div class="title">
-                <p><a href="{{ post.url }}">{{ post.title }}</a></p>
-            </div>
-        {% endif %}
         {% if post.image %}
         <div class="post_img">
             <img src="{{ post.image }}" />
@@ -28,29 +29,25 @@ layout: home
         </div>
         <div class="link clearfix">
             <a href="{{ post.url }}">全文链接</a>
-            <span class="ds-thread-count" data-thread-key="{{ site.url }}{{ post.url }}"></span>
         </div>
 
     </div>
     </li>
     <div class="clear"></div>
+    {% endif %}
     {% endfor %}
 </ul>
 <div class="clear"></div>
 <ul class="pager">
     <li class="previous">
-    {% if paginator.previous_page %}
     {% if paginator.previous_page == 1 %}
-        <a href="/" class="">&larr; Previous</a>
+        <a href="/" class="">&larr; Older</a>
+    {% else if paginator.previous_page %}
+    <a href="/page{{ paginator.previous_page }}" class="">&larr; Older</a>
     {% else %}
-        <a href="/page{{ paginator.previous_page }}" >&larr; Previous</a>
-    {% endif %}
-    {% endif %}
-    </li>
-    <li class="next">
-    {% if paginator.next_page  %}
-        <a href="/page{{ paginator.next_page }}" class="">Next &rarr;</a>
+        <a href="#" class="disabled">&larr; Older</a>
     {% endif %}
     </li>
+    <li class="next"><a href="#">Newer &rarr;</a></li>
 </ul>
 

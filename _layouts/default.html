@@ -4,41 +4,48 @@
     <head>
         <meta charset=utf-8 />
         <title>
-            {% if page.title %} {{ page.title }} | {% endif %} Deng Biao. 
+            {% if site.blogname %} {{ site.blogname }}  {% endif %} 
         </title>
-        <link rel="stylesheet" href="/assets/css/style.css" />
+        <link rel="stylesheet" href="/assets/css/clear.css" />
+        
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/css/default.css" />
+        
+        <script src="/assets/js/jquery-1.10.2.min.js"></script>
     </head>
 
     <body>
-        <div id="main">
+        <div id="container main">
             <header>
-            <h1>
-                Welcome to dengbiao's blog!~~
-            </h1>
-            </header>
-            <nav role="navigation">
-            <ul>
-                <li>
-                <a href="/"> Home </a>
-                </li>
-                <li>
-                <a href="/portfolio/"> Portfolio </a>
-                </li>
-                <li>
-                <a href="/about"> About </a>
-                </li>
-                <li>
-                <a href="/contact"> Contact </a>
-                </li>
+            <div class="info">
+                <div class="logo">
+                    <img class="portrait img-circle" src="/assets/images/portrait.jpg" /> 
+                </div>
+                <h1><a href="/">{{ site.blogname }}</a></h1>
+                <div class="motto">{{ site.motto }}</div>
+            </div>
+            <div class="input-group input-group-sm header_search">
+                <input type="text" class="form-control">
+                <span class="input-group-addon text">搜索</span>
+            </div>
+            <ul class="sidelist">
+                <li><a href="http://weibo.com/dengbiaocsu" class="rss" title="订阅"></a></li>
+                <li><a href="http://dengbiao.github.io/archive.html" class="archive" title="归档"></a></li>
             </ul>
-            </nav>
+            </header>
+
+            <article>
             {{ content }}
+            </article>
+
             <footer>
             <p>
-            @copy; dengbiao 2011 | All Rights Reserved.
+            Copyright @ 2013-2015 dengbiao | All Rights Reserved. Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>. 
             </p>
             </footer>
+
         </div>
+
     </body>
 
 </html>
