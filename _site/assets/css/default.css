@@ -295,6 +295,14 @@ article {
     color:#817B78;
 }
 
+.post_item .link .post_comments {
+    display:inline-block;
+    width:70px;
+    color:#575757;
+    margin:0px 30px 0px 55px;
+    font-size:13px;
+}
+
 
 .pager {
     width: 89%;

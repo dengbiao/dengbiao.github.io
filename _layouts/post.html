@@ -26,9 +26,9 @@ layout: default
         </div>
 
 
-        <div class="page_comments">
+        <div class="page_comments" id="page_comments">
             <!-- Duoshuo Comment BEGIN -->
-            <div class="ds-thread"></div>
+            <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" ></div>
             <script type="text/javascript">
                 var duoshuoQuery = {short_name:"dengbiao"};
 (function() {
