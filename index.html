@@ -29,7 +29,7 @@ layout: home
         <div class="link clearfix">
             <a href="{{ post.url }}">全文链接</a>
             {% if post.tags.size > 0 %}
-            <span class="tags">{{ post.tags  | replace:',',' ' }}</span>
+            <span class="tags">{{ post.tags  | replace:',',' ' | remove:'[' | remove:']' | remove:'"' }}</span>
             {% endif %}
             <a class="post_comments" href="{{ post.url }}#page_comments">
                 <span class="ds-thread-count" data-thread-key="{{ post.id }}" data-count-type="comments">暂无评论</span>
