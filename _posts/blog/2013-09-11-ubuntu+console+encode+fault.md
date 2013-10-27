@@ -7,7 +7,7 @@ title: ubuntu终端显示乱码问题
 
 `sudo vi /var/lib/locales/supported.d/local`
 
-#将文件内容修改如下：
+将文件内容修改如下：
 {% highlight python %}
 en_US.UTF-8 UTF-8  
 zh_CN.UTF-8 UTF-8  
@@ -19,9 +19,9 @@ zh_CN GB2312
 
 `sudo vi /etc/default/locale`
 
-#修改文件内容如下：
+修改文件内容如下：
 
-{% highlight python %}
+{% highlight c %}
 LANG=”zh_CN.UTF-8″
 LANGUAGE=”zh_CN:zh”
 LC_NUMERIC=”zh_CN.UTF-8″

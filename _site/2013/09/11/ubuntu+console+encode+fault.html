@@ -60,7 +60,7 @@
 
 <p><code>sudo vi /var/lib/locales/supported.d/local</code></p>
 
-<h1 id="">将文件内容修改如下：</h1>
+<p>将文件内容修改如下：</p>
 <div class='highlight'><pre><code class='python'><span class='n'>en_US</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span> <span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span>  
 <span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span> <span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span>  
 <span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>GBK</span> <span class='n'>GBK</span>  
@@ -70,18 +70,18 @@
 
 <p><code>sudo vi /etc/default/locale</code></p>
 
-<h1 id="_2">修改文件内容如下：</h1>
-<div class='highlight'><pre><code class='python'><span class='n'>LANG</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
-<span class='n'>LANGUAGE</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='p'>:</span><span class='n'>zh</span><span class='err'>”</span>
-<span class='n'>LC_NUMERIC</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
-<span class='n'>LC_TIME</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
-<span class='n'>LC_MONETARY</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
-<span class='n'>LC_PAPER</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
-<span class='n'>LC_NAME</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
-<span class='n'>LC_ADDRESS</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
-<span class='n'>LC_TELEPHONE</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
-<span class='n'>LC_MEASUREMENT</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
-<span class='n'>LC_IDENTIFICATION</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
+<p>修改文件内容如下：</p>
+<div class='highlight'><pre><code class='c'><span class='n'>LANG</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='p'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
+<span class='n'>LANGUAGE</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='o'>:</span><span class='n'>zh</span><span class='err'>”</span>
+<span class='n'>LC_NUMERIC</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='p'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
+<span class='n'>LC_TIME</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='p'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
+<span class='n'>LC_MONETARY</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='p'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
+<span class='n'>LC_PAPER</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='p'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
+<span class='n'>LC_NAME</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='p'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
+<span class='n'>LC_ADDRESS</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='p'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
+<span class='n'>LC_TELEPHONE</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='p'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
+<span class='n'>LC_MEASUREMENT</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='p'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
+<span class='n'>LC_IDENTIFICATION</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='p'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
 </code></pre></div>
 <p>执行命令<code>sudo locale-gen</code>登出然后登入即可。</p>
 

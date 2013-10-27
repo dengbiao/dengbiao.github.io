@@ -4,7 +4,7 @@
     <title></title>
     <link href="http://localhost" rel="self" type="application/atom+xml"/>
     <link href="http://localhost" rel="alternate" type="text/html" />
-    <updated>2013-10-27T19:14:24+08:00</updated>
+    <updated>2013-10-27T19:42:53+08:00</updated>
     <id>http://localhost</id>
     <author>
         <name></name>
@@ -91,7 +91,7 @@
 
 &lt;p&gt;&lt;code&gt;sudo vi /var/lib/locales/supported.d/local&lt;/code&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;&quot;&gt;将文件内容修改如下：&lt;/h1&gt;
+&lt;p&gt;将文件内容修改如下：&lt;/p&gt;
 &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='python'&gt;&lt;span class='n'&gt;en_US&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt; &lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;  
 &lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt; &lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;  
 &lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;GBK&lt;/span&gt; &lt;span class='n'&gt;GBK&lt;/span&gt;  
@@ -101,18 +101,18 @@
 
 &lt;p&gt;&lt;code&gt;sudo vi /etc/default/locale&lt;/code&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;_2&quot;&gt;修改文件内容如下：&lt;/h1&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='python'&gt;&lt;span class='n'&gt;LANG&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
-&lt;span class='n'&gt;LANGUAGE&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='p'&gt;:&lt;/span&gt;&lt;span class='n'&gt;zh&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;
-&lt;span class='n'&gt;LC_NUMERIC&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
-&lt;span class='n'&gt;LC_TIME&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
-&lt;span class='n'&gt;LC_MONETARY&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
-&lt;span class='n'&gt;LC_PAPER&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
-&lt;span class='n'&gt;LC_NAME&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
-&lt;span class='n'&gt;LC_ADDRESS&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
-&lt;span class='n'&gt;LC_TELEPHONE&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
-&lt;span class='n'&gt;LC_MEASUREMENT&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
-&lt;span class='n'&gt;LC_IDENTIFICATION&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
+&lt;p&gt;修改文件内容如下：&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='c'&gt;&lt;span class='n'&gt;LANG&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
+&lt;span class='n'&gt;LANGUAGE&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt;&lt;span class='n'&gt;zh&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;
+&lt;span class='n'&gt;LC_NUMERIC&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
+&lt;span class='n'&gt;LC_TIME&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
+&lt;span class='n'&gt;LC_MONETARY&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
+&lt;span class='n'&gt;LC_PAPER&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
+&lt;span class='n'&gt;LC_NAME&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
+&lt;span class='n'&gt;LC_ADDRESS&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
+&lt;span class='n'&gt;LC_TELEPHONE&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
+&lt;span class='n'&gt;LC_MEASUREMENT&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
+&lt;span class='n'&gt;LC_IDENTIFICATION&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;执行命令&lt;code&gt;sudo locale-gen&lt;/code&gt;登出然后登入即可。&lt;/p&gt;
 
