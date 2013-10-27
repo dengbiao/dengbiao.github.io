@@ -344,7 +344,7 @@ article {
     font-size: 25px;
 }
 
-.page_item img {
+.page_item .page_img img {
     max-width: 100%;
     overflow: hidden;
     float: left;
