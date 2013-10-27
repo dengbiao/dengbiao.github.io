@@ -1,7 +1,7 @@
 ---
 layout: post
 title: windows 7下用ssh连接virtualbox中的ubuntu
-tags: [win7,ssh,virtualbox,ubuntu]
+tags: [win7 ssh virtualbox ubuntu]
 ---
 首先讲一下自己的环境和应用场景。
 
