@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+    <title></title>
+    <link href="http://localhost" rel="self" type="application/atom+xml"/>
+    <link href="http://localhost" rel="alternate" type="text/html" />
+    <updated>2013-10-27T19:14:24+08:00</updated>
+    <id>http://localhost</id>
+    <author>
+        <name></name>
+        <email></email>
+    </author>
+
+    
+    <entry>
+        <title></title>
+        <link href="http://beiyuu.com/blog/2013/10/17/none.html"/>
+        <updated>2013-10-17T00:00:00+08:00</updated>
+        <id>http://beiyuu.com/blog/2013/10/17/none</id>
+        <content type="html">
+&lt;p&gt;最近没什么工作动态。基本干的也都是些烦人的杂活，或者是没干活。心有点烦。烦烦烦&lt;/p&gt;
+
+&lt;p&gt;下午和程子学老师讨论了一些我们项目的事情。感觉没讨论出什么东西。但是吧，程子学老师对自己倒是挺欣赏的感觉。有点点受宠若惊的感觉，但是想着自己现在的状态，也不想多说什么，也觉得自己有点迷乱。不知道方向的感觉。或许该静下心来好好想想后面的生活该怎么过了。&lt;/p&gt;
+
+&lt;p&gt;加油和努力不是嘴巴说说就可以了。希望这几天能够找回工作的状态。不在迷乱。。。&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+        <title></title>
+        <link href="http://beiyuu.com/blog/2013/10/08/none2.html"/>
+        <updated>2013-10-08T00:00:00+08:00</updated>
+        <id>http://beiyuu.com/blog/2013/10/08/none2</id>
+        <content type="html">
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://127.0.0.4/assets/uploads/6598285826518510344.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;阿里巴巴宣讲会，听到了很多未知的技术，以及一些未知的大牛。 有点意思。 感觉到自己的渺小。 默默的奋斗吧，骚年。&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+        <title></title>
+        <link href="http://beiyuu.com/blog/2013/10/08/none.html"/>
+        <updated>2013-10-08T00:00:00+08:00</updated>
+        <id>http://beiyuu.com/blog/2013/10/08/none</id>
+        <content type="html">
+&lt;p&gt;实验室关门这一刻，wpa_supplicant 编译成功。程序员是不是经常会这样。。。 明天继续。。。&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+        <title>win7+virtualbox与ubuntu server虚拟机共享文件</title>
+        <link href="http://beiyuu.com/2013/09/13/win7%2Bvirtualbox%2Bubuntu_server.html"/>
+        <updated>2013-09-13T00:00:00+08:00</updated>
+        <id>http://beiyuu.com/2013/09/13/win7+virtualbox+ubuntu_server</id>
+        <content type="html">
+&lt;p&gt;老规矩，先描述应用场景。电脑windows 7 64位系统、virtualbox4.2.12 r84980、虚拟机ubuntu server 12.04 64位版本。现在想在host win7和ubuntu server之间共享文件。&lt;/p&gt;
+
+&lt;p&gt;+++++++++++++++++++++++++++++我是分割线 场景描述完毕++++++++++++++++++++++++&lt;/p&gt;
+
+&lt;p&gt;实现方案1：FTP 在虚拟机中搭建ftp服务器&lt;/p&gt;
+
+&lt;p&gt;实现方案2：利用virtualbox的文件共享功能 —-本文采用方法&lt;/p&gt;
+
+&lt;p&gt;+++++++++++++++++++++++++++++我是分割线 具体步骤+++++++++++++++++++++++++++&lt;/p&gt;
+
+&lt;p&gt;考虑到FTP共享需要上传下载，放弃。下面具体讲述virtualbox共享实现方案。&lt;/p&gt;
+
+&lt;p&gt;查看ubuntu的内核版本，命令：&lt;code&gt;uname -r&lt;/code&gt; 获得输出结果如下：&lt;code&gt;3.2.0-23-generic&lt;/code&gt; 根据自己系统版本不同而不同 下载同版本的内核头文件。根据我电脑的情况命令如下： &lt;code&gt;sudo apt-get install build-essential linux-headers-3.2.0-23-generic&lt;/code&gt; 在virtualbox界面上依次选择： 设备–&amp;gt;安装增强功能&lt;/p&gt;
+
+&lt;p&gt;这一步系统会将&lt;code&gt;virtualbox&lt;/code&gt;安装目录下的&lt;code&gt;VBoxGuestAdditions.iso&lt;/code&gt;加载到光驱 挂载光驱文件到mnt目录并执行脚本，命令如下：&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='python'&gt;&lt;span class='n'&gt;mount&lt;/span&gt; &lt;span class='o'&gt;/&lt;/span&gt;&lt;span class='n'&gt;dev&lt;/span&gt;&lt;span class='o'&gt;/&lt;/span&gt;&lt;span class='n'&gt;cdrom&lt;/span&gt; &lt;span class='o'&gt;/&lt;/span&gt;&lt;span class='n'&gt;mnt&lt;/span&gt;
+&lt;span class='n'&gt;cd&lt;/span&gt; &lt;span class='o'&gt;/&lt;/span&gt;&lt;span class='n'&gt;mnt&lt;/span&gt;
+&lt;span class='n'&gt;sudo&lt;/span&gt; &lt;span class='o'&gt;./&lt;/span&gt;&lt;span class='n'&gt;VBoxLinuxAdditions&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;run&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;安装完成后在&lt;code&gt;virtualbox&lt;/code&gt;界面依次选择：设置–&amp;gt;共享文件夹–&amp;gt;添加共享文件夹–&amp;gt;共享文件夹路径选择你需要映射的主机共享路径–&amp;gt;输入共享文件夹名称（downloads这是我写的名称）–&amp;gt;勾选固定分配 （其他两个 自动挂载、只读分配 看情况自己选择） 依次执行以下几个命令：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo umount /mnt&lt;/code&gt; (取消之前的挂载） &lt;code&gt;sudo mount -t vboxsf /downloads /mnt&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;挂载完成，可以共享了。&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+        <title>ubuntu终端显示乱码问题</title>
+        <link href="http://beiyuu.com/2013/09/11/ubuntu%2Bconsole%2Bencode%2Bfault.html"/>
+        <updated>2013-09-11T00:00:00+08:00</updated>
+        <id>http://beiyuu.com/2013/09/11/ubuntu+console+encode+fault</id>
+        <content type="html">
+&lt;p&gt;已经几次遇到这个问题了。每次安装完ubuntu之后，各种编码问题，很头疼。今天又遇到了。把找到的方法写下来。下次查阅方便。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo vi /var/lib/locales/supported.d/local&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;&quot;&gt;将文件内容修改如下：&lt;/h1&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='python'&gt;&lt;span class='n'&gt;en_US&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt; &lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;  
+&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt; &lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;  
+&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;GBK&lt;/span&gt; &lt;span class='n'&gt;GBK&lt;/span&gt;  
+&lt;span class='n'&gt;zh_CN&lt;/span&gt; &lt;span class='n'&gt;GB2312&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;修改以下文件：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo vi /etc/default/locale&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;_2&quot;&gt;修改文件内容如下：&lt;/h1&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='python'&gt;&lt;span class='n'&gt;LANG&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
+&lt;span class='n'&gt;LANGUAGE&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='p'&gt;:&lt;/span&gt;&lt;span class='n'&gt;zh&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;
+&lt;span class='n'&gt;LC_NUMERIC&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
+&lt;span class='n'&gt;LC_TIME&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
+&lt;span class='n'&gt;LC_MONETARY&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
+&lt;span class='n'&gt;LC_PAPER&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
+&lt;span class='n'&gt;LC_NAME&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
+&lt;span class='n'&gt;LC_ADDRESS&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
+&lt;span class='n'&gt;LC_TELEPHONE&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
+&lt;span class='n'&gt;LC_MEASUREMENT&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
+&lt;span class='n'&gt;LC_IDENTIFICATION&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;执行命令&lt;code&gt;sudo locale-gen&lt;/code&gt;登出然后登入即可。&lt;/p&gt;
+
+&lt;p&gt;参考：http://www.2cto.com/os/201211/165712.html&lt;/p&gt;
+</content>
+    </entry>
+    
+
+</feed>

@@ -11,8 +11,8 @@
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="/assets/css/default.css" />
         <link rel="stylesheet" href="/assets/css/pygments.css" />
-        
         <script src="/assets/js/jquery-1.10.2.min.js"></script>
+
     </head>
 
     <body>
@@ -25,10 +25,12 @@
                 <h1><a href="/">邓彪的博客</a></h1>
                 <div class="motto">有一种东西叫做梦想</div>
             </div>
-            <div class="input-group input-group-sm header_search">
-                <input type="text" class="form-control">
-                <span class="input-group-addon text">搜索</span>
-            </div>
+            <form action="/search.html" method="get" name="form">
+                <div class="input-group input-group-sm header_search">
+                    <input type="text" id="search-query" name="q" autocomplete="off" class="form-control" placeholder="Search">
+                    <span class="input-group-addon text" onclick="javascript:form.submit();">搜索</span>
+                </div>
+            </form>
             <ul class="sidelist">
                 <li><a href="http://weibo.com/dengbiaocsu" class="rss" title="订阅"></a></li>
                 <li><a href="http://dengbiao.github.io/archive.html" class="archive" title="归档"></a></li>
@@ -36,25 +38,38 @@
             </header>
 
             <article>
-            <br/>
-<section role="banner">
-<img src="assets/images/girl1.jpg" />
-<img src="assets/images/girl2.jpg" />
-<img src="assets/images/girl3.jpg" />
-<img src="assets/images/girl4.jpg" />
-<img src="assets/images/girl5.jpg" />
-<img src="assets/images/girl6.jpg" />
-<img src="assets/images/girl7.jpg" />
-<img src="assets/images/girl8.jpg" />
-<img src="assets/images/girl9.jpg" />
-<img src="assets/images/girl10.jpg" />
+            <section id="search-results" style="display: none;">
+<p>Search results</p>
+<div class="entries">
+</div>
 </section>
 
-<section class="content">
-<p>
-Welcome to John Doe Photography! Please, check out my <a href="/portfolio/">Portfolio</a> to see my work.
-</p>
-</section>
+
+<script id="search-results-template" type="text/mustache">
+    {{#entries}}
+    <article>
+    <h3>
+        {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}}
+        <a href="{{url}}">{{title}}</a>
+    </h3>
+    </article>
+    {{/entries}}
+</script>
+
+
+
+<script src="/assets/js/search.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript">
+    $(function() {
+            $('#search-query').lunrSearch({
+indexUrl: '/search.json',             // URL of the `search.json` index data for your site
+results:  '#search-results',          // jQuery selector for the search results container
+entries:  '.entries',                 // jQuery selector for the element to contain the results list, must be a child of the results element above.
+template: '#search-results-template'  // jQuery selector for the Mustache.js template
+});
+            });
+</script>
 
             </article>
 

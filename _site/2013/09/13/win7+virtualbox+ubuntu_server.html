@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset=utf-8 />
+        <title>
+             邓彪的博客   
+        </title>
+        <link rel="stylesheet" href="/assets/css/clear.css" />
+        
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/css/default.css" />
+        <link rel="stylesheet" href="/assets/css/pygments.css" />
+        <script src="/assets/js/jquery-1.10.2.min.js"></script>
+
+    </head>
+
+    <body>
+        <div id="container main">
+            <header>
+            <div class="info">
+                <div class="logo">
+                    <a href="/"><img class="portrait img-circle" src="/assets/images/portrait.jpg" /></a>
+                </div>
+                <h1><a href="/">邓彪的博客</a></h1>
+                <div class="motto">有一种东西叫做梦想</div>
+            </div>
+            <form action="/search.html" method="get" name="form">
+                <div class="input-group input-group-sm header_search">
+                    <input type="text" id="search-query" name="q" autocomplete="off" class="form-control" placeholder="Search">
+                    <span class="input-group-addon text" onclick="javascript:form.submit();">搜索</span>
+                </div>
+            </form>
+            <ul class="sidelist">
+                <li><a href="http://weibo.com/dengbiaocsu" class="rss" title="订阅"></a></li>
+                <li><a href="http://dengbiao.github.io/archive.html" class="archive" title="归档"></a></li>
+            </ul>
+            </header>
+
+            <article>
+            <div class="page_container">
+    <div class="date">
+        <span class="month">
+            09
+        </span>
+        <span class="day">
+            13
+        </span>
+    </div>
+    <div class="page_item">
+        
+        <div class="title">
+            <p><a href="/2013/09/13/win7%2Bvirtualbox%2Bubuntu_server.html">win7+virtualbox与ubuntu server虚拟机共享文件</a></p>
+        </div>
+        
+        
+        <div class="page_content">
+            <p>
+<p>老规矩，先描述应用场景。电脑windows 7 64位系统、virtualbox4.2.12 r84980、虚拟机ubuntu server 12.04 64位版本。现在想在host win7和ubuntu server之间共享文件。</p>
+
+<p>+++++++++++++++++++++++++++++我是分割线 场景描述完毕++++++++++++++++++++++++</p>
+
+<p>实现方案1：FTP 在虚拟机中搭建ftp服务器</p>
+
+<p>实现方案2：利用virtualbox的文件共享功能 —-本文采用方法</p>
+
+<p>+++++++++++++++++++++++++++++我是分割线 具体步骤+++++++++++++++++++++++++++</p>
+
+<p>考虑到FTP共享需要上传下载，放弃。下面具体讲述virtualbox共享实现方案。</p>
+
+<p>查看ubuntu的内核版本，命令：<code>uname -r</code> 获得输出结果如下：<code>3.2.0-23-generic</code> 根据自己系统版本不同而不同 下载同版本的内核头文件。根据我电脑的情况命令如下： <code>sudo apt-get install build-essential linux-headers-3.2.0-23-generic</code> 在virtualbox界面上依次选择： 设备–&gt;安装增强功能</p>
+
+<p>这一步系统会将<code>virtualbox</code>安装目录下的<code>VBoxGuestAdditions.iso</code>加载到光驱 挂载光驱文件到mnt目录并执行脚本，命令如下：</p>
+<div class='highlight'><pre><code class='python'><span class='n'>mount</span> <span class='o'>/</span><span class='n'>dev</span><span class='o'>/</span><span class='n'>cdrom</span> <span class='o'>/</span><span class='n'>mnt</span>
+<span class='n'>cd</span> <span class='o'>/</span><span class='n'>mnt</span>
+<span class='n'>sudo</span> <span class='o'>./</span><span class='n'>VBoxLinuxAdditions</span><span class='o'>.</span><span class='n'>run</span>
+</code></pre></div>
+<p>安装完成后在<code>virtualbox</code>界面依次选择：设置–&gt;共享文件夹–&gt;添加共享文件夹–&gt;共享文件夹路径选择你需要映射的主机共享路径–&gt;输入共享文件夹名称（downloads这是我写的名称）–&gt;勾选固定分配 （其他两个 自动挂载、只读分配 看情况自己选择） 依次执行以下几个命令：</p>
+
+<p><code>sudo umount /mnt</code> (取消之前的挂载） <code>sudo mount -t vboxsf /downloads /mnt</code></p>
+
+<p>挂载完成，可以共享了。</p>
+</p> 
+        </div>
+
+
+        <div class="page_comments" id="page_comments">
+            <!-- Duoshuo Comment BEGIN -->
+            <div class="ds-thread" data-thread-key="/2013/09/13/win7+virtualbox+ubuntu_server" data-title="win7+virtualbox与ubuntu server虚拟机共享文件" ></div>
+            <script type="text/javascript">
+                var duoshuoQuery = {short_name:"dengbiao"};
+(function() {
+ var ds = document.createElement('script');
+ ds.type = 'text/javascript';ds.async = true;
+ ds.src = 'http://static.duoshuo.com/embed.js';
+ ds.charset = 'UTF-8';
+ (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+ })();
+</script>
+<!-- Duoshuo Comment END -->
+    </div>
+    </div>
+</div>
+<div class="clear"></div>
+
+
+            </article>
+
+            <footer>
+            <p>
+            Copyright @ 2013-2015 dengbiao | All Rights Reserved. Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>. 
+            </p>
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>

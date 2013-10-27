@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset=utf-8 />
+        <title>
+             邓彪的博客   
+        </title>
+        <link rel="stylesheet" href="/assets/css/clear.css" />
+        
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/css/default.css" />
+        <link rel="stylesheet" href="/assets/css/pygments.css" />
+        <script src="/assets/js/jquery-1.10.2.min.js"></script>
+
+    </head>
+
+    <body>
+        <div id="container main">
+            <header>
+            <div class="info">
+                <div class="logo">
+                    <a href="/"><img class="portrait img-circle" src="/assets/images/portrait.jpg" /></a>
+                </div>
+                <h1><a href="/">邓彪的博客</a></h1>
+                <div class="motto">有一种东西叫做梦想</div>
+            </div>
+            <form action="/search.html" method="get" name="form">
+                <div class="input-group input-group-sm header_search">
+                    <input type="text" id="search-query" name="q" autocomplete="off" class="form-control" placeholder="Search">
+                    <span class="input-group-addon text" onclick="javascript:form.submit();">搜索</span>
+                </div>
+            </form>
+            <ul class="sidelist">
+                <li><a href="http://weibo.com/dengbiaocsu" class="rss" title="订阅"></a></li>
+                <li><a href="http://dengbiao.github.io/archive.html" class="archive" title="归档"></a></li>
+            </ul>
+            </header>
+
+            <article>
+            <div class="page_container">
+    <div class="date">
+        <span class="month">
+            09
+        </span>
+        <span class="day">
+            11
+        </span>
+    </div>
+    <div class="page_item">
+        
+        <div class="title">
+            <p><a href="/2013/09/11/ubuntu%2Bconsole%2Bencode%2Bfault.html">ubuntu终端显示乱码问题</a></p>
+        </div>
+        
+        
+        <div class="page_content">
+            <p>
+<p>已经几次遇到这个问题了。每次安装完ubuntu之后，各种编码问题，很头疼。今天又遇到了。把找到的方法写下来。下次查阅方便。</p>
+
+<p><code>sudo vi /var/lib/locales/supported.d/local</code></p>
+
+<h1 id="">将文件内容修改如下：</h1>
+<div class='highlight'><pre><code class='python'><span class='n'>en_US</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span> <span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span>  
+<span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span> <span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span>  
+<span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>GBK</span> <span class='n'>GBK</span>  
+<span class='n'>zh_CN</span> <span class='n'>GB2312</span>  
+</code></pre></div>
+<p>修改以下文件：</p>
+
+<p><code>sudo vi /etc/default/locale</code></p>
+
+<h1 id="_2">修改文件内容如下：</h1>
+<div class='highlight'><pre><code class='python'><span class='n'>LANG</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
+<span class='n'>LANGUAGE</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='p'>:</span><span class='n'>zh</span><span class='err'>”</span>
+<span class='n'>LC_NUMERIC</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
+<span class='n'>LC_TIME</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
+<span class='n'>LC_MONETARY</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
+<span class='n'>LC_PAPER</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
+<span class='n'>LC_NAME</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
+<span class='n'>LC_ADDRESS</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
+<span class='n'>LC_TELEPHONE</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
+<span class='n'>LC_MEASUREMENT</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
+<span class='n'>LC_IDENTIFICATION</span><span class='o'>=</span><span class='err'>”</span><span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span><span class='err'>″</span>
+</code></pre></div>
+<p>执行命令<code>sudo locale-gen</code>登出然后登入即可。</p>
+
+<p>参考：http://www.2cto.com/os/201211/165712.html</p>
+</p> 
+        </div>
+
+
+        <div class="page_comments" id="page_comments">
+            <!-- Duoshuo Comment BEGIN -->
+            <div class="ds-thread" data-thread-key="/2013/09/11/ubuntu+console+encode+fault" data-title="ubuntu终端显示乱码问题" ></div>
+            <script type="text/javascript">
+                var duoshuoQuery = {short_name:"dengbiao"};
+(function() {
+ var ds = document.createElement('script');
+ ds.type = 'text/javascript';ds.async = true;
+ ds.src = 'http://static.duoshuo.com/embed.js';
+ ds.charset = 'UTF-8';
+ (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+ })();
+</script>
+<!-- Duoshuo Comment END -->
+    </div>
+    </div>
+</div>
+<div class="clear"></div>
+
+
+            </article>
+
+            <footer>
+            <p>
+            Copyright @ 2013-2015 dengbiao | All Rights Reserved. Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>. 
+            </p>
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>

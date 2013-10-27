@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+        <loc>http://localhost/blog/2013/10/17/none.html</loc>
+        
+        <lastmod>2013-10-17T00:00:00+08:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost/blog/2013/10/08/none2.html</loc>
+        
+        <lastmod>2013-10-08T00:00:00+08:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost/blog/2013/10/08/none.html</loc>
+        
+        <lastmod>2013-10-08T00:00:00+08:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost/2013/09/13/win7%2Bvirtualbox%2Bubuntu_server.html</loc>
+        
+        <lastmod>2013-09-13T00:00:00+08:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost/2013/09/11/ubuntu%2Bconsole%2Bencode%2Bfault.html</loc>
+        
+        <lastmod>2013-09-11T00:00:00+08:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+</urlset>

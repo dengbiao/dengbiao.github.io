@@ -11,8 +11,8 @@
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="/assets/css/default.css" />
         <link rel="stylesheet" href="/assets/css/pygments.css" />
-        
         <script src="/assets/js/jquery-1.10.2.min.js"></script>
+
     </head>
 
     <body>
@@ -25,10 +25,12 @@
                 <h1><a href="/">邓彪的博客</a></h1>
                 <div class="motto">有一种东西叫做梦想</div>
             </div>
-            <div class="input-group input-group-sm header_search">
-                <input type="text" class="form-control">
-                <span class="input-group-addon text">搜索</span>
-            </div>
+            <form action="/search.html" method="get" name="form">
+                <div class="input-group input-group-sm header_search">
+                    <input type="text" id="search-query" name="q" autocomplete="off" class="form-control" placeholder="Search">
+                    <span class="input-group-addon text" onclick="javascript:form.submit();">搜索</span>
+                </div>
+            </form>
             <ul class="sidelist">
                 <li><a href="http://weibo.com/dengbiaocsu" class="rss" title="订阅"></a></li>
                 <li><a href="http://dengbiao.github.io/archive.html" class="archive" title="归档"></a></li>
@@ -36,34 +38,53 @@
             </header>
 
             <article>
-            <ul class="entries">
-    
-</ul>
-<div class="clear"></div>
-<ul class="pager">
-    <li class="previous">
-    
-    </li>
-    <li class="next">
-    
-    </li>
-</ul>
+            <div class="page_container">
+    <div class="date">
+        <span class="month">
+            10
+        </span>
+        <span class="day">
+            08
+        </span>
+    </div>
+    <div class="page_item">
+        
+        <div class="title">
+            <p><a href="/blog/2013/10/08/none.html"></a></p>
+        </div>
+        
+        
+        <div class="page_img">
+            <img src="/assets/uploads/1763722204169032117.png" />
+        </div>
+        
+        <div class="page_content">
+            <p>
+<p>实验室关门这一刻，wpa_supplicant 编译成功。程序员是不是经常会这样。。。 明天继续。。。</p>
+</p> 
+        </div>
 
 
-
-
-<!-- 多说js加载开始，一个页面只需要加载一次 -->
-<script type="text/javascript">
-    var duoshuoQuery = {short_name:"dengbiao"};
+        <div class="page_comments" id="page_comments">
+            <!-- Duoshuo Comment BEGIN -->
+            <div class="ds-thread" data-thread-key="/blog/2013/10/08/none" data-title="" ></div>
+            <script type="text/javascript">
+                var duoshuoQuery = {short_name:"dengbiao"};
 (function() {
  var ds = document.createElement('script');
  ds.type = 'text/javascript';ds.async = true;
  ds.src = 'http://static.duoshuo.com/embed.js';
  ds.charset = 'UTF-8';
- (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+ (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
  })();
 </script>
-<!-- 多说js加载结束，一个页面只需要加载一次 -->
+<!-- Duoshuo Comment END -->
+    </div>
+    </div>
+</div>
+<div class="clear"></div>
+
 
             </article>
 

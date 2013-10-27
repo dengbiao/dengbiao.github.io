@@ -11,8 +11,8 @@
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="/assets/css/default.css" />
         <link rel="stylesheet" href="/assets/css/pygments.css" />
-        
         <script src="/assets/js/jquery-1.10.2.min.js"></script>
+
     </head>
 
     <body>
@@ -25,10 +25,12 @@
                 <h1><a href="/">邓彪的博客</a></h1>
                 <div class="motto">有一种东西叫做梦想</div>
             </div>
-            <div class="input-group input-group-sm header_search">
-                <input type="text" class="form-control">
-                <span class="input-group-addon text">搜索</span>
-            </div>
+            <form action="/search.html" method="get" name="form">
+                <div class="input-group input-group-sm header_search">
+                    <input type="text" id="search-query" name="q" autocomplete="off" class="form-control" placeholder="Search">
+                    <span class="input-group-addon text" onclick="javascript:form.submit();">搜索</span>
+                </div>
+            </form>
             <ul class="sidelist">
                 <li><a href="http://weibo.com/dengbiaocsu" class="rss" title="订阅"></a></li>
                 <li><a href="http://dengbiao.github.io/archive.html" class="archive" title="归档"></a></li>
@@ -39,33 +41,31 @@
             <div class="page_container">
     <div class="date">
         <span class="month">
-            07
+            10
         </span>
         <span class="day">
-            09
+            08
         </span>
     </div>
     <div class="page_item">
         
         <div class="title">
-            <p><a href="/accumulation/2011/07/09/road.html">Road and Curb</a></p>
+            <p><a href="/blog/2013/10/08/none2.html"></a></p>
         </div>
         
-        
-        <div class="page_img">
-            <img src="/assets/images/scenery2.jpg" />
-        </div>
         
         <div class="page_content">
             <p>
-<p>Bike lanes here are terribly thin.</p>
+<p><img alt="" src="http://127.0.0.4/assets/uploads/6598285826518510344.jpg" /></p>
+
+<p>阿里巴巴宣讲会，听到了很多未知的技术，以及一些未知的大牛。 有点意思。 感觉到自己的渺小。 默默的奋斗吧，骚年。</p>
 </p> 
         </div>
 
 
         <div class="page_comments" id="page_comments">
             <!-- Duoshuo Comment BEGIN -->
-            <div class="ds-thread" data-thread-key="/accumulation/2011/07/09/road" data-title="Road and Curb" ></div>
+            <div class="ds-thread" data-thread-key="/blog/2013/10/08/none2" data-title="" ></div>
             <script type="text/javascript">
                 var duoshuoQuery = {short_name:"dengbiao"};
 (function() {

@@ -11,8 +11,8 @@
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="/assets/css/default.css" />
         <link rel="stylesheet" href="/assets/css/pygments.css" />
-        
         <script src="/assets/js/jquery-1.10.2.min.js"></script>
+
     </head>
 
     <body>
@@ -25,10 +25,12 @@
                 <h1><a href="/">邓彪的博客</a></h1>
                 <div class="motto">有一种东西叫做梦想</div>
             </div>
-            <div class="input-group input-group-sm header_search">
-                <input type="text" class="form-control">
-                <span class="input-group-addon text">搜索</span>
-            </div>
+            <form action="/search.html" method="get" name="form">
+                <div class="input-group input-group-sm header_search">
+                    <input type="text" id="search-query" name="q" autocomplete="off" class="form-control" placeholder="Search">
+                    <span class="input-group-addon text" onclick="javascript:form.submit();">搜索</span>
+                </div>
+            </form>
             <ul class="sidelist">
                 <li><a href="http://weibo.com/dengbiaocsu" class="rss" title="订阅"></a></li>
                 <li><a href="http://dengbiao.github.io/archive.html" class="archive" title="归档"></a></li>
