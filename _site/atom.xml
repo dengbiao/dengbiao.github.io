@@ -4,7 +4,7 @@
     <title></title>
     <link href="http://localhost" rel="self" type="application/atom+xml"/>
     <link href="http://localhost" rel="alternate" type="text/html" />
-    <updated>2013-10-27T19:42:53+08:00</updated>
+    <updated>2013-10-27T21:26:36+08:00</updated>
     <id>http://localhost</id>
     <author>
         <name></name>
@@ -32,7 +32,7 @@
         <updated>2013-10-08T00:00:00+08:00</updated>
         <id>http://beiyuu.com/blog/2013/10/08/none2</id>
         <content type="html">
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://127.0.0.4/assets/uploads/6598285826518510344.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/uploads/6598285826518510344.jpg&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;阿里巴巴宣讲会，听到了很多未知的技术，以及一些未知的大牛。 有点意思。 感觉到自己的渺小。 默默的奋斗吧，骚年。&lt;/p&gt;
 </content>
@@ -56,13 +56,13 @@
         <content type="html">
 &lt;p&gt;老规矩，先描述应用场景。电脑windows 7 64位系统、virtualbox4.2.12 r84980、虚拟机ubuntu server 12.04 64位版本。现在想在host win7和ubuntu server之间共享文件。&lt;/p&gt;
 
-&lt;p&gt;+++++++++++++++++++++++++++++我是分割线 场景描述完毕++++++++++++++++++++++++&lt;/p&gt;
+&lt;h6 id=&quot;_&quot;&gt;我是分割线 场景描述完毕&lt;/h6&gt;
 
 &lt;p&gt;实现方案1：FTP 在虚拟机中搭建ftp服务器&lt;/p&gt;
 
 &lt;p&gt;实现方案2：利用virtualbox的文件共享功能 —-本文采用方法&lt;/p&gt;
-
-&lt;p&gt;+++++++++++++++++++++++++++++我是分割线 具体步骤+++++++++++++++++++++++++++&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;h6 id=&quot;__2&quot;&gt;我是分割线 具体步骤&lt;/h6&gt;
 
 &lt;p&gt;考虑到FTP共享需要上传下载，放弃。下面具体讲述virtualbox共享实现方案。&lt;/p&gt;
 
@@ -96,7 +96,7 @@
 &lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt; &lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;  
 &lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;GBK&lt;/span&gt; &lt;span class='n'&gt;GBK&lt;/span&gt;  
 &lt;span class='n'&gt;zh_CN&lt;/span&gt; &lt;span class='n'&gt;GB2312&lt;/span&gt;  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!--more--&gt;
 &lt;p&gt;修改以下文件：&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;sudo vi /etc/default/locale&lt;/code&gt;&lt;/p&gt;
@@ -117,6 +117,44 @@
 &lt;p&gt;执行命令&lt;code&gt;sudo locale-gen&lt;/code&gt;登出然后登入即可。&lt;/p&gt;
 
 &lt;p&gt;参考：http://www.2cto.com/os/201211/165712.html&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+        <title>windows 7下用ssh连接virtualbox中的ubuntu</title>
+        <link href="http://beiyuu.com/2013/09/10/win7%2Bssh%2Bvirtualbox%2Bubuntu.html"/>
+        <updated>2013-09-10T00:00:00+08:00</updated>
+        <id>http://beiyuu.com/2013/09/10/win7+ssh+virtualbox+ubuntu</id>
+        <content type="html">
+&lt;p&gt;首先讲一下自己的环境和应用场景。&lt;/p&gt;
+
+&lt;p&gt;之前是用的vagrant配置好的ubuntu环境。速度是很快，但是后来发现在学习过程中不太合适，因为经常要安装很多软件。vagrant更加适合于大家协同工作的时候有一个相同的测试环境。相当于一台装了还原卡的电脑。所以，想了想，用virtualbox装了一个ubuntu12.04server 64bit版。然后用ssh连接，不就达到了可修改的vagrant效果么。其实，你会发现直接用virtualbox提供的界面操作也是一样的，根本不需要用ssh连接。对，是这样的。不过个人表示不太喜欢那个界面。所以应用场景就出现了。&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;电脑：windows 7 64位系统，软件：装有ubuntu 64位虚拟机的virtuabox，装有ssh的cygwin（个人比较喜欢它的界面）。&lt;/p&gt;
+
+&lt;p&gt;环境描述完毕。方法很简单。在本机上做一个端口映射即可。注意，不需要修改虚拟机的联网方式，仍然是NAT上网。（有些教程是通过桥接来实现ssh链接的，这里的方法是端口映射，方法不同）&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;第一步：将virtualbox安装路径加入到PATH中，或者直接打开virtualbox的安装路径（我电脑上的为：C:\Program Files\Oracle\VirtualBox），然后按住shift键并点击右键，选择在此处打开命令窗口。（理由：virtualbox安装路径下有个工具叫VBoxManage.exe，这里需要用到它)&lt;/li&gt;
+
+&lt;li&gt;按以下命令格式输入命令：&lt;code&gt;VBoxManage  --natpf&amp;lt;1-N&amp;gt; [&amp;lt;name&amp;gt;],tcp|udp,[&amp;lt;hostip&amp;gt;],&amp;lt;hostport&amp;gt;,[&amp;lt;guestip&amp;gt;], &amp;lt;guestport&amp;gt;&lt;/code&gt; 举例：&lt;code&gt;VBoxManage modifyvm &amp;quot;VM name&amp;quot; --natpf1 &amp;quot;guestssh,tcp,,3333,22&amp;quot;&lt;/code&gt; 注：如果需要修改端口映射，需要先删除之前建立的映射，命令格式如下：&lt;code&gt;VBoxManage --natpf&amp;lt;1-N&amp;gt; delete &amp;lt;name&amp;gt;&lt;/code&gt; 举例：&lt;code&gt;VBoxManage --natpf1 delete guestssh&lt;/code&gt; 更多参数可参考：&lt;a href=&quot;http://www.virtualbox.org/manual/ch08.html&quot;&gt;http://www.virtualbox.org/manual/ch08.html&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;打开cygwin，输入以下命令格式进行连接：&lt;code&gt;ssh -p&amp;lt;port&amp;gt; &amp;lt;userName&amp;gt;@localhost&lt;/code&gt; 例如：&lt;code&gt;ssh -p3333 biao@localhost.&lt;/code&gt;其中port代表你上面设置的映射端口，userName表示你虚拟机中的用户名，然后在弹出的提示框中输入密码即可。第一次连接会出现确认提示，输入yes即可。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h6 id=&quot;&quot;&gt;我是分割线之界面配置方法&lt;/h6&gt;
+
+&lt;p&gt;由于测试需求，需要添加主机到虚拟机的web映射关系。应用场景如下：&lt;/p&gt;
+
+&lt;p&gt;virtualbox安装的ubuntu server版虚拟机中安装了apache服务器。希望在主机浏览器上可以访问虚拟机中的web程序。&lt;/p&gt;
+
+&lt;p&gt;界面配置方案:&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/uploads/4878242821472382364.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/uploads/156500087151292641.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/uploads/3167437913025476657.png&quot; /&gt;&lt;/p&gt;
 </content>
     </entry>
     

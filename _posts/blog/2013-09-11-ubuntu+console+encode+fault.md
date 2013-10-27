@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ubuntu终端显示乱码问题
+tags: [ubuntu,console,charset]
 ---
 
 已经几次遇到这个问题了。每次安装完ubuntu之后，各种编码问题，很头疼。今天又遇到了。把找到的方法写下来。下次查阅方便。
@@ -14,6 +15,8 @@ zh_CN.UTF-8 UTF-8
 zh_CN.GBK GBK  
 zh_CN GB2312  
 {% endhighlight %}
+
+<!--more-->
 
 修改以下文件：
 

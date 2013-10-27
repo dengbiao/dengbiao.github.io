@@ -277,6 +277,33 @@ article {
     padding: 0px 30px 5px 0px;
 }
 
+.post_content ol, .post_content ul {
+    margin-left: 20px;
+    list-style: decimal;
+    text-indent:0em;
+}
+
+.post_content ul {
+    list-style: disc;
+}
+
+.post_content h6 {
+    text-align:center;
+    font-family: "Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei",\5FAE\8F6F\96C5\9ED1,tahoma,ari;
+    color: #737373;
+    font-size: 14px;
+    line-height: 3.0;
+    text-indent: 0em;
+    border-top: 1px dashed #666666;
+    border-bottom: 1px dashed #666666;
+    margin: 15px auto;
+    text-indent: 0em;
+}
+
+.post_content p img {
+    padding: 10px 10px;
+}
+
 .post_content .highlight {
     text-indent:0em;
 }
@@ -301,6 +328,15 @@ article {
 
 .post_item .link a:hover {
     color:#817B78;
+}
+
+.post_item .link .tags {
+    width: 95px;
+    height: 19px;
+    margin-left: 40px;
+    padding-left: 22px;
+    background: url('/assets/images/icon24.png') no-repeat;
+    background-position: 0px -102px;
 }
 
 .post_item .link .post_comments {
@@ -363,6 +399,36 @@ article {
 .page_item .page_content .highlight {
     text-indent:0em;
 }
+
+
+.page_content ol, .page_content ul {
+    margin-left: 20px;
+    list-style: decimal;
+    text-indent:0em;
+}
+
+.page_content ul {
+    list-style: disc;
+}
+
+.page_content h6 {
+    text-align:center;
+    font-family: "Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei",\5FAE\8F6F\96C5\9ED1,tahoma,ari;
+    color: #737373;
+    font-size: 14px;
+    line-height: 3.0;
+    text-indent: 0em;
+    border-top: 1px dashed #666666;
+    border-bottom: 1px dashed #666666;
+    margin: 15px auto;
+    text-indent: 0em;
+}
+
+.page_content p img {
+    padding: 10px 10px;
+}
+
+
 
 .page_item .page_comments {
     margin:0px 30px 10px 0px;

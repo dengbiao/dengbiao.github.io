@@ -1,16 +1,19 @@
 ---
 layout: post
 title: win7+virtualbox与ubuntu server虚拟机共享文件
+tags: [win7,virtualbox,ubuntu server,share]
 ---
 老规矩，先描述应用场景。电脑windows 7 64位系统、virtualbox4.2.12 r84980、虚拟机ubuntu server 12.04 64位版本。现在想在host win7和ubuntu server之间共享文件。  
 
-+++++++++++++++++++++++++++++我是分割线  场景描述完毕++++++++++++++++++++++++  
+######我是分割线  场景描述完毕  
 
 实现方案1：FTP 在虚拟机中搭建ftp服务器  
 
 实现方案2：利用virtualbox的文件共享功能  ----本文采用方法  
 
-+++++++++++++++++++++++++++++我是分割线  具体步骤+++++++++++++++++++++++++++  
+<!--more-->
+
+######我是分割线  具体步骤  
 
 考虑到FTP共享需要上传下载，放弃。下面具体讲述virtualbox共享实现方案。  
 
