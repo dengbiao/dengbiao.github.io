@@ -99,11 +99,25 @@ header .header_search {
 
 header .header_search .text {
     color:#6f6f6f;
+    padding: 0px 0px;
 }
 
 header .header_search .text:hover {
     color:#6f0000;
     cursor:pointer;
+}
+
+#search-btn {
+    height: 28px;
+    width: 45px;
+    border:none;
+    color: #6f6f6f;
+    padding: 0px 0px;
+    margin: 0px 0px;
+}
+
+#search-btn:hover {
+    color:#D15611;
 }
 
 .sidelist {
