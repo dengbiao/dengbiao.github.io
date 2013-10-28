@@ -472,6 +472,31 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
+/** backToTop **/
+.backToTop {
+    background: url('/assets/images/top.png') no-repeat;
+    background-position: 0px 0px;
+    display: none;
+    width: 49px;
+    height: 49px;
+    background-color: transparent;
+    position: fixed;
+    _position: absolute;
+    bottom: 130px;
+    right:100px;
+    _bottom: "auto";
+    cursor: pointer;
+    opacity: .6;
+    filter: Alpha(opacity=60);
+}
+
+.backToTop:hover {
+    width: 49px;
+    height: 48px;
+    background-position: 0px -52px;
+}
+
+
 /** page css  like aboutme **/
 .page_content2 {
     width:90%;
