@@ -5,10 +5,10 @@ layout: home
     {% for post in paginator.posts %}
     <li class="entry_item">
     <div class="date">
-        <span class="month">
+        <span class="day">
             {{ post.date | date: "%d"  }}
         </span>
-        <span class="day">
+        <span class="month">
             {{ post.date | date: "%m" }}
         </span>
     </div>
@@ -28,16 +28,16 @@ layout: home
         </div>
         <div class="link clearfix">
             <a href="{{ post.url }}">全文链接</a>
-            {% if post.tags.size > 0 %}
-            <span class="tags">
-            {% for tag in post.tags %}
-            {{ tag }}&nbsp;
-            {% endfor %}
-            </span>
-            {% endif %}
             <a class="post_comments" href="{{ post.url }}#page_comments">
                 <span class="ds-thread-count" data-thread-key="{{ post.id }}" data-count-type="comments">暂无评论</span>
             </a>
+            {% if post.tags.size > 0 %}
+            <div class="tags">
+            {% for tag in post.tags %}
+            <span>{{ tag }}</span>
+            {% endfor %}
+            </div>
+            {% endif %}
         </div>
 
     </div>

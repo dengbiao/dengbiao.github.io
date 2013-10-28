@@ -213,7 +213,7 @@ article {
     float:left;
 }
 
-.date .month {
+.date .day {
     color: #dd664e;
     width: 80px;
     height: 80px;
@@ -229,7 +229,7 @@ article {
     border-color: #dd664e;
 }
 
-.date .day {
+.date .month {
     color: #A7A89D;
     width: 80px;
     height: 25px;
@@ -331,12 +331,17 @@ article {
 }
 
 .post_item .link .tags {
-    width: 95px;
     height: 19px;
-    margin-left: 40px;
+    display: inline-block;
+    margin-left: 0px;
     padding-left: 22px;
     background: url('/assets/images/icon24.png') no-repeat;
-    background-position: 0px -102px;
+    background-position: 0px -100px;
+}
+
+.post_item .link .tags span {
+    display:inline-block;
+    margin:0px 4px;
 }
 
 .post_item .link .post_comments {
