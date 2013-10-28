@@ -385,6 +385,7 @@ article {
 /** post page**/
 .page_container {
     width:100%;
+    color: #3f3f3f;
     float: right;
 }
 
@@ -461,6 +462,14 @@ article {
 .page404gy iframe {
     margin: 0px auto;
 }
+
+
+/** page css  like aboutme **/
+.page_content2 {
+    width:90%;
+    margin: 30px auto;
+}
+
 
 /** footer **/
 footer {
