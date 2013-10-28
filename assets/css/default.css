@@ -113,7 +113,7 @@ header .header_search .text:hover {
     border:none;
     color: #6f6f6f;
     padding: 0px 0px;
-    margin: 0px 0px;
+    margin: 0px 0px 0px -1px;
 }
 
 #search-btn:hover {

@@ -29,17 +29,19 @@
             <form method="get" action="http://www.google.com.hk/search" id="search-form">
                 <div class="input-group input-group-sm header_search">
                     <input type="text" id="search-query" name="q" id="s" autocomplete="on" class="form-control" placeholder="Search">
-                    <span class="input-group-addon text" ><input type="submit" name="btnG" value="搜索" id="search-btn"></span>
+                    <span class="input-group-addon text" >
+                        <input type="submit" name="btnG" value="搜索" id="search-btn">
+                    </span>
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <input type="hidden" name="oe" value="UTF-8">
+                    <input type="hidden" name="hl" value="zh-CN">
+                    <input type="hidden" name="domains" value="dengbiao.github.io">
+                    <input type="hidden" name="sitesearch" value="dengbiao.github.io">
                 </div>
-                <input type="hidden" name="ie" value="UTF-8">
-                <input type="hidden" name="oe" value="UTF-8">
-                <input type="hidden" name="hl" value="zh-CN">
-                <input type="hidden" name="domains" value="dengbiao.github.io">
-                <input type="hidden" name="sitesearch" value="dengbiao.github.io">
             </form>
 
             <ul class="sidelist">
-                <li><a href="http://weibo.com/dengbiaocsu" class="rss" title="订阅"></a></li>
+                <li><a href="{{ site_url }}atom.xml" class="rss" title="订阅"></a></li>
                 <li><a href="http://dengbiao.github.io/archive.html" class="archive" title="归档"></a></li>
             </ul>
             </header>
