@@ -17,7 +17,7 @@
 .gr { color: #d22323 } /* Generic.Error */
 .gh { color: #ffffff; font-weight: bold } /* Generic.Heading */
 .gi { color: #589819 } /* Generic.Inserted */
-.go { color: #cccccc } /* Generic.Output */
+.go { color: #7f7f7f; } /* Generic.Output */
 .gp { color: #aaaaaa } /* Generic.Prompt */
 .gs { color: #d0d0d0; font-weight: bold } /* Generic.Strong */
 .gu { color: #ffffff; text-decoration: underline } /* Generic.Subheading */

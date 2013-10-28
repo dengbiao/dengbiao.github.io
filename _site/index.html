@@ -6,6 +6,7 @@
         <title>
              邓彪的博客   
         </title>
+        <link rel="shortcut icon" type="image/ico" href="/assets/images/portrait.jpg">
         <link rel="stylesheet" href="/assets/css/clear.css" />
         
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
@@ -45,6 +46,57 @@
 
             <article>
             <ul class="entries">
+    
+    <li class="entry_item">
+    <div class="date">
+        <span class="day">
+            28
+        </span>
+        <span class="month">
+            10
+        </span>
+    </div>
+    <div class="post_item">
+        
+            <div class="title">
+                <p><a href="/2013/10/28/problem-summary-ubuntu.html">ubuntu问题汇总贴</a></p>
+            </div>
+        
+        
+        <div class="post_content">
+            
+<p>在使用ubuntu的过程中经常遇到各种各样的小问题，有时候觉得问题比较小，很容易通过google就解决了。但是，这些小问题其实挺消耗时间的。所以建立这个问题汇总贴。在使用ubuntu中遇到的各种小问题进行汇总。希望能够帮助遇到同样问题的人找到解决办法。同时，也是给自己的学习历程留下痕迹。</p>
+<hr />
+<h3 id="ubuntu">ubuntu用户添加</h3>
+
+<p>以这段代码进行分析：<code>sudo useradd db -g tcteam -m -s /bin/bash</code></p>
+<div class='highlight'><pre><code class='console'><span class='go'>db: 用户名 </span>
+<span class='go'>tcteam: 用户组名  </span>
+<span class='go'>-m: 同时创建用户目录  </span>
+<span class='go'>-s /bin/bash : 指定shell为bash  </span>
+</code></pre></div> 
+        </div>
+        <div class="link clearfix">
+            <a href="/2013/10/28/problem-summary-ubuntu.html">全文链接</a>
+            <a class="post_comments" href="/2013/10/28/problem-summary-ubuntu.html#page_comments">
+                <span class="ds-thread-count" data-thread-key="/2013/10/28/problem-summary-ubuntu" data-count-type="comments">暂无评论</span>
+            </a>
+            
+            <div class="tags">
+            
+            <span>ubuntu</span>
+            
+            <span>problems</span>
+            
+            <span>summary</span>
+            
+            </div>
+            
+        </div>
+
+    </div>
+    </li>
+    <div class="clear"></div>
     
     <li class="entry_item">
     <div class="date">
@@ -197,53 +249,6 @@
             <div class="tags">
             
             <span>win7,virtualbox,ubuntu server,share</span>
-            
-            </div>
-            
-        </div>
-
-    </div>
-    </li>
-    <div class="clear"></div>
-    
-    <li class="entry_item">
-    <div class="date">
-        <span class="day">
-            11
-        </span>
-        <span class="month">
-            09
-        </span>
-    </div>
-    <div class="post_item">
-        
-            <div class="title">
-                <p><a href="/2013/09/11/ubuntu%2Bconsole%2Bencode%2Bfault.html">ubuntu终端显示乱码问题</a></p>
-            </div>
-        
-        
-        <div class="post_content">
-            
-<p>已经几次遇到这个问题了。每次安装完ubuntu之后，各种编码问题，很头疼。今天又遇到了。把找到的方法写下来。下次查阅方便。</p>
-
-<p><code>sudo vi /var/lib/locales/supported.d/local</code></p>
-
-<p>将文件内容修改如下：</p>
-<div class='highlight'><pre><code class='python'><span class='n'>en_US</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span> <span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span>  
-<span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span> <span class='n'>UTF</span><span class='o'>-</span><span class='mi'>8</span>  
-<span class='n'>zh_CN</span><span class='o'>.</span><span class='n'>GBK</span> <span class='n'>GBK</span>  
-<span class='n'>zh_CN</span> <span class='n'>GB2312</span>  
-</code></pre></div> 
-        </div>
-        <div class="link clearfix">
-            <a href="/2013/09/11/ubuntu%2Bconsole%2Bencode%2Bfault.html">全文链接</a>
-            <a class="post_comments" href="/2013/09/11/ubuntu%2Bconsole%2Bencode%2Bfault.html#page_comments">
-                <span class="ds-thread-count" data-thread-key="/2013/09/11/ubuntu+console+encode+fault" data-count-type="comments">暂无评论</span>
-            </a>
-            
-            <div class="tags">
-            
-            <span>ubuntu,console,charset</span>
             
             </div>
             

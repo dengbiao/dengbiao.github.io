@@ -9,7 +9,7 @@ tags: [ubuntu,console,charset]
 `sudo vi /var/lib/locales/supported.d/local`
 
 将文件内容修改如下：
-{% highlight python %}
+{% highlight console %}
 en_US.UTF-8 UTF-8  
 zh_CN.UTF-8 UTF-8  
 zh_CN.GBK GBK  
@@ -24,7 +24,7 @@ zh_CN GB2312
 
 修改文件内容如下：
 
-{% highlight c %}
+{% highlight console %}
 LANG=”zh_CN.UTF-8″
 LANGUAGE=”zh_CN:zh”
 LC_NUMERIC=”zh_CN.UTF-8″

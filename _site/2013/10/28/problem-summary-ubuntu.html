@@ -48,58 +48,45 @@
             <div class="page_container">
     <div class="date">
         <span class="day">
-            11
+            28
         </span>
         <span class="month">
-            09
+            10
         </span>
     </div>
     <div class="page_item">
         
         <div class="title">
-            <p><a href="/2013/09/11/ubuntu%2Bconsole%2Bencode%2Bfault.html">ubuntu终端显示乱码问题</a></p>
+            <p><a href="/2013/10/28/problem-summary-ubuntu.html">ubuntu问题汇总贴</a></p>
         </div>
         
         
         <div class="page_content">
             <p>
-<p>已经几次遇到这个问题了。每次安装完ubuntu之后，各种编码问题，很头疼。今天又遇到了。把找到的方法写下来。下次查阅方便。</p>
+<p>在使用ubuntu的过程中经常遇到各种各样的小问题，有时候觉得问题比较小，很容易通过google就解决了。但是，这些小问题其实挺消耗时间的。所以建立这个问题汇总贴。在使用ubuntu中遇到的各种小问题进行汇总。希望能够帮助遇到同样问题的人找到解决办法。同时，也是给自己的学习历程留下痕迹。</p>
+<hr />
+<h3 id="ubuntu">ubuntu用户添加</h3>
 
-<p><code>sudo vi /var/lib/locales/supported.d/local</code></p>
+<p>以这段代码进行分析：<code>sudo useradd db -g tcteam -m -s /bin/bash</code></p>
+<div class='highlight'><pre><code class='console'><span class='go'>db: 用户名 </span>
+<span class='go'>tcteam: 用户组名  </span>
+<span class='go'>-m: 同时创建用户目录  </span>
+<span class='go'>-s /bin/bash : 指定shell为bash  </span>
+</code></pre></div><!--more--><hr />
+<h3 id="ubuntu_vi">ubuntu vi配置文件</h3>
 
-<p>将文件内容修改如下：</p>
-<div class='highlight'><pre><code class='console'><span class='go'>en_US.UTF-8 UTF-8  </span>
-<span class='go'>zh_CN.UTF-8 UTF-8  </span>
-<span class='go'>zh_CN.GBK GBK  </span>
-<span class='go'>zh_CN GB2312  </span>
-</code></pre></div><!--more-->
-<p>修改以下文件：</p>
+<p>直接提供链接下载：<a href="/assets/uploads/vimrc.txt">ubuntu-vimrc</a></p>
+<hr />
+<h3 id="ubuntu_">ubuntu 终端忽略大小写</h3>
 
-<p><code>sudo vi /etc/default/locale</code></p>
-
-<p>修改文件内容如下：</p>
-<div class='highlight'><pre><code class='console'><span class='go'>LANG=”zh_CN.UTF-8″</span>
-<span class='go'>LANGUAGE=”zh_CN:zh”</span>
-<span class='go'>LC_NUMERIC=”zh_CN.UTF-8″</span>
-<span class='go'>LC_TIME=”zh_CN.UTF-8″</span>
-<span class='go'>LC_MONETARY=”zh_CN.UTF-8″</span>
-<span class='go'>LC_PAPER=”zh_CN.UTF-8″</span>
-<span class='go'>LC_NAME=”zh_CN.UTF-8″</span>
-<span class='go'>LC_ADDRESS=”zh_CN.UTF-8″</span>
-<span class='go'>LC_TELEPHONE=”zh_CN.UTF-8″</span>
-<span class='go'>LC_MEASUREMENT=”zh_CN.UTF-8″</span>
-<span class='go'>LC_IDENTIFICATION=”zh_CN.UTF-8″</span>
-</code></pre></div>
-<p>执行命令<code>sudo locale-gen</code>登出然后登入即可。</p>
-
-<p>参考：http://www.2cto.com/os/201211/165712.html</p>
+<p>在终端输入以下命令:<code>echo &quot;set completion-ignore-case on&quot;&gt;&gt;~/.inputrc</code></p>
 </p> 
         </div>
 
 
         <div class="page_comments" id="page_comments">
             <!-- Duoshuo Comment BEGIN -->
-            <div class="ds-thread" data-thread-key="/2013/09/11/ubuntu+console+encode+fault" data-title="ubuntu终端显示乱码问题" ></div>
+            <div class="ds-thread" data-thread-key="/2013/10/28/problem-summary-ubuntu" data-title="ubuntu问题汇总贴" ></div>
             <script type="text/javascript">
                 var duoshuoQuery = {short_name:"dengbiao"};
 (function() {

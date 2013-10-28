@@ -2,15 +2,41 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
     <title></title>
-    <link href="http://localhost" rel="self" type="application/atom+xml"/>
-    <link href="http://localhost" rel="alternate" type="text/html" />
-    <updated>2013-10-28T17:32:26+08:00</updated>
-    <id>http://localhost</id>
+    <link href="http://dengbiao.github.io" rel="self" type="application/atom+xml"/>
+    <link href="http://dengbiao.github.io" rel="alternate" type="text/html" />
+    <updated>2013-10-28T19:18:22+08:00</updated>
+    <id>http://dengbiao.github.io</id>
     <author>
         <name></name>
         <email></email>
     </author>
 
+    
+    <entry>
+        <title>ubuntu问题汇总贴</title>
+        <link href="http://beiyuu.com/2013/10/28/problem-summary-ubuntu.html"/>
+        <updated>2013-10-28T00:00:00+08:00</updated>
+        <id>http://beiyuu.com/2013/10/28/problem-summary-ubuntu</id>
+        <content type="html">
+&lt;p&gt;在使用ubuntu的过程中经常遇到各种各样的小问题，有时候觉得问题比较小，很容易通过google就解决了。但是，这些小问题其实挺消耗时间的。所以建立这个问题汇总贴。在使用ubuntu中遇到的各种小问题进行汇总。希望能够帮助遇到同样问题的人找到解决办法。同时，也是给自己的学习历程留下痕迹。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3 id=&quot;ubuntu&quot;&gt;ubuntu用户添加&lt;/h3&gt;
+
+&lt;p&gt;以这段代码进行分析：&lt;code&gt;sudo useradd db -g tcteam -m -s /bin/bash&lt;/code&gt;&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='console'&gt;&lt;span class='go'&gt;db: 用户名 &lt;/span&gt;
+&lt;span class='go'&gt;tcteam: 用户组名  &lt;/span&gt;
+&lt;span class='go'&gt;-m: 同时创建用户目录  &lt;/span&gt;
+&lt;span class='go'&gt;-s /bin/bash : 指定shell为bash  &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!--more--&gt;&lt;hr /&gt;
+&lt;h3 id=&quot;ubuntu_vi&quot;&gt;ubuntu vi配置文件&lt;/h3&gt;
+
+&lt;p&gt;直接提供链接下载：&lt;a href=&quot;/assets/uploads/vimrc.txt&quot;&gt;ubuntu-vimrc&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3 id=&quot;ubuntu_&quot;&gt;ubuntu 终端忽略大小写&lt;/h3&gt;
+
+&lt;p&gt;在终端输入以下命令:&lt;code&gt;echo &amp;quot;set completion-ignore-case on&amp;quot;&amp;gt;&amp;gt;~/.inputrc&lt;/code&gt;&lt;/p&gt;
+</content>
+    </entry>
     
     <entry>
         <title></title>
@@ -92,27 +118,27 @@
 &lt;p&gt;&lt;code&gt;sudo vi /var/lib/locales/supported.d/local&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;将文件内容修改如下：&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='python'&gt;&lt;span class='n'&gt;en_US&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt; &lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;  
-&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt; &lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;  
-&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;GBK&lt;/span&gt; &lt;span class='n'&gt;GBK&lt;/span&gt;  
-&lt;span class='n'&gt;zh_CN&lt;/span&gt; &lt;span class='n'&gt;GB2312&lt;/span&gt;  
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='console'&gt;&lt;span class='go'&gt;en_US.UTF-8 UTF-8  &lt;/span&gt;
+&lt;span class='go'&gt;zh_CN.UTF-8 UTF-8  &lt;/span&gt;
+&lt;span class='go'&gt;zh_CN.GBK GBK  &lt;/span&gt;
+&lt;span class='go'&gt;zh_CN GB2312  &lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!--more--&gt;
 &lt;p&gt;修改以下文件：&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;sudo vi /etc/default/locale&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;修改文件内容如下：&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='c'&gt;&lt;span class='n'&gt;LANG&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
-&lt;span class='n'&gt;LANGUAGE&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt;&lt;span class='n'&gt;zh&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;
-&lt;span class='n'&gt;LC_NUMERIC&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
-&lt;span class='n'&gt;LC_TIME&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
-&lt;span class='n'&gt;LC_MONETARY&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
-&lt;span class='n'&gt;LC_PAPER&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
-&lt;span class='n'&gt;LC_NAME&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
-&lt;span class='n'&gt;LC_ADDRESS&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
-&lt;span class='n'&gt;LC_TELEPHONE&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
-&lt;span class='n'&gt;LC_MEASUREMENT&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
-&lt;span class='n'&gt;LC_IDENTIFICATION&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='err'&gt;”&lt;/span&gt;&lt;span class='n'&gt;zh_CN&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='n'&gt;UTF&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;8&lt;/span&gt;&lt;span class='err'&gt;″&lt;/span&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='console'&gt;&lt;span class='go'&gt;LANG=”zh_CN.UTF-8″&lt;/span&gt;
+&lt;span class='go'&gt;LANGUAGE=”zh_CN:zh”&lt;/span&gt;
+&lt;span class='go'&gt;LC_NUMERIC=”zh_CN.UTF-8″&lt;/span&gt;
+&lt;span class='go'&gt;LC_TIME=”zh_CN.UTF-8″&lt;/span&gt;
+&lt;span class='go'&gt;LC_MONETARY=”zh_CN.UTF-8″&lt;/span&gt;
+&lt;span class='go'&gt;LC_PAPER=”zh_CN.UTF-8″&lt;/span&gt;
+&lt;span class='go'&gt;LC_NAME=”zh_CN.UTF-8″&lt;/span&gt;
+&lt;span class='go'&gt;LC_ADDRESS=”zh_CN.UTF-8″&lt;/span&gt;
+&lt;span class='go'&gt;LC_TELEPHONE=”zh_CN.UTF-8″&lt;/span&gt;
+&lt;span class='go'&gt;LC_MEASUREMENT=”zh_CN.UTF-8″&lt;/span&gt;
+&lt;span class='go'&gt;LC_IDENTIFICATION=”zh_CN.UTF-8″&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;执行命令&lt;code&gt;sudo locale-gen&lt;/code&gt;登出然后登入即可。&lt;/p&gt;
 

@@ -6,6 +6,7 @@
         <title>
              邓彪的博客   
         </title>
+        <link rel="shortcut icon" type="image/ico" href="/assets/images/portrait.jpg">
         <link rel="stylesheet" href="/assets/css/clear.css" />
         
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
@@ -45,6 +46,53 @@
 
             <article>
             <ul class="entries">
+    
+    <li class="entry_item">
+    <div class="date">
+        <span class="day">
+            11
+        </span>
+        <span class="month">
+            09
+        </span>
+    </div>
+    <div class="post_item">
+        
+            <div class="title">
+                <p><a href="/2013/09/11/ubuntu%2Bconsole%2Bencode%2Bfault.html">ubuntu终端显示乱码问题</a></p>
+            </div>
+        
+        
+        <div class="post_content">
+            
+<p>已经几次遇到这个问题了。每次安装完ubuntu之后，各种编码问题，很头疼。今天又遇到了。把找到的方法写下来。下次查阅方便。</p>
+
+<p><code>sudo vi /var/lib/locales/supported.d/local</code></p>
+
+<p>将文件内容修改如下：</p>
+<div class='highlight'><pre><code class='console'><span class='go'>en_US.UTF-8 UTF-8  </span>
+<span class='go'>zh_CN.UTF-8 UTF-8  </span>
+<span class='go'>zh_CN.GBK GBK  </span>
+<span class='go'>zh_CN GB2312  </span>
+</code></pre></div> 
+        </div>
+        <div class="link clearfix">
+            <a href="/2013/09/11/ubuntu%2Bconsole%2Bencode%2Bfault.html">全文链接</a>
+            <a class="post_comments" href="/2013/09/11/ubuntu%2Bconsole%2Bencode%2Bfault.html#page_comments">
+                <span class="ds-thread-count" data-thread-key="/2013/09/11/ubuntu+console+encode+fault" data-count-type="comments">暂无评论</span>
+            </a>
+            
+            <div class="tags">
+            
+            <span>ubuntu,console,charset</span>
+            
+            </div>
+            
+        </div>
+
+    </div>
+    </li>
+    <div class="clear"></div>
     
     <li class="entry_item">
     <div class="date">
