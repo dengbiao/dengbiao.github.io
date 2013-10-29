@@ -394,10 +394,18 @@ article {
     float:right;
 }
 
-.page_item .title p a {
+.page_item .title h1 {
+    margin:0px 0px 0px 0px;
+}
+
+.page_item .title h1 a {
     font-family: "Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei",\5FAE\8F6F\96C5\9ED1,tahoma,ari;
     color: #373737;
     font-size: 25px;
+}
+
+.page_item .title h1 a:hover {
+    color:#CA500C;
 }
 
 .page_item .page_img img {
