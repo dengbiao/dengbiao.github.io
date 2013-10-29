@@ -2,8 +2,7 @@
 layout: page
 title: 关于我
 ---
-#关于我
-##About
+##About me
 
 邓彪。性格外向、开朗、喜好交友。对IT技术与computer前沿发展有着浓厚兴趣。
 
@@ -15,17 +14,17 @@ title: 关于我
 
 兴趣、方向：Cloud Computing、Android、OpenGL
 
-
+----------------
 
 ##Life Motto
 
 just be yourself...
 
 
-Me... 
 
 ![dengbiao](http://farm8.staticflickr.com/7322/10532345515_4370309226_o.png)
 
+------------------
 
 ##Contact
 
