@@ -517,7 +517,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /** archive css **/
 .archive_content {
-    margin: 0px 20px 50px 20px;
+    margin: -15px 20px 50px 20px;
     padding: 10px 10px 50px 10px;
 }
 
@@ -530,7 +530,7 @@ h1,h2,h3,h4,h5,h6 {
     height: 125px;
     overflow: hidden;
     display: block;
-    background: #ddd;
+    background: #bbb;
 }
 
 #archive .post_info {
@@ -539,7 +539,7 @@ h1,h2,h3,h4,h5,h6 {
     width: 115px;
     height: 115px;
     margin: 5px 5px;
-    background-color: #ddd;
+    background-color: #bbb;
     float: left;
 }
 

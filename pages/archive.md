@@ -2,9 +2,7 @@
 layout: home
 title: 归档
 ---
-
-<section id="archive" class="archive_content">
-
+<div id="archive" class="archive_content">
 {% for post in site.posts %}
     {% unless post.next %}
         <h3>{{ post.date | date: '%Y年%m月' }}</h3>
@@ -14,7 +12,8 @@ title: 归档
         {% capture nmonth %}{{ post.next.date | date: '%m' }}{% endcapture %}
         {% if month != nmonth %}
             </ul>
-            <div class="clear" ></div>
+            <div class="clear">  </div>
+            <hr/>
             <h3>{{ post.date | date: '%Y年%m月' }}</h3>
             <ul>
         {% endif %}
@@ -43,8 +42,8 @@ title: 归档
     </li>
 {% endfor %}
 </ul>
-<div class="clear" ></div>
+<div class="clear">  </div>
 
-</section>
+</div>
 
-<div class="clear" ></div>
+<div class="clear">  </div>
