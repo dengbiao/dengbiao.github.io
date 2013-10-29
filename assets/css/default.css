@@ -534,7 +534,7 @@ h1,h2,h3,h4,h5,h6 {
 
 #archive .post_info .post_title .text{
     display: block;
-    padding: 15px 5px 5px 0px;
+    padding: 15px 5px 5px 5px;
     text-align: center;
     font-size: 16px;
     letter-spacing: 0.1em;
