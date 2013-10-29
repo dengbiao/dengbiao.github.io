@@ -262,17 +262,20 @@ article {
 }
 
 
-.post_item .title p {
-    font-family: "Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei",\5FAE\8F6F\96C5\9ED1,tahoma,ari;
-}
-.post_item .title p a {
-    color:#373737;
-    font-size:25px;
+.post_item .title h1 {
+    margin:0px 0px 0px 0px;
 }
 
-.post_item .title p a:hover {
-    color:#E7650F;
+.post_item .title h1 a {
+    font-family: "Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei",\5FAE\8F6F\96C5\9ED1,tahoma,ari;
+    color: #373737;
+    font-size: 25px;
 }
+
+.post_item .title h1 a:hover {
+    color:#CA500C;
+}
+
 
 .post_img img{
     max-width: 100%;
@@ -282,6 +285,7 @@ article {
 }
 
 .post_content {
+    margin-top: 10px;
     min-height: 100px;
     font-family: "Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei",\5FAE\8F6F\96C5\9ED1,tahoma,ari;
     color:#737373;
