@@ -1,7 +1,6 @@
 ---
 layout: home
-title: 猫头的博客
-motto: 有一种东西叫做梦想
+title: 归档
 ---
 
 <section id="archive" class="archive_content">
