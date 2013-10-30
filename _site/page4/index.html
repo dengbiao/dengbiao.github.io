@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset=utf-8 />
+        <title>
+             邓彪的博客   
+            
+        </title>
+        <link rel="shortcut icon" type="image/ico" href="/assets/images/portrait.jpg">
+        <link rel="stylesheet" href="/assets/css/clear.css" />
+        
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/css/default.css" />
+        <link rel="stylesheet" href="/assets/css/pygments.css" />
+        <script src="/assets/js/jquery-1.10.2.min.js"></script>
+
+    </head>
+
+    <body>
+        <div id="container main">
+            <header>
+            <div class="info">
+                <div class="logo">
+                    <a href="/pages/about.html"><img class="portrait img-circle" src="/assets/images/portrait.jpg" /></a>
+                </div>
+                <h1><a href="/">邓彪的博客</a></h1>
+                <div class="motto">有一种东西叫做梦想</div>
+            </div>
+            <form method="get" action="http://www.google.com.hk/search" id="search-form">
+                <div class="input-group input-group-sm header_search">
+                    <input type="text" id="search-query" name="q" id="s" autocomplete="on" class="form-control" placeholder="Search">
+                    <span class="input-group-addon text" >
+                        <input type="submit" name="btnG" value="搜索" id="search-btn">
+                    </span>
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <input type="hidden" name="oe" value="UTF-8">
+                    <input type="hidden" name="hl" value="zh-CN">
+                    <input type="hidden" name="domains" value="dengbiao.github.io">
+                    <input type="hidden" name="sitesearch" value="dengbiao.github.io">
+                </div>
+            </form>
+
+            <ul class="sidelist">
+                <li><a href="http://127.0.0.4/atom.xml" class="rss" title="订阅"></a></li>
+                <li><a href="http://127.0.0.4/pages/archive.html" class="archive" title="归档"></a></li>
+            </ul>
+            </header>
+
+            <article>
+            <ul class="entries">
+    
+    <li class="entry_item">
+    <div class="date">
+        <span class="day">
+            22
+        </span>
+        <span class="month">
+            05
+        </span>
+    </div>
+    <div class="post_item">
+        
+            <div class="title">
+                <h1><a href="/accumulation/qt/2012/05/22/qte4b98be99a90e5bc8fe695b0e68daee585b1e4baab.html">Qt之隐式数据共享</a></h1>
+            </div>
+        
+        
+        <div class="post_content">
+            
+<p>转自：<a href="http://www.thisisqt.com/forum/viewthread.php?tid=94">http://www.thisisqt.com/forum/viewthread.php?tid=94</a></p>
+
+<p>Qt中99%的类都使用了隐式数据共享(Implicit Sharing)，这种数据共享是基于Copy-On-Write实现的，这种隐式数据共享可以最大化资源利用，最小换资源拷贝的消耗。下面我们就来说说Implicit Sharing。</p>
+ 
+        </div>
+        <div class="link clearfix">
+            <a href="/accumulation/qt/2012/05/22/qte4b98be99a90e5bc8fe695b0e68daee585b1e4baab.html">全文链接</a>
+            <a class="post_comments" href="/accumulation/qt/2012/05/22/qte4b98be99a90e5bc8fe695b0e68daee585b1e4baab.html#page_comments">
+                <span class="ds-thread-count" data-thread-key="/accumulation/qt/2012/05/22/qte4b98be99a90e5bc8fe695b0e68daee585b1e4baab" data-count-type="comments">暂无评论</span>
+            </a>
+            
+        </div>
+
+    </div>
+    </li>
+    <div class="clear"></div>
+    
+    <li class="entry_item">
+    <div class="date">
+        <span class="day">
+            02
+        </span>
+        <span class="month">
+            05
+        </span>
+    </div>
+    <div class="post_item">
+        
+            <div class="title">
+                <h1><a href="/accumulation/coding/qt/2012/05/02/qt-qline-e7babfe69da1e9a29ce889b2e6b890e58f98.html">Qt   QLine 线条颜色渐变</a></h1>
+            </div>
+        
+        
+        <div class="post_content">
+            
+<pre><code>QLineF line(sourcePoint, destPoint);
+QLinearGradient gradient(sourcePoint.x(), sourcePoint.y(), destPoint.x(), destPoint.y());
+gradient.setColorAt(0.0, Qt::white);
+gradient.setColorAt(0.5, color);
+gradient.setColorAt(1.0, Qt::black);
+painter-&gt;setPen(QPen(QBrush(gradient), width, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
+painter-&gt;drawLine(line);</code></pre>
+ 
+        </div>
+        <div class="link clearfix">
+            <a href="/accumulation/coding/qt/2012/05/02/qt-qline-e7babfe69da1e9a29ce889b2e6b890e58f98.html">全文链接</a>
+            <a class="post_comments" href="/accumulation/coding/qt/2012/05/02/qt-qline-e7babfe69da1e9a29ce889b2e6b890e58f98.html#page_comments">
+                <span class="ds-thread-count" data-thread-key="/accumulation/coding/qt/2012/05/02/qt-qline-e7babfe69da1e9a29ce889b2e6b890e58f98" data-count-type="comments">暂无评论</span>
+            </a>
+            
+        </div>
+
+    </div>
+    </li>
+    <div class="clear"></div>
+    
+    <li class="entry_item">
+    <div class="date">
+        <span class="day">
+            16
+        </span>
+        <span class="month">
+            04
+        </span>
+    </div>
+    <div class="post_item">
+        
+            <div class="title">
+                <h1><a href="/accumulation/android/2012/04/16/android-e9809ae794a8-usb-e9a9b1e58aa8-e79c9fe69cbae5bc80e58f91-e8b083e8af95.html">android 通用 usb 驱动  --真机开发 调试</a></h1>
+            </div>
+        
+        
+        <div class="post_content">
+            
+<p>用的是国产的山寨pad 系统为4.0.3 想用来做真机开发，找了很久却找不到合适的驱动。相当的郁闷。功夫不负苦心人啊，终于找到办法解决不认识的android设备的驱动问题。其实方法很简单，就是在google官方的驱动配置文件中添加支持的设备，将自己的设备信息添加进去。具体的方法便是修改 android_winusb.inf 文件。</p>
+
+<p>文件位置：<code>android-sdk-windows\extras\google\usb_driver\android_winusb.inf</code></p>
+
+<p><code>要注意你的系统是32位的还是64位的哦  这个很重要。</code></p>
+
+<p>修改完成后呢，就在你的设备上点击右键，更新设备驱动，选择从列表或者指定位置安装，然后选择路径到<code>..\android-sdk-windows\extras\google\usb_driver\</code>点击确定就好了。</p>
+ 
+        </div>
+        <div class="link clearfix">
+            <a href="/accumulation/android/2012/04/16/android-e9809ae794a8-usb-e9a9b1e58aa8-e79c9fe69cbae5bc80e58f91-e8b083e8af95.html">全文链接</a>
+            <a class="post_comments" href="/accumulation/android/2012/04/16/android-e9809ae794a8-usb-e9a9b1e58aa8-e79c9fe69cbae5bc80e58f91-e8b083e8af95.html#page_comments">
+                <span class="ds-thread-count" data-thread-key="/accumulation/android/2012/04/16/android-e9809ae794a8-usb-e9a9b1e58aa8-e79c9fe69cbae5bc80e58f91-e8b083e8af95" data-count-type="comments">暂无评论</span>
+            </a>
+            
+        </div>
+
+    </div>
+    </li>
+    <div class="clear"></div>
+    
+    <li class="entry_item">
+    <div class="date">
+        <span class="day">
+            12
+        </span>
+        <span class="month">
+            04
+        </span>
+    </div>
+    <div class="post_item">
+        
+            <div class="title">
+                <h1><a href="/home/2012/04/12/e5889be696b0e5b7a5e59cba-e794b5e8af9de99da2e8af95-androide6b8b8e6888fe5bc80e58f91.html">创新工场-电话面试-android游戏开发</a></h1>
+            </div>
+        
+        
+        <div class="post_content">
+            
+<p>随便投递的一个简历，创新工场打电话过来约了面试时间，还好心的提醒了我面试内容会和android游戏开发相关。或许是我投递的是android游戏开发吧。挺不好意思的，都不记得什么时候投递的什么职位了。虽然对创新工场还是有一定的向往的。O(∩_∩)O。</p>
+ 
+        </div>
+        <div class="link clearfix">
+            <a href="/home/2012/04/12/e5889be696b0e5b7a5e59cba-e794b5e8af9de99da2e8af95-androide6b8b8e6888fe5bc80e58f91.html">全文链接</a>
+            <a class="post_comments" href="/home/2012/04/12/e5889be696b0e5b7a5e59cba-e794b5e8af9de99da2e8af95-androide6b8b8e6888fe5bc80e58f91.html#page_comments">
+                <span class="ds-thread-count" data-thread-key="/home/2012/04/12/e5889be696b0e5b7a5e59cba-e794b5e8af9de99da2e8af95-androide6b8b8e6888fe5bc80e58f91" data-count-type="comments">暂无评论</span>
+            </a>
+            
+        </div>
+
+    </div>
+    </li>
+    <div class="clear"></div>
+    
+</ul>
+<div class="clear"></div>
+<ul class="pager">
+    <li class="previous">
+    
+    
+        <a href="/page3" >&larr; Previous</a>
+    
+    
+    </li>
+    <li class="next">
+    
+    </li>
+</ul>
+
+
+
+
+<!-- 多说js加载开始，一个页面只需要加载一次 -->
+<script type="text/javascript">
+    var duoshuoQuery = {short_name:"dengbiao"};
+(function() {
+ var ds = document.createElement('script');
+ ds.type = 'text/javascript';ds.async = true;
+ ds.src = 'http://static.duoshuo.com/embed.js';
+ ds.charset = 'UTF-8';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+ })();
+</script>
+<!-- 多说js加载结束，一个页面只需要加载一次 -->
+
+            </article>
+
+            <footer>
+            <p>
+            Copyright @ 2013-2015 dengbiao | All Rights Reserved. Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> and <a href="http://getbootstrap.com/" target="_blank" >Bootstrap</a>. 
+            </p>
+            </footer>
+
+        </div>
+
+        <! --- backToTop js  -->
+        <script>
+            (function() {
+                var $backToTopTxt = "", $backToTopEle = $('<div class="backToTop"></div>').appendTo($("body"))
+                .text($backToTopTxt).attr("title", $backToTopTxt).click(function() {
+                    $("html, body").animate({ scrollTop: 0 }, 120);
+                    }), $backToTopFun = function() {
+                    var st = $(document).scrollTop(), winh = $(window).height();
+                    (st > 0)? $backToTopEle.fadeIn('slow') : $backToTopEle.fadeOut('slow');
+                    //IE6下的定位
+                    if (!window.XMLHttpRequest) {
+                        $backToTopEle.css("top", st + winh - 166);
+                    }
+                };
+                $(window).bind("scroll", $backToTopFun);
+                $(function() { $backToTopFun(); });
+            })();
+        </script>
+
+        <! --- google analytics  -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-45239189-1', 'dengbiao.github.io');
+            ga('send', 'pageview');
+
+        </script>
+
+    </body>
+
+</html>

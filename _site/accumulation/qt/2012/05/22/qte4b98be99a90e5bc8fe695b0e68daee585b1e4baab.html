@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset=utf-8 />
+        <title>
+             邓彪的博客   
+             | Qt之隐式数据共享 
+        </title>
+        <link rel="shortcut icon" type="image/ico" href="/assets/images/portrait.jpg">
+        <link rel="stylesheet" href="/assets/css/clear.css" />
+        
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/css/default.css" />
+        <link rel="stylesheet" href="/assets/css/pygments.css" />
+        <script src="/assets/js/jquery-1.10.2.min.js"></script>
+
+    </head>
+
+    <body>
+        <div id="container main">
+            <header>
+            <div class="info">
+                <div class="logo">
+                    <a href="/pages/about.html"><img class="portrait img-circle" src="/assets/images/portrait.jpg" /></a>
+                </div>
+                <h1><a href="/">邓彪的博客</a></h1>
+                <div class="motto">有一种东西叫做梦想</div>
+            </div>
+            <form method="get" action="http://www.google.com.hk/search" id="search-form">
+                <div class="input-group input-group-sm header_search">
+                    <input type="text" id="search-query" name="q" id="s" autocomplete="on" class="form-control" placeholder="Search">
+                    <span class="input-group-addon text" >
+                        <input type="submit" name="btnG" value="搜索" id="search-btn">
+                    </span>
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <input type="hidden" name="oe" value="UTF-8">
+                    <input type="hidden" name="hl" value="zh-CN">
+                    <input type="hidden" name="domains" value="dengbiao.github.io">
+                    <input type="hidden" name="sitesearch" value="dengbiao.github.io">
+                </div>
+            </form>
+
+            <ul class="sidelist">
+                <li><a href="http://127.0.0.4/atom.xml" class="rss" title="订阅"></a></li>
+                <li><a href="http://127.0.0.4/pages/archive.html" class="archive" title="归档"></a></li>
+            </ul>
+            </header>
+
+            <article>
+            <div class="page_container">
+    <div class="date">
+        <span class="day">
+            22
+        </span>
+        <span class="month">
+            05
+        </span>
+    </div>
+    <div class="page_item">
+        
+        <div class="title">
+            <h1><a href="/accumulation/qt/2012/05/22/qte4b98be99a90e5bc8fe695b0e68daee585b1e4baab.html">Qt之隐式数据共享</a></h1>
+        </div>
+        
+        
+        <div class="page_content">
+            <p>
+<p>转自：<a href="http://www.thisisqt.com/forum/viewthread.php?tid=94">http://www.thisisqt.com/forum/viewthread.php?tid=94</a></p>
+
+<p>Qt中99%的类都使用了隐式数据共享(Implicit Sharing)，这种数据共享是基于Copy-On-Write实现的，这种隐式数据共享可以最大化资源利用，最小换资源拷贝的消耗。下面我们就来说说Implicit Sharing。</p>
+<!--more-->
+<p>Implicit Sharing就其实现来讲就是用一个共享的类，这个共享的类呢有一个指向数据的指针和引用计数组成。当一个共享对象被创建时，其引用计数会被置成1，当有一个对象引用这个共享对象时，其引用计数就会加1，相反，当有一个对象解引用这个共享对象时，其引用计数就会减1，当引用计数为0时，这个共享对象就会自动删除，这不也是只能指针嘛，哈哈。</p>
+
+<p>在拷贝这些共享对象时有两种情况，一种是深拷贝(deep copies)一种是浅拷贝(shallw copies)。这里深拷贝是用来复制一个对象，而浅拷贝则是用来复制一个引用，也就是只是复制一个指向数据的指针。深拷贝消耗很多的内存和CPU资源，速度也慢，我们应该是尽可能的避免，而浅拷贝则只需要设置一个指针，然后把引用计数加1，消耗的资源少，速度也更快，在拷贝时我们应该尽可能地使用浅拷贝。在Qt中，这些使用了隐式数据共享的类的赋值运算符(operator=())和拷贝构造函数(copy constructor)都是基于浅拷贝实现的，因此在传递函数参数的时候我们可以放心大胆地传递这些类对象，而不用考虑它们会消耗太多的资源。</p>
+
+<p>为了让大家对隐式数据共享有一个更好的理解，这里我举个例子：</p>
+
+<pre><code>1. QPixmap p1, p2;
+2. p1.load(&quot;image.bmp&quot;);
+3. p2 = p1; // p1和p2共享图像数据
+4. QPainter paint;
+5. paint.begin(&amp;p2); // p2对共享的图片数据解引用，并复制属于自己的共享数据
+6. paint.drawText(0,50, &quot;Hi&quot;);
+7. paint.end();</code></pre>
+
+<p>通过上面的例子我们可以看到只有在更改某个对象数据时，它的数据才会从共享数据中深拷贝出自己的一份。说到这里要提一下Qt中的容器类的[]操作符，我们在使用[]操作符的时候可能是想读数据，也可能是要写数据，但由于编译器不能对此加以区分，因此在使用[]时都进行了深拷贝，而这时我们如果只是想读的话就做了无用功，白白做了深拷贝这个动作，为此Qt中的所有容器类都有一个at()方法，此方法只要针对读数据这种情况而设，可以避免不必要的深拷贝，因此我们在使用容器类的时候要注意，在读的时候要用at()，而只在写的时候用[]</p>
+</p> 
+        </div>
+
+
+        <div class="page_comments" id="page_comments">
+            <!-- Duoshuo Comment BEGIN -->
+            <div class="ds-thread" data-thread-key="/accumulation/qt/2012/05/22/qte4b98be99a90e5bc8fe695b0e68daee585b1e4baab" data-title="Qt之隐式数据共享" ></div>
+            <script type="text/javascript">
+                var duoshuoQuery = {short_name:"dengbiao"};
+(function() {
+ var ds = document.createElement('script');
+ ds.type = 'text/javascript';ds.async = true;
+ ds.src = 'http://static.duoshuo.com/embed.js';
+ ds.charset = 'UTF-8';
+ (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+ })();
+</script>
+<!-- Duoshuo Comment END -->
+    </div>
+    </div>
+</div>
+<div class="clear"></div>
+
+
+            </article>
+
+            <footer>
+            <p>
+            Copyright @ 2013-2015 dengbiao | All Rights Reserved. Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> and <a href="http://getbootstrap.com/" target="_blank" >Bootstrap</a>. 
+            </p>
+            </footer>
+
+        </div>
+
+        <! --- backToTop js  -->
+        <script>
+            (function() {
+                var $backToTopTxt = "", $backToTopEle = $('<div class="backToTop"></div>').appendTo($("body"))
+                .text($backToTopTxt).attr("title", $backToTopTxt).click(function() {
+                    $("html, body").animate({ scrollTop: 0 }, 120);
+                    }), $backToTopFun = function() {
+                    var st = $(document).scrollTop(), winh = $(window).height();
+                    (st > 0)? $backToTopEle.fadeIn('slow') : $backToTopEle.fadeOut('slow');
+                    //IE6下的定位
+                    if (!window.XMLHttpRequest) {
+                        $backToTopEle.css("top", st + winh - 166);
+                    }
+                };
+                $(window).bind("scroll", $backToTopFun);
+                $(function() { $backToTopFun(); });
+            })();
+        </script>
+
+        <! --- google analytics  -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-45239189-1', 'dengbiao.github.io');
+            ga('send', 'pageview');
+
+        </script>
+
+    </body>
+
+</html>
