@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
     <title></title>
-    <link href="http://127.0.0.4/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="http://127.0.0.4" rel="alternate" type="text/html" />
-    <updated>2013-10-30T18:50:14+08:00</updated>
-    <id>http://127.0.0.4</id>
+    <link href="http://dengbiao.github.io/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="http://dengbiao.github.io" rel="alternate" type="text/html" />
+    <updated>2013-11-05T08:50:56+08:00</updated>
+    <id>http://dengbiao.github.io</id>
     <author>
         <name>dengbiao</name>
         <email>dengbiao123@gmail.com</email>
@@ -13,10 +13,65 @@
 
     
     <entry>
+        <title>音乐：其实我还好</title>
+        <link href="http://dengbiao.github.io/music/2013/11/04/qishiwohaihao.html"/>
+        <updated>2013-11-04T00:00:00+08:00</updated>
+        <id>http://dengbiao.github.io/music/2013/11/04/qishiwohaihao</id>
+        <content type="html">
+&lt;p&gt;第一次听到这首歌是在ktv，和房角石的小伙伴们一起。曾经听说过俞灏明的事情，在新闻里面，因为本人不追星，所以也没有太去关注。当看到mv中，湖南卫视跨年演唱会上，他的演出。有一种感动和敬佩。不知道为什么，突然觉得他好帅，好man。&lt;/p&gt;
+
+&lt;p&gt;或许是第一次听到这首歌，感触颇深。对俞灏明也有了一个不错的印象。尤其是歌词：&lt;code&gt;被故事选中，没资格懵懂&lt;/code&gt;。很现实的一句话。联想到他的经历，不得不说，这短短的一句话深藏了多少的辛酸与痛苦。&lt;/p&gt;
+
+&lt;p&gt;总之，很喜欢这首歌。&lt;/p&gt;
+
+&lt;p&gt;&lt;audio controls='controls' src='http://www.baidu.dj/mp3/fdiskdown-13983695.mp3'&gt;
+&lt;/audio&gt;&lt;/p&gt;
+&lt;!--more--&gt;&lt;hr /&gt;
+&lt;p&gt;以下是歌词：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;其实我还好
+
+作曲：俞灏明 作词：俞灏明 吴梦知
+演唱：俞灏明
+
+如果痛是一种形容
+我也会倔强到最终
+沉默是最完美的互动
+怕什么有我陪你疯
+平凡的苦衷说爱说痛都太笼统
+被故事选中没资格懵懂
+就算没观众自己第一个被感动
+我相信到最后一分钟
+如果狠是一种从容
+我也不肯选择被动
+如果有所谓的太贫穷
+不过是不敢再做梦
+
+平凡的苦衷说爱说痛都太笼统
+被故事选中没资格懵懂
+就算没观众自己第一个被感动
+我相信到最后一分钟
+但愿在茫茫人海中
+我的眼神你会懂
+但愿我们会温柔的目送
+那些没看过的繁荣
+那些理想的恢弘
+总会有一天和我们相逢
+
+平凡的苦衷说爱说痛都太笼统
+被故事选中没资格懵懂
+就算没观众自己第一个被感动
+我相信到最后一分钟
+太多不由衷不过是岁月的内容
+叹息过再继续向前走&lt;/code&gt;&lt;/pre&gt;
+</content>
+    </entry>
+    
+    <entry>
         <title>ubuntu问题汇总贴</title>
-        <link href="http://127.0.0.4/2013/10/28/problem-summary-ubuntu.html"/>
+        <link href="http://dengbiao.github.io/2013/10/28/problem-summary-ubuntu.html"/>
         <updated>2013-10-28T00:00:00+08:00</updated>
-        <id>http://127.0.0.4/2013/10/28/problem-summary-ubuntu</id>
+        <id>http://dengbiao.github.io/2013/10/28/problem-summary-ubuntu</id>
         <content type="html">
 &lt;p&gt;在使用ubuntu的过程中经常遇到各种各样的小问题，有时候觉得问题比较小，很容易通过google就解决了。但是，这些小问题其实挺消耗时间的。所以建立这个问题汇总贴。在使用ubuntu中遇到的各种小问题进行汇总。希望能够帮助遇到同样问题的人找到解决办法。同时，也是给自己的学习历程留下痕迹。&lt;/p&gt;
 &lt;hr /&gt;
@@ -596,9 +651,9 @@ Listen_port=5555 #（从5555端口进行数据连接）  &lt;/code&gt;&lt;/pre&g
     
     <entry>
         <title></title>
-        <link href="http://127.0.0.4/blog/2013/10/17/none.html"/>
+        <link href="http://dengbiao.github.io/blog/2013/10/17/none.html"/>
         <updated>2013-10-17T00:00:00+08:00</updated>
-        <id>http://127.0.0.4/blog/2013/10/17/none</id>
+        <id>http://dengbiao.github.io/blog/2013/10/17/none</id>
         <content type="html">
 &lt;p&gt;最近没什么工作动态。基本干的也都是些烦人的杂活，或者是没干活。心有点烦。烦烦烦&lt;/p&gt;
 
@@ -610,9 +665,9 @@ Listen_port=5555 #（从5555端口进行数据连接）  &lt;/code&gt;&lt;/pre&g
     
     <entry>
         <title></title>
-        <link href="http://127.0.0.4/blog/2013/10/08/none2.html"/>
+        <link href="http://dengbiao.github.io/blog/2013/10/08/none2.html"/>
         <updated>2013-10-08T00:00:00+08:00</updated>
-        <id>http://127.0.0.4/blog/2013/10/08/none2</id>
+        <id>http://dengbiao.github.io/blog/2013/10/08/none2</id>
         <content type="html">
 &lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/uploads/6598285826518510344.jpg&quot; /&gt;&lt;/p&gt;
 
@@ -622,9 +677,9 @@ Listen_port=5555 #（从5555端口进行数据连接）  &lt;/code&gt;&lt;/pre&g
     
     <entry>
         <title></title>
-        <link href="http://127.0.0.4/blog/2013/10/08/none.html"/>
+        <link href="http://dengbiao.github.io/blog/2013/10/08/none.html"/>
         <updated>2013-10-08T00:00:00+08:00</updated>
-        <id>http://127.0.0.4/blog/2013/10/08/none</id>
+        <id>http://dengbiao.github.io/blog/2013/10/08/none</id>
         <content type="html">
 &lt;p&gt;实验室关门这一刻，wpa_supplicant 编译成功。程序员是不是经常会这样。。。 明天继续。。。&lt;/p&gt;
 </content>
@@ -632,9 +687,9 @@ Listen_port=5555 #（从5555端口进行数据连接）  &lt;/code&gt;&lt;/pre&g
     
     <entry>
         <title>win7+virtualbox与ubuntu server虚拟机共享文件</title>
-        <link href="http://127.0.0.4/2013/09/13/win7%2Bvirtualbox%2Bubuntu_server.html"/>
+        <link href="http://dengbiao.github.io/2013/09/13/win7%2Bvirtualbox%2Bubuntu_server.html"/>
         <updated>2013-09-13T00:00:00+08:00</updated>
-        <id>http://127.0.0.4/2013/09/13/win7+virtualbox+ubuntu_server</id>
+        <id>http://dengbiao.github.io/2013/09/13/win7+virtualbox+ubuntu_server</id>
         <content type="html">
 &lt;p&gt;老规矩，先描述应用场景。电脑windows 7 64位系统、virtualbox4.2.12 r84980、虚拟机ubuntu server 12.04 64位版本。现在想在host win7和ubuntu server之间共享文件。&lt;/p&gt;
 
@@ -665,9 +720,9 @@ Listen_port=5555 #（从5555端口进行数据连接）  &lt;/code&gt;&lt;/pre&g
     
     <entry>
         <title>ubuntu终端显示乱码问题</title>
-        <link href="http://127.0.0.4/2013/09/11/ubuntu%2Bconsole%2Bencode%2Bfault.html"/>
+        <link href="http://dengbiao.github.io/2013/09/11/ubuntu%2Bconsole%2Bencode%2Bfault.html"/>
         <updated>2013-09-11T00:00:00+08:00</updated>
-        <id>http://127.0.0.4/2013/09/11/ubuntu+console+encode+fault</id>
+        <id>http://dengbiao.github.io/2013/09/11/ubuntu+console+encode+fault</id>
         <content type="html">
 &lt;p&gt;已经几次遇到这个问题了。每次安装完ubuntu之后，各种编码问题，很头疼。今天又遇到了。把找到的方法写下来。下次查阅方便。&lt;/p&gt;
 
@@ -704,9 +759,9 @@ Listen_port=5555 #（从5555端口进行数据连接）  &lt;/code&gt;&lt;/pre&g
     
     <entry>
         <title>windows 7下用ssh连接virtualbox中的ubuntu</title>
-        <link href="http://127.0.0.4/2013/09/10/win7%2Bssh%2Bvirtualbox%2Bubuntu.html"/>
+        <link href="http://dengbiao.github.io/2013/09/10/win7%2Bssh%2Bvirtualbox%2Bubuntu.html"/>
         <updated>2013-09-10T00:00:00+08:00</updated>
-        <id>http://127.0.0.4/2013/09/10/win7+ssh+virtualbox+ubuntu</id>
+        <id>http://dengbiao.github.io/2013/09/10/win7+ssh+virtualbox+ubuntu</id>
         <content type="html">
 &lt;p&gt;首先讲一下自己的环境和应用场景。&lt;/p&gt;
 
@@ -741,96 +796,16 @@ Listen_port=5555 #（从5555端口进行数据连接）  &lt;/code&gt;&lt;/pre&g
     </entry>
     
     <entry>
-        <title>android开发环境配置问题汇总贴</title>
-        <link href="http://127.0.0.4/accumulation/2013/03/14/android%2Bdevelopment%2Bproblems.html"/>
-        <updated>2013-03-14T20:05:29+08:00</updated>
-        <id>http://127.0.0.4/accumulation/2013/03/14/android+development+problems</id>
-        <content type="html">
-&lt;h3 id=&quot;1adb_rejected_install_command_with_device_not_found&quot;&gt;1.adb rejected install command with: device not found&lt;/h3&gt;
-
-&lt;p&gt;华为c8813的手机。在ubuntu 12.10下联机调试。eclipse不识别设备：运行程序的时候报错adb rejected install command with: device not found. google之后，发现是华为手机的问题。解决办法也很牛逼：&lt;/p&gt;
-
-&lt;p&gt;拨号：&lt;code&gt;*#*#2846579#*#*&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;ProjectMenu-&amp;gt;后台设置-&amp;gt;USB端口配置-&amp;gt;Google 模式&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;设置完毕重启即可。&lt;/p&gt;
-
-&lt;p&gt;ps：国产手机伤不起&lt;/p&gt;
-&lt;!--more--&gt;&lt;hr /&gt;
-&lt;h3 id=&quot;2_adbfailed_to_parse_the_output_of_adb_version&quot;&gt;2. adb]Failed to parse the output of ‘adb version’&lt;/h3&gt;
-
-&lt;p&gt;ubuntu 12.10 安装android SDK + eclipse不能运行,报错&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;adb]Failed to parse the output of 'adb version'&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;adb: error while loading shared libraries: libncurses.so.5&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;解决办法：&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;sudo apt-get install ia32-libs&lt;/code&gt;&lt;/p&gt;
-&lt;hr /&gt;</content>
-    </entry>
-    
-    <entry>
-        <title>vim 分屏操作</title>
-        <link href="http://127.0.0.4/accumulation/2013/03/04/vim-e58886e5b18fe6938de4bd9c.html"/>
-        <updated>2013-03-04T18:20:26+08:00</updated>
-        <id>http://127.0.0.4/accumulation/2013/03/04/vim-e58886e5b18fe6938de4bd9c</id>
-        <content type="html">
-&lt;h3 id=&quot;&quot;&gt;启动分屏&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;1.使用大写O参数进行垂直分屏 &lt;code&gt;$ vim -On file1 file2 ...&lt;/code&gt;&lt;br /&gt;2.使用小写o参数进行水平分屏 &lt;code&gt;$ vim -on file1 file2 ...&lt;/code&gt;&lt;br /&gt;注: n是数字，表示分屏的数量&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-&lt;h3 id=&quot;_2&quot;&gt;关闭分屏&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;1.关闭当前窗口 &lt;code&gt;ctrl+w c&lt;/code&gt;&lt;br /&gt;2.关闭当前窗口，如果只剩最后一个，则退出vim &lt;code&gt;ctrl+w q&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;&lt;!--more--&gt;
-&lt;h3 id=&quot;_3&quot;&gt;编辑中分屏&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;1.上下分割当前打开的文件 &lt;code&gt;ctrl+w s&lt;/code&gt;&lt;br /&gt;2.上下分割，并打开一个新的文件 &lt;code&gt;:sp filename&lt;/code&gt;&lt;br /&gt;3.左右分割当前打开的文件 &lt;code&gt;ctrl+w v&lt;/code&gt;&lt;br /&gt;4.左右分割，并打开一个新的文件 &lt;code&gt;:vsp filename&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-&lt;h3 id=&quot;_4&quot;&gt;分屏编辑中光标的移动&lt;/h3&gt;
-
-&lt;p&gt;vi中的光标键是h,j,k,l,要在各个屏之间切换，只需要先按一下ctrl+w&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;1.把光标移动到上边的屏 &lt;code&gt;ctrl+w k&lt;/code&gt;&lt;br /&gt;2.把光标移动到下边的屏 &lt;code&gt;ctrl+w j&lt;/code&gt;&lt;br /&gt;3.把光标移动到右边的屏 &lt;code&gt;ctrl+w l&lt;/code&gt;&lt;br /&gt;4.把光标移动到左边的屏 &lt;code&gt;ctrl+w h&lt;/code&gt;&lt;br /&gt;5.把光标移动到下一个的屏 &lt;code&gt;ctrl+w w&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-&lt;h3 id=&quot;_5&quot;&gt;移动分屏&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;1.向上移动 &lt;code&gt;ctrl+w K&lt;/code&gt;&lt;br /&gt;2.向下移动 &lt;code&gt;ctrl+w J&lt;/code&gt;&lt;br /&gt;3.向右移动 &lt;code&gt;ctrl+w L&lt;/code&gt;&lt;br /&gt;4.向左移动 &lt;code&gt;ctrl+w H&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-&lt;h3 id=&quot;_6&quot;&gt;屏幕尺寸&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;1.增加高度 &lt;code&gt;ctrl+w +&lt;/code&gt;&lt;br /&gt;2.减少高度 &lt;code&gt;ctrl+w -&lt;/code&gt;&lt;br /&gt;3.让所有屏的高度一致 &lt;code&gt;ctrl+w =&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-</content>
-    </entry>
-    
-    <entry>
         <title>Vagrant 入门</title>
-        <link href="http://127.0.0.4/accumulation/python/2013/02/21/vagrant-e585a5e997a8.html"/>
+        <link href="http://dengbiao.github.io/accumulation/python/2013/02/21/vagrant-e585a5e997a8.html"/>
         <updated>2013-02-21T14:44:02+08:00</updated>
-        <id>http://127.0.0.4/accumulation/python/2013/02/21/vagrant-e585a5e997a8</id>
+        <id>http://dengbiao.github.io/accumulation/python/2013/02/21/vagrant-e585a5e997a8</id>
         <content type="html">
 &lt;p&gt;转自：&lt;a href=&quot;http://blog.csdn.net/jillliang/article/details/8251242&quot;&gt;http://blog.csdn.net/jillliang/article/details/8251242&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;1_vagrant&quot;&gt;1. Vagrant功能:&lt;/h3&gt;
 
-&lt;p&gt;Vagrant uses &lt;a href=&quot;http://www.virtualbox.org/&quot;&gt;Oracle's VirtualBox&lt;/a&gt; to build configurable, lightweight, and portable virtual machines dynamically..&lt;/p&gt;
-
-&lt;p&gt;【Vagrant 使用Oracle VM VirtualBox 动态创建和配置轻量级的，可重现的，便携的虚拟机环境。】&lt;/p&gt;
+&lt;p&gt;Vagrant 使用Oracle VM VirtualBox 动态创建和配置轻量级的，可重现的，便携的虚拟机环境。&lt;/p&gt;
 
 &lt;h3 id=&quot;2_vagrant&quot;&gt;2. Vagrant下载:&lt;/h3&gt;
 
@@ -838,37 +813,36 @@ Listen_port=5555 #（从5555端口进行数据连接）  &lt;/code&gt;&lt;/pre&g
 &lt;!--more--&gt;
 &lt;h3 id=&quot;3_vagrant&quot;&gt;3. Vagrant安装:&lt;/h3&gt;
 
-&lt;h4 id=&quot;31_oracle_vm_virtualbox_windowsvirtualbox42080737winexe&quot;&gt;3.1. 下载并安装Oracle VM VirtualBox: 例如在Windows环境下，需要安装VirtualBox-4.2.0-80737-Win.exe&lt;/h4&gt;
+&lt;p&gt;3.1. 下载并安装Oracle VM VirtualBox: 例如在Windows环境下，需要安装VirtualBox-4.2.0-80737-Win.exe&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.virtualbox.org/wiki/Downloads&quot;&gt;https://www.virtualbox.org/wiki/Downloads&lt;/a&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;32_vagrant&quot;&gt;3.2. 下载并安装最新版本的Vagrant:&lt;/h4&gt;
+&lt;p&gt;3.2. 下载并安装最新版本的Vagrant:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://downloads.vagrantup.com/&quot;&gt;http://downloads.vagrantup.com/&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;[注]在 Windows and Mac OS X,&lt;code&gt;vagrant&lt;/code&gt; 命令应该自动添加到环境变量&lt;code&gt;PATH&lt;/code&gt;. 但是在其他操作系统下, 你必须手动添加&lt;code&gt;/opt/vagrant/bin&lt;/code&gt; 到环境变量&lt;code&gt;PATH。&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;注: 在 Windows and Mac OS X,&lt;code&gt;vagrant&lt;/code&gt; 命令应该自动添加到环境变量&lt;code&gt;PATH&lt;/code&gt;. 但是在其他操作系统下, 你必须手动添加&lt;code&gt;/opt/vagrant/bin&lt;/code&gt; 到环境变量&lt;code&gt;PATH。&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;4_vagrant&quot;&gt;4. Vagrant命令&lt;/h3&gt;
 
 &lt;p&gt;Vagrant安装完成之后，我们就可以从命令行通过vagrant命令来进行操作。vagrant 常用命令如下：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;vagrant box add &amp;lt;name&amp;gt; &amp;lt;url&amp;gt;  
-vagrant box list  
-vagrant box remove &amp;lt;name&amp;gt;  
-vagrant box repackage &amp;lt;name&amp;gt;   
-vagrant init [box-name] [box-url]  
-vagrant up [vm-name] [--[no-]provision] [-h]  
-vagrant destroy [vm-name]  
-vagrant suspend [vm-name]  
-vagrant reload [vm-name]  
-vagrant resume [vm-name]  
-vagrant halt [vm-name]  
-vagrant status [vm-name]   
-vagrant package [vm-name] [--base name] [--output name.box][--include one,two,three] [--vagrantfile file]  
-vagrant provision [vm-name]  
-vagrant ssh [vm-name] [-c command] [-- extra ssh args]  
-vagrant ssh-config [vm-name] [--host name]&lt;/code&gt;&lt;/pre&gt;
-
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='console'&gt;&lt;span class='go'&gt;    vagrant box add &amp;lt;name&amp;gt; &amp;lt;url&amp;gt;  &lt;/span&gt;
+&lt;span class='go'&gt;    vagrant box list  &lt;/span&gt;
+&lt;span class='go'&gt;    vagrant box remove &amp;lt;name&amp;gt;  &lt;/span&gt;
+&lt;span class='go'&gt;    vagrant box repackage &amp;lt;name&amp;gt;   &lt;/span&gt;
+&lt;span class='go'&gt;    vagrant init [box-name] [box-url]  &lt;/span&gt;
+&lt;span class='go'&gt;    vagrant up [vm-name] [--[no-]provision] [-h]  &lt;/span&gt;
+&lt;span class='go'&gt;    vagrant destroy [vm-name]  &lt;/span&gt;
+&lt;span class='go'&gt;    vagrant suspend [vm-name]  &lt;/span&gt;
+&lt;span class='go'&gt;    vagrant reload [vm-name]  &lt;/span&gt;
+&lt;span class='go'&gt;    vagrant resume [vm-name]  &lt;/span&gt;
+&lt;span class='go'&gt;    vagrant halt [vm-name]  &lt;/span&gt;
+&lt;span class='go'&gt;    vagrant status [vm-name]   &lt;/span&gt;
+&lt;span class='go'&gt;    vagrant package [vm-name] [--base name] [--output name.box][--include one,two,three] [--vagrantfile file]  &lt;/span&gt;
+&lt;span class='go'&gt;    vagrant provision [vm-name]  &lt;/span&gt;
+&lt;span class='go'&gt;    vagrant ssh [vm-name] [-c command] [-- extra ssh args]  &lt;/span&gt;
+&lt;span class='go'&gt;    vagrant ssh-config [vm-name] [--host name]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id=&quot;5_vagrantfile&quot;&gt;5. Vagrantfile&lt;/h3&gt;
 
 &lt;p&gt;任何Vagrant工程下都有一个Vagrantfile, 就像makefile一样，Vagrantfile用来配置vagrant的行为所创建虚拟机的信息，下面是一个基本的Vagrantfile:&lt;/p&gt;
@@ -1013,6 +987,20 @@ Password: vagrant&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;$ vagrant box add my_box /path/to/the/package.box  
 $ vagrant init my_box  
 $ vagrant up&lt;/code&gt;&lt;/pre&gt;
+</content>
+    </entry>
+    
+    <entry>
+        <title>teleport pro tppabs标签批量删除</title>
+        <link href="http://dengbiao.github.io/accumulation/2013/01/09/teleport-pro-tppabse6a087e7adbee689b9e9878fe588a0e999a4.html"/>
+        <updated>2013-01-09T15:21:13+08:00</updated>
+        <id>http://dengbiao.github.io/accumulation/2013/01/09/teleport-pro-tppabse6a087e7adbee689b9e9878fe588a0e999a4</id>
+        <content type="html">
+&lt;p&gt;使用Teleport Pro下载的网页代码中包含了很多垃圾代码，比如下载的html网页代码中会出现tppabs标签，而且还会将所有的href标签中加入了很多垃圾代码，在css会加入了tpa标签，这些都是冗余代码，可以将其全部删除，但是由于代码太多，我们不可能一个个删除，因此可以使用Dreamweaver的查找/替换工具中的正则表达式来进行替换。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;1. 替换tppabs标签，使用Dreamweaver查找\btppabs=&amp;quot;h[^&amp;quot;]*&amp;quot;，将其替换为空即可。  
+2. 替换href中的多余代码，使用Dreamweaver查找href=&amp;quot;javascript:if\(confirm\('htt[^&amp;quot;]*&amp;quot;替换为href=&amp;quot;&amp;quot;即可。  
+3. 替换css文件中的tpa标签，使用Dreamweaver查找/\*tpa=.*\*/替换为空即可。&lt;/code&gt;&lt;/pre&gt;
 </content>
     </entry>
     

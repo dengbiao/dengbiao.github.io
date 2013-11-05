@@ -42,8 +42,8 @@
             </form>
 
             <ul class="sidelist">
-                <li><a href="http://127.0.0.4/atom.xml" class="rss" title="订阅"></a></li>
-                <li><a href="http://127.0.0.4/pages/archive.html" class="archive" title="归档"></a></li>
+                <li><a href="http://dengbiao.github.io/atom.xml" class="rss" title="订阅"></a></li>
+                <li><a href="http://dengbiao.github.io/pages/archive.html" class="archive" title="归档"></a></li>
             </ul>
             </header>
 
@@ -70,9 +70,7 @@
 
 <h3 id="1_vagrant">1. Vagrant功能:</h3>
 
-<p>Vagrant uses <a href="http://www.virtualbox.org/">Oracle's VirtualBox</a> to build configurable, lightweight, and portable virtual machines dynamically..</p>
-
-<p>【Vagrant 使用Oracle VM VirtualBox 动态创建和配置轻量级的，可重现的，便携的虚拟机环境。】</p>
+<p>Vagrant 使用Oracle VM VirtualBox 动态创建和配置轻量级的，可重现的，便携的虚拟机环境。</p>
 
 <h3 id="2_vagrant">2. Vagrant下载:</h3>
 
@@ -80,37 +78,36 @@
 <!--more-->
 <h3 id="3_vagrant">3. Vagrant安装:</h3>
 
-<h4 id="31_oracle_vm_virtualbox_windowsvirtualbox42080737winexe">3.1. 下载并安装Oracle VM VirtualBox: 例如在Windows环境下，需要安装VirtualBox-4.2.0-80737-Win.exe</h4>
+<p>3.1. 下载并安装Oracle VM VirtualBox: 例如在Windows环境下，需要安装VirtualBox-4.2.0-80737-Win.exe</p>
 
 <p><a href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a></p>
 
-<h4 id="32_vagrant">3.2. 下载并安装最新版本的Vagrant:</h4>
+<p>3.2. 下载并安装最新版本的Vagrant:</p>
 
 <p><a href="http://downloads.vagrantup.com/">http://downloads.vagrantup.com/</a></p>
 
-<p>[注]在 Windows and Mac OS X,<code>vagrant</code> 命令应该自动添加到环境变量<code>PATH</code>. 但是在其他操作系统下, 你必须手动添加<code>/opt/vagrant/bin</code> 到环境变量<code>PATH。</code></p>
+<p>注: 在 Windows and Mac OS X,<code>vagrant</code> 命令应该自动添加到环境变量<code>PATH</code>. 但是在其他操作系统下, 你必须手动添加<code>/opt/vagrant/bin</code> 到环境变量<code>PATH。</code></p>
 
 <h3 id="4_vagrant">4. Vagrant命令</h3>
 
 <p>Vagrant安装完成之后，我们就可以从命令行通过vagrant命令来进行操作。vagrant 常用命令如下：</p>
-
-<pre><code>vagrant box add &lt;name&gt; &lt;url&gt;  
-vagrant box list  
-vagrant box remove &lt;name&gt;  
-vagrant box repackage &lt;name&gt;   
-vagrant init [box-name] [box-url]  
-vagrant up [vm-name] [--[no-]provision] [-h]  
-vagrant destroy [vm-name]  
-vagrant suspend [vm-name]  
-vagrant reload [vm-name]  
-vagrant resume [vm-name]  
-vagrant halt [vm-name]  
-vagrant status [vm-name]   
-vagrant package [vm-name] [--base name] [--output name.box][--include one,two,three] [--vagrantfile file]  
-vagrant provision [vm-name]  
-vagrant ssh [vm-name] [-c command] [-- extra ssh args]  
-vagrant ssh-config [vm-name] [--host name]</code></pre>
-
+<div class='highlight'><pre><code class='console'><span class='go'>    vagrant box add &lt;name&gt; &lt;url&gt;  </span>
+<span class='go'>    vagrant box list  </span>
+<span class='go'>    vagrant box remove &lt;name&gt;  </span>
+<span class='go'>    vagrant box repackage &lt;name&gt;   </span>
+<span class='go'>    vagrant init [box-name] [box-url]  </span>
+<span class='go'>    vagrant up [vm-name] [--[no-]provision] [-h]  </span>
+<span class='go'>    vagrant destroy [vm-name]  </span>
+<span class='go'>    vagrant suspend [vm-name]  </span>
+<span class='go'>    vagrant reload [vm-name]  </span>
+<span class='go'>    vagrant resume [vm-name]  </span>
+<span class='go'>    vagrant halt [vm-name]  </span>
+<span class='go'>    vagrant status [vm-name]   </span>
+<span class='go'>    vagrant package [vm-name] [--base name] [--output name.box][--include one,two,three] [--vagrantfile file]  </span>
+<span class='go'>    vagrant provision [vm-name]  </span>
+<span class='go'>    vagrant ssh [vm-name] [-c command] [-- extra ssh args]  </span>
+<span class='go'>    vagrant ssh-config [vm-name] [--host name]</span>
+</code></pre></div>
 <h3 id="5_vagrantfile">5. Vagrantfile</h3>
 
 <p>任何Vagrant工程下都有一个Vagrantfile, 就像makefile一样，Vagrantfile用来配置vagrant的行为所创建虚拟机的信息，下面是一个基本的Vagrantfile:</p>
