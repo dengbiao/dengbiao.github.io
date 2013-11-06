@@ -12,7 +12,7 @@ categories:
 
 总之，很喜欢这首歌。
 
-<audio src="http://www.baidu.dj/mp3/fdiskdown-13983695.mp3" controls="controls">
+<audio src="/assets/uploads/qishiwohaihao.mp3" controls="controls">
 </audio>
 
 <!--more-->
