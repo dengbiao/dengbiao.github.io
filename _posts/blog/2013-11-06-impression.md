@@ -1,5 +1,6 @@
 ---
 author: dengbiao
+layout: post
 title: 十月感想
 categories: 
 - impression
