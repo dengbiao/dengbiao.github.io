@@ -4,13 +4,33 @@
     <title></title>
     <link href="http://dengbiao.github.io/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://dengbiao.github.io" rel="alternate" type="text/html" />
-    <updated>2013-11-05T15:02:14+08:00</updated>
+    <updated>2013-11-06T13:47:11+08:00</updated>
     <id>http://dengbiao.github.io</id>
     <author>
         <name>dengbiao</name>
         <email>dengbiao123@gmail.com</email>
     </author>
 
+    
+    <entry>
+        <title>十月感想</title>
+        <link href="http://dengbiao.github.io/impression/2013/11/06/impression.html"/>
+        <updated>2013-11-06T00:00:00+08:00</updated>
+        <id>http://dengbiao.github.io/impression/2013/11/06/impression</id>
+        <content type="html">
+&lt;p&gt;十月，研二的第二个月。感觉时间在一点点的走过。但是这两个月来，一直没有找到自己的工作状态。实验室项目进展缓慢。专业基础也没有什么提升。看着师兄师姐们为找工作而忙碌着。自己确有点不知所措。用了将近一个星期的时间，将博客从lofter转移到了github上面。很多以前在wordpress上的博文直接放弃了。虽然有点不舍得，但是确实没有什么有用的珍藏价值，仅有的只是一些成长的记忆吧。丢就丢吧，虽然偶尔回想起的那句“中国人不怎么在意历史的保护”，确实是这样的，建筑拆了建，建了拆。一些古老的东西，慢慢的在消失着。清理了博客，给空间留给剩下的研二，写一些有意义的博文，有深度的博文。不要再是简单的错误笔记。&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;写博客的时间，让自己找到了一些曾经写代码的感觉。曾经的那种斗志。熟悉的味道。&lt;/p&gt;
+
+&lt;p&gt;二姐一直在建议着我要多出去走走，说外面的世界，没出去过永远都不知道会有多好，也永远都不知道自己的视野是多么的狭隘。 最近见到了小马哥本人，还是有点点激动的。第一次见到这样的名人。 现场听了小马哥的一个访谈，对他的感觉：实在，有深度。挺不错的一个人。总的来说比较喜欢他的风格。当谈到一些比较尖锐的话题时，小马哥的回答总是那么的直接，不含糊，而且有自己的理解与一定的深度。佩服。在学校生存久了，听到的都是一些套话，一些没意义的，没营养的话。相比之下，为什么在中国企业的效率比高校的要高，情理之中。&lt;/p&gt;
+
+&lt;p&gt;从小马哥的奋斗史中，我的总结是：能够保持自己的想法，能够坚持自己的原则，能够为了自己的梦想而努力。fighting！！！ 给力，小马哥。&lt;/p&gt;
+
+&lt;p&gt;这个月要开题了，还需要为张家界的会议作准备。事情挺多，保持激情。还有，学英语。。。&lt;/p&gt;
+
+&lt;p&gt;做一只有想法的鸟，朝着自己的那片天，飞去。。。&lt;/p&gt;
+</content>
+    </entry>
     
     <entry>
         <title>音乐：其实我还好</title>
@@ -24,7 +44,7 @@
 
 &lt;p&gt;总之，很喜欢这首歌。&lt;/p&gt;
 
-&lt;p&gt;&lt;audio src='http://www.baidu.dj/mp3/fdiskdown-13983695.mp3' controls='controls'&gt;
+&lt;p&gt;&lt;audio src='/assets/uploads/qishiwohaihao.mp3' controls='controls'&gt;
 &lt;/audio&gt;&lt;/p&gt;
 &lt;!--more--&gt;&lt;hr /&gt;
 &lt;p&gt;以下是歌词：&lt;/p&gt;
@@ -669,7 +689,7 @@ Listen_port=5555 #（从5555端口进行数据连接）  &lt;/code&gt;&lt;/pre&g
         <updated>2013-10-08T00:00:00+08:00</updated>
         <id>http://dengbiao.github.io/blog/2013/10/08/none2</id>
         <content type="html">
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/uploads/6598285826518510344.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/uploads/6598285826518510344.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;阿里巴巴宣讲会，听到了很多未知的技术，以及一些未知的大牛。 有点意思。 感觉到自己的渺小。 默默的奋斗吧，骚年。&lt;/p&gt;
 </content>
@@ -787,11 +807,11 @@ Listen_port=5555 #（从5555端口进行数据连接）  &lt;/code&gt;&lt;/pre&g
 
 &lt;p&gt;界面配置方案:&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/uploads/4878242821472382364.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/uploads/4878242821472382364.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/uploads/156500087151292641.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/uploads/156500087151292641.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/uploads/3167437913025476657.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/uploads/3167437913025476657.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </content>
     </entry>
     
@@ -860,7 +880,7 @@ end&lt;/code&gt;&lt;/pre&gt;
 $ cd vagrant_guide
 $ vagrant init&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://img.my.csdn.net/uploads/201212/03/1354515824_8087.PNG&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.my.csdn.net/uploads/201212/03/1354515824_8087.PNG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;(2)添加一个Base Box:&lt;/p&gt;
 
@@ -871,7 +891,7 @@ $ vagrant init&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;$vagrant box add base http://files.vagrantup.com/lucid32.box
 $vagrant box add base D:\lucid32.box&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://img.my.csdn.net/uploads/201212/03/1354516669_4279.PNG&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.my.csdn.net/uploads/201212/03/1354516669_4279.PNG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;(3)配置Project使用这个Box: 修改Vagrantfile为如下内容：&lt;/p&gt;
 
@@ -883,7 +903,7 @@ end&lt;/code&gt;&lt;/pre&gt;
 
 &lt;pre&gt;&lt;code&gt;$vagrant up  &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://img.my.csdn.net/uploads/201212/03/1354517333_8671.PNG&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.my.csdn.net/uploads/201212/03/1354517333_8671.PNG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;(5)停掉虚拟机&lt;/p&gt;
 
@@ -903,7 +923,7 @@ Connection Type: SSH
 User Name: vagrant
 Password: vagrant&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://img.my.csdn.net/uploads/201212/03/1354517823_4070.PNG&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.my.csdn.net/uploads/201212/03/1354517823_4070.PNG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;(7)访问刚才创建的Project.&lt;/p&gt;
 
@@ -954,7 +974,7 @@ Password: vagrant&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;因为没有配置port forwarding，所以你还不能从本地浏览器查看Project的输出。只能SSH到虚拟机上查看127.0.0.1的输出：&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://img.my.csdn.net/uploads/201212/03/1354519989_4712.PNG&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.my.csdn.net/uploads/201212/03/1354519989_4712.PNG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;(10) 进行端口映射&lt;/p&gt;
 
@@ -964,7 +984,7 @@ Password: vagrant&lt;/code&gt;&lt;/pre&gt;
 &lt;span class='go'&gt;        config.vm.forward_port 80, 4567&lt;/span&gt;
 &lt;span class='go'&gt;    end &lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://img.my.csdn.net/uploads/201212/03/1354520417_4109.PNG&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.my.csdn.net/uploads/201212/03/1354520417_4109.PNG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;7__packaging&quot;&gt;7. 打包 Packaging&lt;/h3&gt;
 
@@ -987,20 +1007,6 @@ Password: vagrant&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;$ vagrant box add my_box /path/to/the/package.box  
 $ vagrant init my_box  
 $ vagrant up&lt;/code&gt;&lt;/pre&gt;
-</content>
-    </entry>
-    
-    <entry>
-        <title>teleport pro tppabs标签批量删除</title>
-        <link href="http://dengbiao.github.io/accumulation/2013/01/09/teleport-pro-tppabse6a087e7adbee689b9e9878fe588a0e999a4.html"/>
-        <updated>2013-01-09T15:21:13+08:00</updated>
-        <id>http://dengbiao.github.io/accumulation/2013/01/09/teleport-pro-tppabse6a087e7adbee689b9e9878fe588a0e999a4</id>
-        <content type="html">
-&lt;p&gt;使用Teleport Pro下载的网页代码中包含了很多垃圾代码，比如下载的html网页代码中会出现tppabs标签，而且还会将所有的href标签中加入了很多垃圾代码，在css会加入了tpa标签，这些都是冗余代码，可以将其全部删除，但是由于代码太多，我们不可能一个个删除，因此可以使用Dreamweaver的查找/替换工具中的正则表达式来进行替换。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;1. 替换tppabs标签，使用Dreamweaver查找\btppabs=&amp;quot;h[^&amp;quot;]*&amp;quot;，将其替换为空即可。  
-2. 替换href中的多余代码，使用Dreamweaver查找href=&amp;quot;javascript:if\(confirm\('htt[^&amp;quot;]*&amp;quot;替换为href=&amp;quot;&amp;quot;即可。  
-3. 替换css文件中的tpa标签，使用Dreamweaver查找/\*tpa=.*\*/替换为空即可。&lt;/code&gt;&lt;/pre&gt;
 </content>
     </entry>
     
