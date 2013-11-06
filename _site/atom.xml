@@ -4,7 +4,7 @@
     <title></title>
     <link href="http://dengbiao.github.io/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://dengbiao.github.io" rel="alternate" type="text/html" />
-    <updated>2013-11-06T13:47:11+08:00</updated>
+    <updated>2013-11-06T13:50:10+08:00</updated>
     <id>http://dengbiao.github.io</id>
     <author>
         <name>dengbiao</name>
@@ -44,7 +44,7 @@
 
 &lt;p&gt;总之，很喜欢这首歌。&lt;/p&gt;
 
-&lt;p&gt;&lt;audio src='/assets/uploads/qishiwohaihao.mp3' controls='controls'&gt;
+&lt;p&gt;&lt;audio controls='controls' src='/assets/uploads/qishiwohaihao.mp3'&gt;
 &lt;/audio&gt;&lt;/p&gt;
 &lt;!--more--&gt;&lt;hr /&gt;
 &lt;p&gt;以下是歌词：&lt;/p&gt;
@@ -689,7 +689,7 @@ Listen_port=5555 #（从5555端口进行数据连接）  &lt;/code&gt;&lt;/pre&g
         <updated>2013-10-08T00:00:00+08:00</updated>
         <id>http://dengbiao.github.io/blog/2013/10/08/none2</id>
         <content type="html">
-&lt;p&gt;&lt;img src=&quot;/assets/uploads/6598285826518510344.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/uploads/6598285826518510344.jpg&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;阿里巴巴宣讲会，听到了很多未知的技术，以及一些未知的大牛。 有点意思。 感觉到自己的渺小。 默默的奋斗吧，骚年。&lt;/p&gt;
 </content>
@@ -807,11 +807,11 @@ Listen_port=5555 #（从5555端口进行数据连接）  &lt;/code&gt;&lt;/pre&g
 
 &lt;p&gt;界面配置方案:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/uploads/4878242821472382364.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/uploads/4878242821472382364.jpg&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/uploads/156500087151292641.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/uploads/156500087151292641.png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/uploads/3167437913025476657.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/uploads/3167437913025476657.png&quot; /&gt;&lt;/p&gt;
 </content>
     </entry>
     
@@ -880,7 +880,7 @@ end&lt;/code&gt;&lt;/pre&gt;
 $ cd vagrant_guide
 $ vagrant init&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://img.my.csdn.net/uploads/201212/03/1354515824_8087.PNG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://img.my.csdn.net/uploads/201212/03/1354515824_8087.PNG&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;(2)添加一个Base Box:&lt;/p&gt;
 
@@ -891,7 +891,7 @@ $ vagrant init&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;$vagrant box add base http://files.vagrantup.com/lucid32.box
 $vagrant box add base D:\lucid32.box&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://img.my.csdn.net/uploads/201212/03/1354516669_4279.PNG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://img.my.csdn.net/uploads/201212/03/1354516669_4279.PNG&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;(3)配置Project使用这个Box: 修改Vagrantfile为如下内容：&lt;/p&gt;
 
@@ -903,7 +903,7 @@ end&lt;/code&gt;&lt;/pre&gt;
 
 &lt;pre&gt;&lt;code&gt;$vagrant up  &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://img.my.csdn.net/uploads/201212/03/1354517333_8671.PNG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://img.my.csdn.net/uploads/201212/03/1354517333_8671.PNG&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;(5)停掉虚拟机&lt;/p&gt;
 
@@ -923,7 +923,7 @@ Connection Type: SSH
 User Name: vagrant
 Password: vagrant&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://img.my.csdn.net/uploads/201212/03/1354517823_4070.PNG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://img.my.csdn.net/uploads/201212/03/1354517823_4070.PNG&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;(7)访问刚才创建的Project.&lt;/p&gt;
 
@@ -974,7 +974,7 @@ Password: vagrant&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;因为没有配置port forwarding，所以你还不能从本地浏览器查看Project的输出。只能SSH到虚拟机上查看127.0.0.1的输出：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://img.my.csdn.net/uploads/201212/03/1354519989_4712.PNG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://img.my.csdn.net/uploads/201212/03/1354519989_4712.PNG&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;(10) 进行端口映射&lt;/p&gt;
 
@@ -984,7 +984,7 @@ Password: vagrant&lt;/code&gt;&lt;/pre&gt;
 &lt;span class='go'&gt;        config.vm.forward_port 80, 4567&lt;/span&gt;
 &lt;span class='go'&gt;    end &lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;http://img.my.csdn.net/uploads/201212/03/1354520417_4109.PNG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://img.my.csdn.net/uploads/201212/03/1354520417_4109.PNG&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;7__packaging&quot;&gt;7. 打包 Packaging&lt;/h3&gt;
 

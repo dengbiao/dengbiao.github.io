@@ -125,7 +125,7 @@ end</code></pre>
 $ cd vagrant_guide
 $ vagrant init</code></pre>
 
-<p><img src="http://img.my.csdn.net/uploads/201212/03/1354515824_8087.PNG" alt="" /></p>
+<p><img alt="" src="http://img.my.csdn.net/uploads/201212/03/1354515824_8087.PNG" /></p>
 
 <p>(2)添加一个Base Box:</p>
 
@@ -136,7 +136,7 @@ $ vagrant init</code></pre>
 <pre><code>$vagrant box add base http://files.vagrantup.com/lucid32.box
 $vagrant box add base D:\lucid32.box</code></pre>
 
-<p><img src="http://img.my.csdn.net/uploads/201212/03/1354516669_4279.PNG" alt="" /></p>
+<p><img alt="" src="http://img.my.csdn.net/uploads/201212/03/1354516669_4279.PNG" /></p>
 
 <p>(3)配置Project使用这个Box: 修改Vagrantfile为如下内容：</p>
 
@@ -148,7 +148,7 @@ end</code></pre>
 
 <pre><code>$vagrant up  </code></pre>
 
-<p><img src="http://img.my.csdn.net/uploads/201212/03/1354517333_8671.PNG" alt="" /></p>
+<p><img alt="" src="http://img.my.csdn.net/uploads/201212/03/1354517333_8671.PNG" /></p>
 
 <p>(5)停掉虚拟机</p>
 
@@ -168,7 +168,7 @@ Connection Type: SSH
 User Name: vagrant
 Password: vagrant</code></pre>
 
-<p><img src="http://img.my.csdn.net/uploads/201212/03/1354517823_4070.PNG" alt="" /></p>
+<p><img alt="" src="http://img.my.csdn.net/uploads/201212/03/1354517823_4070.PNG" /></p>
 
 <p>(7)访问刚才创建的Project.</p>
 
@@ -219,7 +219,7 @@ Password: vagrant</code></pre>
 
 <p>因为没有配置port forwarding，所以你还不能从本地浏览器查看Project的输出。只能SSH到虚拟机上查看127.0.0.1的输出：</p>
 
-<p><img src="http://img.my.csdn.net/uploads/201212/03/1354519989_4712.PNG" alt="" /></p>
+<p><img alt="" src="http://img.my.csdn.net/uploads/201212/03/1354519989_4712.PNG" /></p>
 
 <p>(10) 进行端口映射</p>
 
@@ -229,7 +229,7 @@ Password: vagrant</code></pre>
 <span class='go'>        config.vm.forward_port 80, 4567</span>
 <span class='go'>    end </span>
 </code></pre></div>
-<p><img src="http://img.my.csdn.net/uploads/201212/03/1354520417_4109.PNG" alt="" /></p>
+<p><img alt="" src="http://img.my.csdn.net/uploads/201212/03/1354520417_4109.PNG" /></p>
 
 <h3 id="7__packaging">7. 打包 Packaging</h3>
 
