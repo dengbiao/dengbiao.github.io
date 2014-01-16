@@ -65,8 +65,7 @@
         
         
         <div class="page_content">
-            <p>
-<p>用的是国产的山寨pad 系统为4.0.3 想用来做真机开发，找了很久却找不到合适的驱动。相当的郁闷。功夫不负苦心人啊，终于找到办法解决不认识的android设备的驱动问题。其实方法很简单，就是在google官方的驱动配置文件中添加支持的设备，将自己的设备信息添加进去。具体的方法便是修改 android_winusb.inf 文件。</p>
+            <p><p>用的是国产的山寨pad 系统为4.0.3 想用来做真机开发，找了很久却找不到合适的驱动。相当的郁闷。功夫不负苦心人啊，终于找到办法解决不认识的android设备的驱动问题。其实方法很简单，就是在google官方的驱动配置文件中添加支持的设备，将自己的设备信息添加进去。具体的方法便是修改 android_winusb.inf 文件。</p>
 
 <p>文件位置：<code>android-sdk-windows\extras\google\usb_driver\android_winusb.inf</code></p>
 
@@ -101,22 +100,22 @@
 <span class='go'>[Google.NTx86]</span>
 <span class='go'>;这下面放的是32位系统下的设备信息 如果你的电脑的系统是32位的 那么你的设备信息就要放到这里  不然会安装不成功的</span>
 <span class='go'>; HTC Dream</span>
-<span class='gp'>%</span>SingleAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_0BB4&amp;PID_0C01
-<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_0BB4&amp;PID_0C02&amp;MI_01
-<span class='gp'>%</span>SingleBootLoaderInterface% <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_0BB4&amp;PID_0FFF
+<span class='gp'>%</span>SingleAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_0BB4<span class='p'>&amp;</span>PID_0C01
+<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_0BB4<span class='p'>&amp;</span>PID_0C02<span class='p'>&amp;</span>MI_01
+<span class='gp'>%</span>SingleBootLoaderInterface% <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_0BB4<span class='p'>&amp;</span>PID_0FFF
 <span class='go'>; HTC Magic</span>
-<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_0BB4&amp;PID_0C03&amp;MI_01
+<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_0BB4<span class='p'>&amp;</span>PID_0C03<span class='p'>&amp;</span>MI_01
 <span class='go'>;</span>
 <span class='go'>;Moto Sholes</span>
-<span class='gp'>%</span>SingleAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_22B8&amp;PID_41DB
-<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_22B8&amp;PID_41DB&amp;MI_01
+<span class='gp'>%</span>SingleAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_22B8<span class='p'>&amp;</span>PID_41DB
+<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_22B8<span class='p'>&amp;</span>PID_41DB<span class='p'>&amp;</span>MI_01
 <span class='go'>;</span>
 <span class='go'>;Google NexusOne</span>
-<span class='gp'>%</span>SingleAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_18D1&amp;PID_0D02
-<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_18D1&amp;PID_0D02&amp;MI_01
-<span class='gp'>%</span>SingleAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_18D1&amp;PID_4E11
-<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_18D1&amp;PID_4E12&amp;MI_01
-<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_18D1&amp;PID_4E22&amp;MI_01
+<span class='gp'>%</span>SingleAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_18D1<span class='p'>&amp;</span>PID_0D02
+<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_18D1<span class='p'>&amp;</span>PID_0D02<span class='p'>&amp;</span>MI_01
+<span class='gp'>%</span>SingleAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_18D1<span class='p'>&amp;</span>PID_4E11
+<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_18D1<span class='p'>&amp;</span>PID_4E12<span class='p'>&amp;</span>MI_01
+<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_18D1<span class='p'>&amp;</span>PID_4E22<span class='p'>&amp;</span>MI_01
 <span class='go'>[Google.NTamd64]</span>
 <span class='go'>;如果你的电脑的系统是64位的 那么你的设备信息就要放到这里  我电脑系统是64位的 所以放到了这个下面</span>
 <span class='go'>;</span>
@@ -124,28 +123,28 @@
 <span class='go'>-----------------------------------------------</span>
 
 <span class='go'>;Sigo newten</span>
-<span class='gp'>%</span>SingleAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_18D1&amp;PID_0003&amp;REV_0230&amp;MI_01
-<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_18D1&amp;PID_0003&amp;MI_01
+<span class='gp'>%</span>SingleAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_18D1<span class='p'>&amp;</span>PID_0003<span class='p'>&amp;</span>REV_0230<span class='p'>&amp;</span>MI_01
+<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_18D1<span class='p'>&amp;</span>PID_0003<span class='p'>&amp;</span>MI_01
 
 <span class='go'>---------------------------------------------</span>
 
 <span class='go'>;</span>
 <span class='go'>; HTC Dream</span>
-<span class='gp'>%</span>SingleAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_0BB4&amp;PID_0C01
-<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_0BB4&amp;PID_0C02&amp;MI_01
-<span class='gp'>%</span>SingleBootLoaderInterface% <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_0BB4&amp;PID_0FFF
+<span class='gp'>%</span>SingleAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_0BB4<span class='p'>&amp;</span>PID_0C01
+<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_0BB4<span class='p'>&amp;</span>PID_0C02<span class='p'>&amp;</span>MI_01
+<span class='gp'>%</span>SingleBootLoaderInterface% <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_0BB4<span class='p'>&amp;</span>PID_0FFF
 <span class='go'>; HTC Magic</span>
-<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_0BB4&amp;PID_0C03&amp;MI_01
+<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_0BB4<span class='p'>&amp;</span>PID_0C03<span class='p'>&amp;</span>MI_01
 <span class='go'>;</span>
 <span class='go'>;Moto Sholes</span>
-<span class='gp'>%</span>SingleAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_22B8&amp;PID_41DB
-<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_22B8&amp;PID_41DB&amp;MI_01
+<span class='gp'>%</span>SingleAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_22B8<span class='p'>&amp;</span>PID_41DB
+<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_22B8<span class='p'>&amp;</span>PID_41DB<span class='p'>&amp;</span>MI_01
 <span class='go'>;Google NexusOne</span>
-<span class='gp'>%</span>SingleAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_18D1&amp;PID_0D02
-<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_18D1&amp;PID_0D02&amp;MI_01
-<span class='gp'>%</span>SingleAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_18D1&amp;PID_4E11
-<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_18D1&amp;PID_4E12&amp;MI_01
-<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_18D1&amp;PID_4E22&amp;MI_01
+<span class='gp'>%</span>SingleAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_18D1<span class='p'>&amp;</span>PID_0D02
+<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_18D1<span class='p'>&amp;</span>PID_0D02<span class='p'>&amp;</span>MI_01
+<span class='gp'>%</span>SingleAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_18D1<span class='p'>&amp;</span>PID_4E11
+<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_18D1<span class='p'>&amp;</span>PID_4E12<span class='p'>&amp;</span>MI_01
+<span class='gp'>%</span>CompositeAdbInterface%  <span class='o'>=</span> USB_Install, USB<span class='se'>\V</span>ID_18D1<span class='p'>&amp;</span>PID_4E22<span class='p'>&amp;</span>MI_01
 <span class='go'>[USB_Install]</span>
 <span class='go'>Include = winusb.inf</span>
 <span class='go'>Needs  = WINUSB.NT</span>
@@ -196,8 +195,7 @@
 </code></pre></div>
 <p>上面红色部分的信息获取途径：</p>
 
-<p><a href="http://www.csumt.com/wp-content/uploads/2012/04/android设备id获取.jpg"><img alt="" src="http://www.csumt.com/wp-content/uploads/2012/04/android设备id获取.jpg" /></a></p>
-</p> 
+<p><a href="http://www.csumt.com/wp-content/uploads/2012/04/android设备id获取.jpg"><img alt="" src="http://www.csumt.com/wp-content/uploads/2012/04/android设备id获取.jpg" /></a></p></p> 
         </div>
 
 

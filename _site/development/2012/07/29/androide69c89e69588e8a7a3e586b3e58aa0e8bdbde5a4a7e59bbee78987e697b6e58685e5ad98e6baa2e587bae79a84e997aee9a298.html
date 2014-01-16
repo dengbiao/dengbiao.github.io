@@ -65,8 +65,7 @@
         
         
         <div class="page_content">
-            <p>
-<p>转自：<a href="http://hi.baidu.com/liganggang/item/6ab1e480fa2da1e3e596e015">http://hi.baidu.com/liganggang/item/6ab1e480fa2da1e3e596e015</a></p>
+            <p><p>转自：<a href="http://hi.baidu.com/liganggang/item/6ab1e480fa2da1e3e596e015">http://hi.baidu.com/liganggang/item/6ab1e480fa2da1e3e596e015</a></p>
 
 <p>尽量不要使用setImageBitmap或setImageResource或BitmapFactory.decodeResource来设置一张大图，</p>
 
@@ -192,8 +191,7 @@
 </code></pre></div>
 <p>优化Dalvik虚拟机的堆内存分配</p>
 
-<p>对于Android平台来说，其托管层使用的DalvikJavaVM从目前的表现来看还有很多地方可以优化处理，比如我们在开发一些大型游戏或耗资源的应用中可能考虑手动干涉GC处理，使用dalvik.system.VMRuntime类提供的setTargetHeapUtilization方法可以增强程序堆内存的处理效率。当然具体原理我们可以参考开源工程，这里我们仅说下使用方法: private final staticfloatTARGET_HEAP_UTILIZATION = 0.75f; 在程序onCreate时就可以调用VMRuntime.getRuntime().setTargetHeapUtilization(TARGET_HEAP_UTILIZATION);即可。</p>
-</p> 
+<p>对于Android平台来说，其托管层使用的DalvikJavaVM从目前的表现来看还有很多地方可以优化处理，比如我们在开发一些大型游戏或耗资源的应用中可能考虑手动干涉GC处理，使用dalvik.system.VMRuntime类提供的setTargetHeapUtilization方法可以增强程序堆内存的处理效率。当然具体原理我们可以参考开源工程，这里我们仅说下使用方法: private final staticfloatTARGET_HEAP_UTILIZATION = 0.75f; 在程序onCreate时就可以调用VMRuntime.getRuntime().setTargetHeapUtilization(TARGET_HEAP_UTILIZATION);即可。</p></p> 
         </div>
 
 

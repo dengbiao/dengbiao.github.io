@@ -65,15 +65,13 @@
         
         
         <div class="page_content">
-            <p>
-<pre><code>QLineF line(sourcePoint, destPoint);
+            <p><pre><code>QLineF line(sourcePoint, destPoint);
 QLinearGradient gradient(sourcePoint.x(), sourcePoint.y(), destPoint.x(), destPoint.y());
 gradient.setColorAt(0.0, Qt::white);
 gradient.setColorAt(0.5, color);
 gradient.setColorAt(1.0, Qt::black);
 painter-&gt;setPen(QPen(QBrush(gradient), width, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
-painter-&gt;drawLine(line);</code></pre>
-</p> 
+painter-&gt;drawLine(line);</code></pre></p> 
         </div>
 
 

@@ -4,7 +4,7 @@
     <title></title>
     <link href="http://dengbiao.github.io/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://dengbiao.github.io" rel="alternate" type="text/html" />
-    <updated>2013-12-04T22:02:44+08:00</updated>
+    <updated>2014-01-16T11:40:10+08:00</updated>
     <id>http://dengbiao.github.io</id>
     <author>
         <name>dengbiao</name>
@@ -13,12 +13,37 @@
 
     
     <entry>
+        <title>something I want to say</title>
+        <link href="http://dengbiao.github.io/accumulation/2014/01/16/something.html"/>
+        <updated>2014-01-16T00:00:00+08:00</updated>
+        <id>http://dengbiao.github.io/accumulation/2014/01/16/something</id>
+        <content type="html">&lt;p&gt;有些东西,你不去表达,别人是不会理解的.有的东西,你表达的太多,别人会理解错误的.所以,有人就会告诉你,不要在意别人的眼光.做好自己就可以了.但是真的是这样吗? 或许,真像别人说的那样,万事没有决定,何去何从,得靠自己来判断.对的,这又是别人的看法.人之所以为人,之所以能够立于动物之首,就是因为这个物种懂得学习,懂得吸取教训.&lt;/p&gt;
+
+&lt;p&gt;今天看到有人在讨论一个问题: 人为什么要工作? 论点是人为了工作,占用了自己的时间,不能陪伴亲人,不能照顾好孩子,不能去自己想去的地方,做自己想做的事情. 那你为什么要工作! 为了自己的那点存在感?还是为了取悦你的老板. 其实,我个人觉得问这样问题的都是傻逼. 先抛开什么梦想,什么追求不说. 在我看来,亲人,朋友,爱人.这些都是先于工作的.但是如果没有经济基础,你有能力去守护这些东西吗? 对的,你工作的理由就是为了守护自己心爱的东西,自己珍惜的东西.似乎我们找到了答案,并觉得自己在做着一件高尚的事情,可是,又有人要问了,为了守护自己珍爱的东西而去工作,可是工作确会让你伤害到它们,那你这又算什么. 是的,你永远没办法满足所有人.包括你自己. 所以何苦去思考这个问题呢. 人生一世,本以很艰难,何必难为自己,难为他人. 正所谓,人艰不拆.还是有一定的道理的.&lt;/p&gt;
+
+&lt;p&gt;为何有此感慨.上班的时间,干着抽逼的活.写着抽逼的文字. 我可不可以说我是在思考人生?&lt;/p&gt;
+
+&lt;p&gt;迷失吗? 我知道我要什么,也知道该怎么做,也在为它拼搏着.&lt;/p&gt;
+
+&lt;p&gt;犹豫么? 好像是有点,不知道自己选择的对不对,不知道自己该如何去权衡一些事情.&lt;/p&gt;
+
+&lt;p&gt;想家吗? 想.&lt;/p&gt;
+
+&lt;p&gt;想她吗? 废话.&lt;/p&gt;
+
+&lt;p&gt;哪个更多点? 操蛋. 当要做出选择的时候,总是那么的不想去抉择.因为那边对你来说都很重. 对,如果是我姐,肯定会告诉你说家人才是最重要的. 但是,这本就不是说要二选一的事情,为何一定要做抉择. 随着时间的积累,她也会是家人.不是么? 所以,我是有选择恐惧症的.因为我不知道抛弃.不懂得抛弃.&lt;/p&gt;
+
+&lt;p&gt;有的时候很听话,有的时候又很叛逆. 别人说这是在成长. 或许吧. 我只知道,我在慢慢经历. 也许有一天, 我有能力的那一天. 我可以主宰自己的生活. 不被别人牵制着.&lt;/p&gt;
+
+&lt;p&gt;中二病么? 得治!&lt;/p&gt;</content>
+    </entry>
+    
+    <entry>
         <title>十月感想</title>
         <link href="http://dengbiao.github.io/impression/2013/11/06/impression.html"/>
         <updated>2013-11-06T00:00:00+08:00</updated>
         <id>http://dengbiao.github.io/impression/2013/11/06/impression</id>
-        <content type="html">
-&lt;p&gt;十月，研二的第二个月。感觉时间在一点点的走过。但是这两个月来，一直没有找到自己的工作状态。实验室项目进展缓慢。专业基础也没有什么提升。看着师兄师姐们为找工作而忙碌着。自己确有点不知所措。用了将近一个星期的时间，将博客从lofter转移到了github上面。很多以前在wordpress上的博文直接放弃了。虽然有点不舍得，但是确实没有什么有用的珍藏价值，仅有的只是一些成长的记忆吧。丢就丢吧，虽然偶尔回想起的那句“中国人不怎么在意历史的保护”，确实是这样的，建筑拆了建，建了拆。一些古老的东西，慢慢的在消失着。清理了博客，给空间留给剩下的研二，写一些有意义的博文，有深度的博文。不要再是简单的错误笔记。&lt;/p&gt;
+        <content type="html">&lt;p&gt;十月，研二的第二个月。感觉时间在一点点的走过。但是这两个月来，一直没有找到自己的工作状态。实验室项目进展缓慢。专业基础也没有什么提升。看着师兄师姐们为找工作而忙碌着。自己确有点不知所措。用了将近一个星期的时间，将博客从lofter转移到了github上面。很多以前在wordpress上的博文直接放弃了。虽然有点不舍得，但是确实没有什么有用的珍藏价值，仅有的只是一些成长的记忆吧。丢就丢吧，虽然偶尔回想起的那句“中国人不怎么在意历史的保护”，确实是这样的，建筑拆了建，建了拆。一些古老的东西，慢慢的在消失着。清理了博客，给空间留给剩下的研二，写一些有意义的博文，有深度的博文。不要再是简单的错误笔记。&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;p&gt;写博客的时间，让自己找到了一些曾经写代码的感觉。曾经的那种斗志。熟悉的味道。&lt;/p&gt;
 
@@ -28,8 +53,7 @@
 
 &lt;p&gt;这个月要开题了，还需要为张家界的会议作准备。事情挺多，保持激情。还有，学英语。。。&lt;/p&gt;
 
-&lt;p&gt;做一只有想法的鸟，朝着自己的那片天，飞去。。。&lt;/p&gt;
-</content>
+&lt;p&gt;做一只有想法的鸟，朝着自己的那片天，飞去。。。&lt;/p&gt;</content>
     </entry>
     
     <entry>
@@ -37,14 +61,13 @@
         <link href="http://dengbiao.github.io/music/2013/11/04/qishiwohaihao.html"/>
         <updated>2013-11-04T00:00:00+08:00</updated>
         <id>http://dengbiao.github.io/music/2013/11/04/qishiwohaihao</id>
-        <content type="html">
-&lt;p&gt;第一次听到这首歌是在ktv，和房角石的小伙伴们一起。曾经听说过俞灏明的事情，在新闻里面，因为本人不追星，所以也没有太去关注。当看到mv中，湖南卫视跨年演唱会上，他的演出。有一种感动和敬佩。不知道为什么，突然觉得他好帅，好man。&lt;/p&gt;
+        <content type="html">&lt;p&gt;第一次听到这首歌是在ktv，和房角石的小伙伴们一起。曾经听说过俞灏明的事情，在新闻里面，因为本人不追星，所以也没有太去关注。当看到mv中，湖南卫视跨年演唱会上，他的演出。有一种感动和敬佩。不知道为什么，突然觉得他好帅，好man。&lt;/p&gt;
 
 &lt;p&gt;或许是第一次听到这首歌，感触颇深。对俞灏明也有了一个不错的印象。尤其是歌词：&lt;code&gt;被故事选中，没资格懵懂&lt;/code&gt;。很现实的一句话。联想到他的经历，不得不说，这短短的一句话深藏了多少的辛酸与痛苦。&lt;/p&gt;
 
 &lt;p&gt;总之，很喜欢这首歌。&lt;/p&gt;
 
-&lt;p&gt;&lt;audio controls='controls' src='/assets/uploads/qishiwohaihao.mp3'&gt;
+&lt;p&gt;&lt;audio src='/assets/uploads/qishiwohaihao.mp3' controls='controls'&gt;
 &lt;/audio&gt;&lt;/p&gt;
 &lt;!--more--&gt;&lt;hr /&gt;
 &lt;p&gt;以下是歌词：&lt;/p&gt;
@@ -83,8 +106,7 @@
 就算没观众自己第一个被感动
 我相信到最后一分钟
 太多不由衷不过是岁月的内容
-叹息过再继续向前走&lt;/code&gt;&lt;/pre&gt;
-</content>
+叹息过再继续向前走&lt;/code&gt;&lt;/pre&gt;</content>
     </entry>
     
     <entry>
@@ -92,8 +114,7 @@
         <link href="http://dengbiao.github.io/2013/10/28/problem-summary-ubuntu.html"/>
         <updated>2013-10-28T00:00:00+08:00</updated>
         <id>http://dengbiao.github.io/2013/10/28/problem-summary-ubuntu</id>
-        <content type="html">
-&lt;p&gt;在使用ubuntu的过程中经常遇到各种各样的小问题，有时候觉得问题比较小，很容易通过google就解决了。但是，这些小问题其实挺消耗时间的。所以建立这个问题汇总贴。在使用ubuntu中遇到的各种小问题进行汇总。希望能够帮助遇到同样问题的人找到解决办法。同时，也是给自己的学习历程留下痕迹。&lt;/p&gt;
+        <content type="html">&lt;p&gt;在使用ubuntu的过程中经常遇到各种各样的小问题，有时候觉得问题比较小，很容易通过google就解决了。但是，这些小问题其实挺消耗时间的。所以建立这个问题汇总贴。在使用ubuntu中遇到的各种小问题进行汇总。希望能够帮助遇到同样问题的人找到解决办法。同时，也是给自己的学习历程留下痕迹。&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h3 id=&quot;ubuntu&quot;&gt;ubuntu用户添加&lt;/h3&gt;
 
@@ -666,7 +687,10 @@ Listen_port=5555 #（从5555端口进行数据连接）  &lt;/code&gt;&lt;/pre&g
 &lt;p&gt;转自：Vsftpd匿名用户无法上传、删除、创建文件、修改文件的解决&lt;/p&gt;
 
 &lt;p&gt;编译：&lt;a href=&quot;http://www.07net01.com/linux/_zhuan_vsftpxiangxipeizhi__etc_vsftpd_vsftpd_conf_17718_1348644341.html&quot;&gt;（转）vsftp详细配置、/etc/vsftpd/vsftpd.conf&lt;/a&gt;&lt;/p&gt;
-&lt;hr /&gt;</content>
+&lt;hr /&gt;
+&lt;h3 id=&quot;github_&quot;&gt;github 提交记住用户名密码&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;git config --global credential.helper 'cache --timeout 3600'&lt;/code&gt;&lt;/pre&gt;</content>
     </entry>
     
     <entry>
@@ -674,13 +698,11 @@ Listen_port=5555 #（从5555端口进行数据连接）  &lt;/code&gt;&lt;/pre&g
         <link href="http://dengbiao.github.io/blog/2013/10/17/none.html"/>
         <updated>2013-10-17T00:00:00+08:00</updated>
         <id>http://dengbiao.github.io/blog/2013/10/17/none</id>
-        <content type="html">
-&lt;p&gt;最近没什么工作动态。基本干的也都是些烦人的杂活，或者是没干活。心有点烦。烦烦烦&lt;/p&gt;
+        <content type="html">&lt;p&gt;最近没什么工作动态。基本干的也都是些烦人的杂活，或者是没干活。心有点烦。烦烦烦&lt;/p&gt;
 
 &lt;p&gt;下午和程子学老师讨论了一些我们项目的事情。感觉没讨论出什么东西。但是吧，程子学老师对自己倒是挺欣赏的感觉。有点点受宠若惊的感觉，但是想着自己现在的状态，也不想多说什么，也觉得自己有点迷乱。不知道方向的感觉。或许该静下心来好好想想后面的生活该怎么过了。&lt;/p&gt;
 
-&lt;p&gt;加油和努力不是嘴巴说说就可以了。希望这几天能够找回工作的状态。不在迷乱。。。&lt;/p&gt;
-</content>
+&lt;p&gt;加油和努力不是嘴巴说说就可以了。希望这几天能够找回工作的状态。不在迷乱。。。&lt;/p&gt;</content>
     </entry>
     
     <entry>
@@ -688,11 +710,9 @@ Listen_port=5555 #（从5555端口进行数据连接）  &lt;/code&gt;&lt;/pre&g
         <link href="http://dengbiao.github.io/blog/2013/10/08/none2.html"/>
         <updated>2013-10-08T00:00:00+08:00</updated>
         <id>http://dengbiao.github.io/blog/2013/10/08/none2</id>
-        <content type="html">
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/uploads/6598285826518510344.jpg&quot; /&gt;&lt;/p&gt;
+        <content type="html">&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/uploads/6598285826518510344.jpg&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;阿里巴巴宣讲会，听到了很多未知的技术，以及一些未知的大牛。 有点意思。 感觉到自己的渺小。 默默的奋斗吧，骚年。&lt;/p&gt;
-</content>
+&lt;p&gt;阿里巴巴宣讲会，听到了很多未知的技术，以及一些未知的大牛。 有点意思。 感觉到自己的渺小。 默默的奋斗吧，骚年。&lt;/p&gt;</content>
     </entry>
     
     <entry>
@@ -700,9 +720,7 @@ Listen_port=5555 #（从5555端口进行数据连接）  &lt;/code&gt;&lt;/pre&g
         <link href="http://dengbiao.github.io/blog/2013/10/08/none.html"/>
         <updated>2013-10-08T00:00:00+08:00</updated>
         <id>http://dengbiao.github.io/blog/2013/10/08/none</id>
-        <content type="html">
-&lt;p&gt;实验室关门这一刻，wpa_supplicant 编译成功。程序员是不是经常会这样。。。 明天继续。。。&lt;/p&gt;
-</content>
+        <content type="html">&lt;p&gt;实验室关门这一刻，wpa_supplicant 编译成功。程序员是不是经常会这样。。。 明天继续。。。&lt;/p&gt;</content>
     </entry>
     
     <entry>
@@ -710,8 +728,7 @@ Listen_port=5555 #（从5555端口进行数据连接）  &lt;/code&gt;&lt;/pre&g
         <link href="http://dengbiao.github.io/2013/09/13/win7%2Bvirtualbox%2Bubuntu_server.html"/>
         <updated>2013-09-13T00:00:00+08:00</updated>
         <id>http://dengbiao.github.io/2013/09/13/win7+virtualbox+ubuntu_server</id>
-        <content type="html">
-&lt;p&gt;老规矩，先描述应用场景。电脑windows 7 64位系统、virtualbox4.2.12 r84980、虚拟机ubuntu server 12.04 64位版本。现在想在host win7和ubuntu server之间共享文件。&lt;/p&gt;
+        <content type="html">&lt;p&gt;老规矩，先描述应用场景。电脑windows 7 64位系统、virtualbox4.2.12 r84980、虚拟机ubuntu server 12.04 64位版本。现在想在host win7和ubuntu server之间共享文件。&lt;/p&gt;
 
 &lt;h6 id=&quot;_&quot;&gt;我是分割线 场景描述完毕&lt;/h6&gt;
 
@@ -734,8 +751,7 @@ Listen_port=5555 #（从5555端口进行数据连接）  &lt;/code&gt;&lt;/pre&g
 
 &lt;p&gt;&lt;code&gt;sudo umount /mnt&lt;/code&gt; (取消之前的挂载） &lt;code&gt;sudo mount -t vboxsf /downloads /mnt&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;挂载完成，可以共享了。&lt;/p&gt;
-</content>
+&lt;p&gt;挂载完成，可以共享了。&lt;/p&gt;</content>
     </entry>
     
     <entry>
@@ -743,8 +759,7 @@ Listen_port=5555 #（从5555端口进行数据连接）  &lt;/code&gt;&lt;/pre&g
         <link href="http://dengbiao.github.io/2013/09/11/ubuntu%2Bconsole%2Bencode%2Bfault.html"/>
         <updated>2013-09-11T00:00:00+08:00</updated>
         <id>http://dengbiao.github.io/2013/09/11/ubuntu+console+encode+fault</id>
-        <content type="html">
-&lt;p&gt;已经几次遇到这个问题了。每次安装完ubuntu之后，各种编码问题，很头疼。今天又遇到了。把找到的方法写下来。下次查阅方便。&lt;/p&gt;
+        <content type="html">&lt;p&gt;已经几次遇到这个问题了。每次安装完ubuntu之后，各种编码问题，很头疼。今天又遇到了。把找到的方法写下来。下次查阅方便。&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;sudo vi /var/lib/locales/supported.d/local&lt;/code&gt;&lt;/p&gt;
 
@@ -773,8 +788,7 @@ Listen_port=5555 #（从5555端口进行数据连接）  &lt;/code&gt;&lt;/pre&g
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;执行命令&lt;code&gt;sudo locale-gen&lt;/code&gt;登出然后登入即可。&lt;/p&gt;
 
-&lt;p&gt;参考：http://www.2cto.com/os/201211/165712.html&lt;/p&gt;
-</content>
+&lt;p&gt;参考：http://www.2cto.com/os/201211/165712.html&lt;/p&gt;</content>
     </entry>
     
     <entry>
@@ -782,8 +796,7 @@ Listen_port=5555 #（从5555端口进行数据连接）  &lt;/code&gt;&lt;/pre&g
         <link href="http://dengbiao.github.io/2013/09/10/win7%2Bssh%2Bvirtualbox%2Bubuntu.html"/>
         <updated>2013-09-10T00:00:00+08:00</updated>
         <id>http://dengbiao.github.io/2013/09/10/win7+ssh+virtualbox+ubuntu</id>
-        <content type="html">
-&lt;p&gt;首先讲一下自己的环境和应用场景。&lt;/p&gt;
+        <content type="html">&lt;p&gt;首先讲一下自己的环境和应用场景。&lt;/p&gt;
 
 &lt;p&gt;之前是用的vagrant配置好的ubuntu环境。速度是很快，但是后来发现在学习过程中不太合适，因为经常要安装很多软件。vagrant更加适合于大家协同工作的时候有一个相同的测试环境。相当于一台装了还原卡的电脑。所以，想了想，用virtualbox装了一个ubuntu12.04server 64bit版。然后用ssh连接，不就达到了可修改的vagrant效果么。其实，你会发现直接用virtualbox提供的界面操作也是一样的，根本不需要用ssh连接。对，是这样的。不过个人表示不太喜欢那个界面。所以应用场景就出现了。&lt;/p&gt;
 &lt;!--more--&gt;
@@ -811,203 +824,7 @@ Listen_port=5555 #（从5555端口进行数据连接）  &lt;/code&gt;&lt;/pre&g
 
 &lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/uploads/156500087151292641.png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/uploads/3167437913025476657.png&quot; /&gt;&lt;/p&gt;
-</content>
-    </entry>
-    
-    <entry>
-        <title>Vagrant 入门</title>
-        <link href="http://dengbiao.github.io/accumulation/python/2013/02/21/vagrant-e585a5e997a8.html"/>
-        <updated>2013-02-21T14:44:02+08:00</updated>
-        <id>http://dengbiao.github.io/accumulation/python/2013/02/21/vagrant-e585a5e997a8</id>
-        <content type="html">
-&lt;p&gt;转自：&lt;a href=&quot;http://blog.csdn.net/jillliang/article/details/8251242&quot;&gt;http://blog.csdn.net/jillliang/article/details/8251242&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;1_vagrant&quot;&gt;1. Vagrant功能:&lt;/h3&gt;
-
-&lt;p&gt;Vagrant 使用Oracle VM VirtualBox 动态创建和配置轻量级的，可重现的，便携的虚拟机环境。&lt;/p&gt;
-
-&lt;h3 id=&quot;2_vagrant&quot;&gt;2. Vagrant下载:&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://downloads.vagrantup.com/tags/v1.0.5&quot;&gt;http://downloads.vagrantup.com/tags/v1.0.5&lt;/a&gt;&lt;/p&gt;
-&lt;!--more--&gt;
-&lt;h3 id=&quot;3_vagrant&quot;&gt;3. Vagrant安装:&lt;/h3&gt;
-
-&lt;p&gt;3.1. 下载并安装Oracle VM VirtualBox: 例如在Windows环境下，需要安装VirtualBox-4.2.0-80737-Win.exe&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.virtualbox.org/wiki/Downloads&quot;&gt;https://www.virtualbox.org/wiki/Downloads&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;3.2. 下载并安装最新版本的Vagrant:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://downloads.vagrantup.com/&quot;&gt;http://downloads.vagrantup.com/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;注: 在 Windows and Mac OS X,&lt;code&gt;vagrant&lt;/code&gt; 命令应该自动添加到环境变量&lt;code&gt;PATH&lt;/code&gt;. 但是在其他操作系统下, 你必须手动添加&lt;code&gt;/opt/vagrant/bin&lt;/code&gt; 到环境变量&lt;code&gt;PATH。&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;4_vagrant&quot;&gt;4. Vagrant命令&lt;/h3&gt;
-
-&lt;p&gt;Vagrant安装完成之后，我们就可以从命令行通过vagrant命令来进行操作。vagrant 常用命令如下：&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='console'&gt;&lt;span class='go'&gt;    vagrant box add &amp;lt;name&amp;gt; &amp;lt;url&amp;gt;  &lt;/span&gt;
-&lt;span class='go'&gt;    vagrant box list  &lt;/span&gt;
-&lt;span class='go'&gt;    vagrant box remove &amp;lt;name&amp;gt;  &lt;/span&gt;
-&lt;span class='go'&gt;    vagrant box repackage &amp;lt;name&amp;gt;   &lt;/span&gt;
-&lt;span class='go'&gt;    vagrant init [box-name] [box-url]  &lt;/span&gt;
-&lt;span class='go'&gt;    vagrant up [vm-name] [--[no-]provision] [-h]  &lt;/span&gt;
-&lt;span class='go'&gt;    vagrant destroy [vm-name]  &lt;/span&gt;
-&lt;span class='go'&gt;    vagrant suspend [vm-name]  &lt;/span&gt;
-&lt;span class='go'&gt;    vagrant reload [vm-name]  &lt;/span&gt;
-&lt;span class='go'&gt;    vagrant resume [vm-name]  &lt;/span&gt;
-&lt;span class='go'&gt;    vagrant halt [vm-name]  &lt;/span&gt;
-&lt;span class='go'&gt;    vagrant status [vm-name]   &lt;/span&gt;
-&lt;span class='go'&gt;    vagrant package [vm-name] [--base name] [--output name.box][--include one,two,three] [--vagrantfile file]  &lt;/span&gt;
-&lt;span class='go'&gt;    vagrant provision [vm-name]  &lt;/span&gt;
-&lt;span class='go'&gt;    vagrant ssh [vm-name] [-c command] [-- extra ssh args]  &lt;/span&gt;
-&lt;span class='go'&gt;    vagrant ssh-config [vm-name] [--host name]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id=&quot;5_vagrantfile&quot;&gt;5. Vagrantfile&lt;/h3&gt;
-
-&lt;p&gt;任何Vagrant工程下都有一个Vagrantfile, 就像makefile一样，Vagrantfile用来配置vagrant的行为所创建虚拟机的信息，下面是一个基本的Vagrantfile:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Vagrant::Config.run do |config|
-    \#Setup the box
-    config.vm.box = &amp;quot;my_box&amp;quot;
-end&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;6_vagrant&quot;&gt;6. 创建第一个Vagrant虚拟环境以及工程:&lt;/h3&gt;
-
-&lt;p&gt;(1)创建工程目录， 并且执行vagrant init命令，该命令会产生最初的 Vagrantfile&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ mkdir vagrant_guide
-$ cd vagrant_guide
-$ vagrant init&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://img.my.csdn.net/uploads/201212/03/1354515824_8087.PNG&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;(2)添加一个Base Box:&lt;/p&gt;
-
-&lt;p&gt;Vagrant不是从头开始创建虚拟机，而是导入一个虚机的base image，在这个基础上进行构建。这些image就叫做Box.&lt;/p&gt;
-
-&lt;p&gt;Vagrant 支持从本地文件系统或者HTTP URL来添加boxes&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$vagrant box add base http://files.vagrantup.com/lucid32.box
-$vagrant box add base D:\lucid32.box&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://img.my.csdn.net/uploads/201212/03/1354516669_4279.PNG&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;(3)配置Project使用这个Box: 修改Vagrantfile为如下内容：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Vagrant::Config.run do |config|  
-    config.vm.box = &amp;quot;base&amp;quot;  
-end&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(4)启动虚拟机&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$vagrant up  &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://img.my.csdn.net/uploads/201212/03/1354517333_8671.PNG&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;(5)停掉虚拟机&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$vagrant destroy  &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(6) SSH配置&lt;/p&gt;
-
-&lt;p&gt;Vagrant 提供了对虚拟机的SSH连接，只需要执行一个命令：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$vagrant ssh  &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;在Windows环境下可以使用PUTTY，配置下面的信息来连接虚拟机：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;hostname: localhost
-port: 2222
-Connection Type: SSH
-User Name: vagrant
-Password: vagrant&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://img.my.csdn.net/uploads/201212/03/1354517823_4070.PNG&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;(7)访问刚才创建的Project.&lt;/p&gt;
-
-&lt;p&gt;Vagrant 通过VirtualBox的shared folder来连接你的application和虚拟机， 默认的shared folder的卫士是/vagrant， 所以想要查看刚才创建的项目，只需要执行：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;vagrant@lucid32:~$ ls /vagrant  &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(8) Provisioning：&lt;/p&gt;
-
-&lt;p&gt;通常情况下Box只做最基本的设置，而不是一次到位的设置好所有的环境。Vagrant通常使用&lt;a href=&quot;http://www.opscode.com/chef&quot;&gt;chef&lt;/a&gt;或者&lt;a href=&quot;http://www.puppetlabs.com/puppet&quot;&gt;Puppet&lt;/a&gt;来做进一步的环境搭建。&lt;/p&gt;
-
-&lt;p&gt;回到刚才创建的index.html，我们需要安装Apache。我们下面用Puppet来完成这一设置。&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;在项目的根目录下创建文件夹manifests，然后在该文件家中创建Puppet的配置文件default.pp，该文件内容如下：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='python'&gt;&lt;span class='c'&gt;# Basic Puppet Apache manifest&lt;/span&gt;
-
-&lt;span class='k'&gt;class&lt;/span&gt; &lt;span class='nc'&gt;apache&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
-    &lt;span class='k'&gt;exec&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt; &lt;span class='s'&gt;&amp;#39;apt-get update&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;:&lt;/span&gt;
-        &lt;span class='n'&gt;command&lt;/span&gt; &lt;span class='o'&gt;=&amp;gt;&lt;/span&gt; &lt;span class='s'&gt;&amp;#39;/usr/bin/apt-get update&amp;#39;&lt;/span&gt;
-    &lt;span class='p'&gt;}&lt;/span&gt;
-
-    &lt;span class='n'&gt;package&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt; &lt;span class='s'&gt;&amp;quot;apache2&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;:&lt;/span&gt;
-        &lt;span class='n'&gt;ensure&lt;/span&gt; &lt;span class='o'&gt;=&amp;gt;&lt;/span&gt; &lt;span class='n'&gt;present&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;
-    &lt;span class='p'&gt;}&lt;/span&gt;
-
-    &lt;span class='n'&gt;service&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt; &lt;span class='s'&gt;&amp;quot;apache2&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;:&lt;/span&gt;
-        &lt;span class='n'&gt;ensure&lt;/span&gt; &lt;span class='o'&gt;=&amp;gt;&lt;/span&gt; &lt;span class='n'&gt;running&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;
-               &lt;span class='n'&gt;require&lt;/span&gt; &lt;span class='o'&gt;=&amp;gt;&lt;/span&gt; &lt;span class='n'&gt;Package&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;apache2&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;],&lt;/span&gt;
-    &lt;span class='p'&gt;}&lt;/span&gt;
-&lt;span class='p'&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;在Vagrantfile里添加对Puppet provisioning的支持：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='console'&gt;&lt;span class='go'&gt;    Vagrant::Config.run do |config|  &lt;/span&gt;
-&lt;span class='go'&gt;        config.vm.box = &amp;quot;base&amp;quot;  &lt;/span&gt;
-&lt;span class='go'&gt;        \# Enable the Puppet provisioner  &lt;/span&gt;
-&lt;span class='go'&gt;        config.vm.provision :puppet  &lt;/span&gt;
-&lt;span class='go'&gt;    end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;(9) 运行Project&lt;/p&gt;
-
-&lt;p&gt;为了使puppet的配置生效，如果不重启虚机，则需要执行&lt;code&gt;vagrant reload&lt;/code&gt;命令。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ vagrant reload &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;因为没有配置port forwarding，所以你还不能从本地浏览器查看Project的输出。只能SSH到虚拟机上查看127.0.0.1的输出：&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://img.my.csdn.net/uploads/201212/03/1354519989_4712.PNG&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;(10) 进行端口映射&lt;/p&gt;
-
-&lt;p&gt;修改Vagrantfile， 添加本地端口和虚机端口的映射关系， 然后执行vagrant reload, 然后你就可以通过本地浏览器来访问：&lt;a href=&quot;http://localhost:4567/&quot;&gt;http://localhost:4567&lt;/a&gt;.&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='console'&gt;&lt;span class='go'&gt;    Vagrant::Config.run do |config|&lt;/span&gt;
-&lt;span class='go'&gt;        \# Forward guest port 80 to host port 4567&lt;/span&gt;
-&lt;span class='go'&gt;        config.vm.forward_port 80, 4567&lt;/span&gt;
-&lt;span class='go'&gt;    end &lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://img.my.csdn.net/uploads/201212/03/1354520417_4109.PNG&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;7__packaging&quot;&gt;7. 打包 Packaging&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;创建一个新的文件Vagrantfile.pkg，内容如下：&lt;/p&gt;
-
-&lt;p&gt;Vagrant::Config.run do |config| # Forward apache config.vm.forward_port 80, 8080&lt;br /&gt; end&lt;/p&gt;
-&lt;/li&gt;
-
-&lt;li&gt;
-&lt;p&gt;打包Project&lt;/p&gt;
-
-&lt;p&gt;$ vagrant package –vagrantfile Vagrantfile.pkg&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;8_packageboxbox&quot;&gt;8. 打包完成后，在工程根目录下就会生成package.box，别人就可以使用这个Box了：&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;$ vagrant box add my_box /path/to/the/package.box  
-$ vagrant init my_box  
-$ vagrant up&lt;/code&gt;&lt;/pre&gt;
-</content>
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/uploads/3167437913025476657.png&quot; /&gt;&lt;/p&gt;</content>
     </entry>
     
 

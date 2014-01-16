@@ -53,6 +53,42 @@
     <li class="entry_item">
     <div class="date">
         <span class="day">
+            29
+        </span>
+        <span class="month">
+            07
+        </span>
+    </div>
+    <div class="post_item">
+        
+            <div class="title">
+                <h1><a href="/development/2012/07/29/androide69c89e69588e8a7a3e586b3e58aa0e8bdbde5a4a7e59bbee78987e697b6e58685e5ad98e6baa2e587bae79a84e997aee9a298.html">Android有效解决加载大图片时内存溢出的问题 </a></h1>
+            </div>
+        
+        
+        <div class="post_content">
+            <p>转自：<a href="http://hi.baidu.com/liganggang/item/6ab1e480fa2da1e3e596e015">http://hi.baidu.com/liganggang/item/6ab1e480fa2da1e3e596e015</a></p>
+
+<p>尽量不要使用setImageBitmap或setImageResource或BitmapFactory.decodeResource来设置一张大图，</p>
+
+<p>因为这些函数在完成decode后，最终都是通过java层的createBitmap来完成的，需要消耗更多内存。</p>
+ 
+        </div>
+        <div class="link clearfix">
+            <a href="/development/2012/07/29/androide69c89e69588e8a7a3e586b3e58aa0e8bdbde5a4a7e59bbee78987e697b6e58685e5ad98e6baa2e587bae79a84e997aee9a298.html">全文链接</a>
+            <a class="post_comments" href="/development/2012/07/29/androide69c89e69588e8a7a3e586b3e58aa0e8bdbde5a4a7e59bbee78987e697b6e58685e5ad98e6baa2e587bae79a84e997aee9a298.html#page_comments">
+                <span class="ds-thread-count" data-thread-key="/development/2012/07/29/androide69c89e69588e8a7a3e586b3e58aa0e8bdbde5a4a7e59bbee78987e697b6e58685e5ad98e6baa2e587bae79a84e997aee9a298" data-count-type="comments">暂无评论</span>
+            </a>
+            
+        </div>
+
+    </div>
+    </li>
+    <div class="clear"></div>
+    
+    <li class="entry_item">
+    <div class="date">
+        <span class="day">
             02
         </span>
         <span class="month">
@@ -67,15 +103,13 @@
         
         
         <div class="post_content">
-            
-<pre><code>QLineF line(sourcePoint, destPoint);
+            <pre><code>QLineF line(sourcePoint, destPoint);
 QLinearGradient gradient(sourcePoint.x(), sourcePoint.y(), destPoint.x(), destPoint.y());
 gradient.setColorAt(0.0, Qt::white);
 gradient.setColorAt(0.5, color);
 gradient.setColorAt(1.0, Qt::black);
 painter-&gt;setPen(QPen(QBrush(gradient), width, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
-painter-&gt;drawLine(line);</code></pre>
- 
+painter-&gt;drawLine(line);</code></pre> 
         </div>
         <div class="link clearfix">
             <a href="/accumulation/coding/qt/2012/05/02/qt-qline-e7babfe69da1e9a29ce889b2e6b890e58f98.html">全文链接</a>
@@ -106,8 +140,7 @@ painter-&gt;drawLine(line);</code></pre>
         
         
         <div class="post_content">
-            
-<p>用的是国产的山寨pad 系统为4.0.3 想用来做真机开发，找了很久却找不到合适的驱动。相当的郁闷。功夫不负苦心人啊，终于找到办法解决不认识的android设备的驱动问题。其实方法很简单，就是在google官方的驱动配置文件中添加支持的设备，将自己的设备信息添加进去。具体的方法便是修改 android_winusb.inf 文件。</p>
+            <p>用的是国产的山寨pad 系统为4.0.3 想用来做真机开发，找了很久却找不到合适的驱动。相当的郁闷。功夫不负苦心人啊，终于找到办法解决不认识的android设备的驱动问题。其实方法很简单，就是在google官方的驱动配置文件中添加支持的设备，将自己的设备信息添加进去。具体的方法便是修改 android_winusb.inf 文件。</p>
 
 <p>文件位置：<code>android-sdk-windows\extras\google\usb_driver\android_winusb.inf</code></p>
 
@@ -145,8 +178,7 @@ painter-&gt;drawLine(line);</code></pre>
         
         
         <div class="post_content">
-            
-<p>随便投递的一个简历，创新工场打电话过来约了面试时间，还好心的提醒了我面试内容会和android游戏开发相关。或许是我投递的是android游戏开发吧。挺不好意思的，都不记得什么时候投递的什么职位了。虽然对创新工场还是有一定的向往的。O(∩_∩)O。</p>
+            <p>随便投递的一个简历，创新工场打电话过来约了面试时间，还好心的提醒了我面试内容会和android游戏开发相关。或许是我投递的是android游戏开发吧。挺不好意思的，都不记得什么时候投递的什么职位了。虽然对创新工场还是有一定的向往的。O(∩_∩)O。</p>
  
         </div>
         <div class="link clearfix">
