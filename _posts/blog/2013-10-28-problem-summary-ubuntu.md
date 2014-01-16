@@ -673,8 +673,9 @@ unzip命令的选项参数说明:
 -------------------------------------------------
 
 
+###github 提交记住用户名密码
 
-
+    git config --global credential.helper 'cache --timeout 3600'
 	
 
 
