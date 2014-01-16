@@ -4,7 +4,7 @@
     <title></title>
     <link href="http://dengbiao.github.io/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://dengbiao.github.io" rel="alternate" type="text/html" />
-    <updated>2014-01-16T11:40:10+08:00</updated>
+    <updated>2014-01-16T12:55:49+08:00</updated>
     <id>http://dengbiao.github.io</id>
     <author>
         <name>dengbiao</name>
@@ -67,7 +67,7 @@
 
 &lt;p&gt;总之，很喜欢这首歌。&lt;/p&gt;
 
-&lt;p&gt;&lt;audio src='/assets/uploads/qishiwohaihao.mp3' controls='controls'&gt;
+&lt;p&gt;&lt;audio controls='controls' src='/assets/uploads/qishiwohaihao.mp3'&gt;
 &lt;/audio&gt;&lt;/p&gt;
 &lt;!--more--&gt;&lt;hr /&gt;
 &lt;p&gt;以下是歌词：&lt;/p&gt;
