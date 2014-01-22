@@ -4,7 +4,7 @@
     <title></title>
     <link href="http://dengbiao.github.io/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://dengbiao.github.io" rel="alternate" type="text/html" />
-    <updated>2014-01-22T21:25:18+08:00</updated>
+    <updated>2014-01-22T21:27:21+08:00</updated>
     <id>http://dengbiao.github.io</id>
     <author>
         <name>dengbiao</name>
@@ -288,13 +288,11 @@ ms-dns 208.67.222.222&lt;/code&gt;&lt;/pre&gt;
     </entry>
     
     <entry>
-        <title></title>
+        <title>ubuntu进程管理方法</title>
         <link href="http://dengbiao.github.io/ubuntu/process/manager/2014/01/22/ubuntu-process-manager.html"/>
         <updated>2014-01-22T00:00:00+08:00</updated>
         <id>http://dengbiao.github.io/ubuntu/process/manager/2014/01/22/ubuntu-process-manager</id>
-        <content type="html">&lt;h3 id=&quot;ubuntu&quot;&gt;ubuntu进程管理方法&lt;/h3&gt;
-
-&lt;p&gt;转自：&lt;a href=&quot;http://www.cnblogs.com/xinzaibing/archive/2012/03/24/2415434.html&quot;&gt;http://www.cnblogs.com/xinzaibing/archive/2012/03/24/2415434.html&lt;/a&gt;&lt;/p&gt;
+        <content type="html">&lt;p&gt;转自：&lt;a href=&quot;http://www.cnblogs.com/xinzaibing/archive/2012/03/24/2415434.html&quot;&gt;http://www.cnblogs.com/xinzaibing/archive/2012/03/24/2415434.html&lt;/a&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;ps 显示当前进程  
 ps -l 显示详细信息   
@@ -343,7 +341,7 @@ top -d 10 指定更新时间
 lsof -p 查看进程打开的文件   
 jobs 命令查看后台作业&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&quot;ubuntu_2&quot;&gt;ubuntu结束进程方法&lt;/h4&gt;
+&lt;h4 id=&quot;ubuntu&quot;&gt;ubuntu结束进程方法&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;1、打开终端  
 2、敲 ps -ef 查出进程的编号（就是PID那列）  
@@ -456,7 +454,7 @@ killall httpd   &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;总之，很喜欢这首歌。&lt;/p&gt;
 
-&lt;p&gt;&lt;audio src='/assets/uploads/qishiwohaihao.mp3' controls='controls'&gt;
+&lt;p&gt;&lt;audio controls='controls' src='/assets/uploads/qishiwohaihao.mp3'&gt;
 &lt;/audio&gt;&lt;/p&gt;
 &lt;!--more--&gt;&lt;hr /&gt;
 &lt;p&gt;以下是歌词：&lt;/p&gt;

@@ -1,11 +1,9 @@
 ---
 layout: post
-title:
+title: ubuntu进程管理方法
 categories: [ubuntu, process, manager]
 tags: [ubuntu, process, manager]
 ---
-
-###ubuntu进程管理方法
 
 转自：[http://www.cnblogs.com/xinzaibing/archive/2012/03/24/2415434.html](http://www.cnblogs.com/xinzaibing/archive/2012/03/24/2415434.html)  
 
