@@ -3,6 +3,33 @@
 
     
     <url>
+        <loc>http://dengbiao.github.io/2014/01/22/ubuntu-vsftpd.html</loc>
+        
+        <lastmod>2014-01-22T00:00:00+08:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>http://dengbiao.github.io/ubuntu/vpn/pptpd/2014/01/22/ubuntu-vpn-pptpd.html</loc>
+        
+        <lastmod>2014-01-22T00:00:00+08:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>http://dengbiao.github.io/ubuntu/process/manager/2014/01/22/ubuntu-process-manager.html</loc>
+        
+        <lastmod>2014-01-22T00:00:00+08:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
         <loc>http://dengbiao.github.io/accumulation/2014/01/16/something.html</loc>
         
         <lastmod>2014-01-16T00:00:00+08:00</lastmod>
@@ -172,6 +199,8 @@
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
+    
+    
     
     
     
