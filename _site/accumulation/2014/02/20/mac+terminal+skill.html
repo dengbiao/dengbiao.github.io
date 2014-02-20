@@ -5,7 +5,7 @@
         <meta charset=utf-8 />
         <title>
              邓彪的博客   
-             | teleport pro tppabs标签批量删除 
+             | mac terminal skills 
         </title>
         <link rel="shortcut icon" type="image/ico" href="/assets/images/portrait.jpg">
         <link rel="stylesheet" href="/assets/css/clear.css" />
@@ -51,31 +51,56 @@
             <div class="page_container">
     <div class="date">
         <span class="day">
-            09
+            20
         </span>
         <span class="month">
-            01
+            02
         </span>
     </div>
     <div class="page_item">
         
         <div class="title">
-            <h1><a href="/accumulation/2013/01/09/teleport-pro-tppabse6a087e7adbee689b9e9878fe588a0e999a4.html">teleport pro tppabs标签批量删除</a></h1>
+            <h1><a href="/accumulation/2014/02/20/mac%2Bterminal%2Bskill.html">mac terminal skills</a></h1>
         </div>
         
         
         <div class="page_content">
-            <p><p>使用Teleport Pro下载的网页代码中包含了很多垃圾代码，比如下载的html网页代码中会出现tppabs标签，而且还会将所有的href标签中加入了很多垃圾代码，在css会加入了tpa标签，这些都是冗余代码，可以将其全部删除，但是由于代码太多，我们不可能一个个删除，因此可以使用Dreamweaver的查找/替换工具中的正则表达式来进行替换。</p>
+            <p><p>时隔半年的样子，重新装回了Mac OS。台式机由于显卡HD2500的原因没有安装成功，依旧使用自己的笔记本。感觉没有好好的维护，笔记本越来越不好使了，而且方向键也出了问题，不能使用。比较郁闷。</p>
 
-<pre><code>1. 替换tppabs标签，使用Dreamweaver查找\btppabs=&quot;h[^&quot;]*&quot;，将其替换为空即可。  
-2. 替换href中的多余代码，使用Dreamweaver查找href=&quot;javascript:if\(confirm\(&#39;htt[^&quot;]*&quot;替换为href=&quot;&quot;即可。  
-3. 替换css文件中的tpa标签，使用Dreamweaver查找/\*tpa=.*\*/替换为空即可。</code></pre></p> 
+<p>看了池建强老师的博客(http://macshuo.com),激起了自己对mac的兴趣。原来之前玩mac都是完成了一坨屎啊。看到老师推荐spotlight的时候，恨不得把自己给拍死。这么好用的东东，自己当时就tm的各种讨厌，各种不明所以好么。</p>
+
+<p>废话不多说了，这篇文章整理了mac自带terminal相关的一些快捷方式，以备自己使用时查询。</p>
+
+<p>操作相关</p>
+
+<pre><code>Command + a  移动到开头
+Command + e  移动到结尾
+Command + b  向左移动一个字符（助记back）
+Command + f  向右移动一个字符（助记forward）
+Option + Left     向左移动一个单词
+Option + Right    向右移动一个单词
+Command + h  向左删除一个字符
+Command + w  向左删除一个单词
+Command + k  向右删除到行尾
+Command + t  交换行尾两个字符顺序
+Esc + t   交换行尾两个单词顺序
+Command + l  清屏
+Shift + Command + 鼠标双击    快速选中路径</code></pre>
+<!--more-->
+<p>终端相关</p>
+
+<pre><code>新建标签： Command + T
+关闭当前标签页： Command +W
+保存终端输出：Command + S
+水平分隔当前标签页： Command + D
+取消水平分隔： Command + Shift + D
+向左/向右切换标签： Command + shift + { 或 }</code></pre></p> 
         </div>
 
 
         <div class="page_comments" id="page_comments">
             <!-- Duoshuo Comment BEGIN -->
-            <div class="ds-thread" data-thread-key="/accumulation/2013/01/09/teleport-pro-tppabse6a087e7adbee689b9e9878fe588a0e999a4" data-title="teleport pro tppabs标签批量删除" ></div>
+            <div class="ds-thread" data-thread-key="/accumulation/2014/02/20/mac+terminal+skill" data-title="mac terminal skills" ></div>
             <script type="text/javascript">
                 var duoshuoQuery = {short_name:"dengbiao"};
 (function() {

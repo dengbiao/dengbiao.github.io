@@ -204,9 +204,9 @@ Welcome to the MySQL monitor.  Commands end with ; or \g.
 mysql&gt; use mysql 
 Database changed </code></pre>
 
-<p>执行<code>update user set password=PASSWORD(&quot;new_pass&quot;) where user='root'</code>; 把密码重置为<code>new_pass</code>。退出数据库管理。</p>
+<p>执行<code>update user set password=PASSWORD(&quot;new_pass&quot;) where user=&#39;root&#39;</code>; 把密码重置为<code>new_pass</code>。退出数据库管理。</p>
 
-<pre><code>mysql&gt; update user set password=PASSWORD(&quot;new_pass&quot;) where user='root';   
+<pre><code>mysql&gt; update user set password=PASSWORD(&quot;new_pass&quot;) where user=&#39;root&#39;;   
 Query OK, 0 rows affected (0.00 sec)   
 Rows matched: 4  Changed: 0  Warnings: 0   
 mysql&gt;quit </code></pre>
@@ -266,7 +266,7 @@ mysql&gt;</code></pre>
 <hr />
 <h3 id="github_">github 提交记住用户名密码</h3>
 
-<pre><code>git config --global credential.helper 'cache --timeout 3600'</code></pre>
+<pre><code>git config --global credential.helper &#39;cache --timeout 3600&#39;</code></pre>
 <hr />
 <h3 id="ubunturesolvconf">ubuntu重启后resolv.conf被清空</h3>
 

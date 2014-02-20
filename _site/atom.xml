@@ -4,13 +4,50 @@
     <title></title>
     <link href="http://dengbiao.github.io/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://dengbiao.github.io" rel="alternate" type="text/html" />
-    <updated>2014-01-23T17:34:15+08:00</updated>
+    <updated>2014-02-20T15:19:37+08:00</updated>
     <id>http://dengbiao.github.io</id>
     <author>
         <name>dengbiao</name>
         <email>dengbiao123@gmail.com</email>
     </author>
 
+    
+    <entry>
+        <title>mac terminal skills</title>
+        <link href="http://dengbiao.github.io/accumulation/2014/02/20/mac%2Bterminal%2Bskill.html"/>
+        <updated>2014-02-20T00:00:00+08:00</updated>
+        <id>http://dengbiao.github.io/accumulation/2014/02/20/mac+terminal+skill</id>
+        <content type="html">&lt;p&gt;时隔半年的样子，重新装回了Mac OS。台式机由于显卡HD2500的原因没有安装成功，依旧使用自己的笔记本。感觉没有好好的维护，笔记本越来越不好使了，而且方向键也出了问题，不能使用。比较郁闷。&lt;/p&gt;
+
+&lt;p&gt;看了池建强老师的博客(http://macshuo.com),激起了自己对mac的兴趣。原来之前玩mac都是完成了一坨屎啊。看到老师推荐spotlight的时候，恨不得把自己给拍死。这么好用的东东，自己当时就tm的各种讨厌，各种不明所以好么。&lt;/p&gt;
+
+&lt;p&gt;废话不多说了，这篇文章整理了mac自带terminal相关的一些快捷方式，以备自己使用时查询。&lt;/p&gt;
+
+&lt;p&gt;操作相关&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Command + a  移动到开头
+Command + e  移动到结尾
+Command + b  向左移动一个字符（助记back）
+Command + f  向右移动一个字符（助记forward）
+Option + Left     向左移动一个单词
+Option + Right    向右移动一个单词
+Command + h  向左删除一个字符
+Command + w  向左删除一个单词
+Command + k  向右删除到行尾
+Command + t  交换行尾两个字符顺序
+Esc + t   交换行尾两个单词顺序
+Command + l  清屏
+Shift + Command + 鼠标双击    快速选中路径&lt;/code&gt;&lt;/pre&gt;
+&lt;!--more--&gt;
+&lt;p&gt;终端相关&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;新建标签： Command + T
+关闭当前标签页： Command +W
+保存终端输出：Command + S
+水平分隔当前标签页： Command + D
+取消水平分隔： Command + Shift + D
+向左/向右切换标签： Command + shift + { 或 }&lt;/code&gt;&lt;/pre&gt;</content>
+    </entry>
     
     <entry>
         <title>项目的一些文档说明</title>
@@ -23,7 +60,7 @@
 
 &lt;p&gt;android源码目录: &lt;code&gt;/home/csumt/soft/pandaboard/sourcecode/android/&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;模块编译方法: 进入到android源码目录(&lt;code&gt;cd /home/csumt/soft/pandaboard/sourcecode/android/&lt;/code&gt;),执行 &lt;code&gt;source ./build/envsetup.sh&lt;/code&gt;命令, 然后进入到具体的模块目录(&lt;code&gt;cd /home/csumt/soft/pandaboard/sourcecode/android/frameworks/base/services/java/com/android/server/pm/&lt;/code&gt;) 直接运行 &lt;code&gt;mm&lt;/code&gt;命令即可.&lt;/p&gt;</content>
+&lt;p&gt;模块编译方法: 进入到android源码目录(&lt;code&gt;cd /home/csumt/soft/pandaboard/sourcecode/android/&lt;/code&gt;),执行 &lt;code&gt;source ./build/envsetup.sh&lt;/code&gt;命令和&lt;code&gt;source ./build/myBuild.sh&lt;/code&gt;)命令, 然后进入到具体的模块目录(&lt;code&gt;cd /home/csumt/soft/pandaboard/sourcecode/android/frameworks/base/services/java/com/android/server/pm/&lt;/code&gt;) 直接运行 &lt;code&gt;mm&lt;/code&gt;命令即可.&lt;/p&gt;</content>
     </entry>
     
     <entry>
@@ -468,7 +505,7 @@ killall httpd   &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;总之，很喜欢这首歌。&lt;/p&gt;
 
-&lt;p&gt;&lt;audio src='/assets/uploads/qishiwohaihao.mp3' controls='controls'&gt;
+&lt;p&gt;&lt;audio controls=&#39;controls&#39; src=&#39;/assets/uploads/qishiwohaihao.mp3&#39;&gt;
 &lt;/audio&gt;&lt;/p&gt;
 &lt;!--more--&gt;&lt;hr /&gt;
 &lt;p&gt;以下是歌词：&lt;/p&gt;
@@ -520,10 +557,10 @@ killall httpd   &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&quot;ubuntu&quot;&gt;ubuntu用户添加&lt;/h3&gt;
 
 &lt;p&gt;以这段代码进行分析：&lt;code&gt;sudo useradd db -g tcteam -m -s /bin/bash&lt;/code&gt;&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='console'&gt;&lt;span class='go'&gt;db: 用户名 &lt;/span&gt;
-&lt;span class='go'&gt;tcteam: 用户组名  &lt;/span&gt;
-&lt;span class='go'&gt;-m: 同时创建用户目录  &lt;/span&gt;
-&lt;span class='go'&gt;-s /bin/bash : 指定shell为bash  &lt;/span&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;console&#39;&gt;&lt;span class=&#39;go&#39;&gt;db: 用户名 &lt;/span&gt;
+&lt;span class=&#39;go&#39;&gt;tcteam: 用户组名  &lt;/span&gt;
+&lt;span class=&#39;go&#39;&gt;-m: 同时创建用户目录  &lt;/span&gt;
+&lt;span class=&#39;go&#39;&gt;-s /bin/bash : 指定shell为bash  &lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!--more--&gt;&lt;hr /&gt;
 &lt;h3 id=&quot;ubuntu_vi&quot;&gt;ubuntu vi配置文件&lt;/h3&gt;
 
@@ -538,23 +575,23 @@ killall httpd   &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;万恶的gfw。&lt;/p&gt;
 
 &lt;p&gt;ubuntu软件中心下载的dropbox安装完成后，用命令sudo dropbox start -i 安装失败。提示：&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='console'&gt;&lt;span class='gp'&gt;csumt@vivi-pc:~/Desktop$&lt;/span&gt; sudo dropbox start -i
-&lt;span class='go'&gt;Starting Dropbox&lt;/span&gt;
-&lt;span class='go'&gt;Dropbox is the easiest way to share and store your files online. Want to learn more? Head to http://www.dropbox.com/&lt;/span&gt;
-&lt;span class='go'&gt;Error: Trouble connecting to Dropbox servers. Maybe your internet connection is down, or you need to set your http_proxy environment variable.&lt;/span&gt;
-&lt;span class='go'&gt;URL that failed to download: http://www.dropbox.com/download?plat=lnx.x86_64&lt;/span&gt;
-&lt;span class='go'&gt;Error: [Errno 104] Connection reset by peer&lt;/span&gt;
-&lt;span class='go'&gt;The installation of Dropbox failed.&lt;/span&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;console&#39;&gt;&lt;span class=&#39;gp&#39;&gt;csumt@vivi-pc:~/Desktop$&lt;/span&gt; sudo dropbox start -i
+&lt;span class=&#39;go&#39;&gt;Starting Dropbox&lt;/span&gt;
+&lt;span class=&#39;go&#39;&gt;Dropbox is the easiest way to share and store your files online. Want to learn more? Head to http://www.dropbox.com/&lt;/span&gt;
+&lt;span class=&#39;go&#39;&gt;Error: Trouble connecting to Dropbox servers. Maybe your internet connection is down, or you need to set your http_proxy environment variable.&lt;/span&gt;
+&lt;span class=&#39;go&#39;&gt;URL that failed to download: http://www.dropbox.com/download?plat=lnx.x86_64&lt;/span&gt;
+&lt;span class=&#39;go&#39;&gt;Error: [Errno 104] Connection reset by peer&lt;/span&gt;
+&lt;span class=&#39;go&#39;&gt;The installation of Dropbox failed.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;顿时头痛不已。这么好用的东西难道就不能用？&lt;/p&gt;
 
 &lt;p&gt;万恶的GFW&lt;/p&gt;
 
 &lt;p&gt;google之。方法如下：&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='console'&gt;&lt;span class='go'&gt;1.去官网下载drobox安装包。我的是dropbox_1.4.0_amd64.deb  &lt;/span&gt;
-&lt;span class='go'&gt;2.然后下载dropbox-lnx.x86-1.6.17.tar。  &lt;/span&gt;
-&lt;span class='go'&gt;3.解压缩 dropbox-linux.tar.gz ，并将解压出来的 .dropbox-dist 文件夹放入你的 根目录，也就是 /home/你的名字 目录下（新版本的放到/var/lib/dropbox中，不然安装不了）  &lt;/span&gt;
-&lt;span class='go'&gt;4.安装dropbox_1.4.0_amd64.deb。  &lt;/span&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;console&#39;&gt;&lt;span class=&#39;go&#39;&gt;1.去官网下载drobox安装包。我的是dropbox_1.4.0_amd64.deb  &lt;/span&gt;
+&lt;span class=&#39;go&#39;&gt;2.然后下载dropbox-lnx.x86-1.6.17.tar。  &lt;/span&gt;
+&lt;span class=&#39;go&#39;&gt;3.解压缩 dropbox-linux.tar.gz ，并将解压出来的 .dropbox-dist 文件夹放入你的 根目录，也就是 /home/你的名字 目录下（新版本的放到/var/lib/dropbox中，不然安装不了）  &lt;/span&gt;
+&lt;span class=&#39;go&#39;&gt;4.安装dropbox_1.4.0_amd64.deb。  &lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;ok到此安装完毕。&lt;/p&gt;
 &lt;hr /&gt;
@@ -654,9 +691,9 @@ Welcome to the MySQL monitor.  Commands end with ; or \g.
 mysql&amp;gt; use mysql 
 Database changed &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;执行&lt;code&gt;update user set password=PASSWORD(&amp;quot;new_pass&amp;quot;) where user='root'&lt;/code&gt;; 把密码重置为&lt;code&gt;new_pass&lt;/code&gt;。退出数据库管理。&lt;/p&gt;
+&lt;p&gt;执行&lt;code&gt;update user set password=PASSWORD(&amp;quot;new_pass&amp;quot;) where user=&amp;#39;root&amp;#39;&lt;/code&gt;; 把密码重置为&lt;code&gt;new_pass&lt;/code&gt;。退出数据库管理。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;mysql&amp;gt; update user set password=PASSWORD(&amp;quot;new_pass&amp;quot;) where user='root';   
+&lt;pre&gt;&lt;code&gt;mysql&amp;gt; update user set password=PASSWORD(&amp;quot;new_pass&amp;quot;) where user=&amp;#39;root&amp;#39;;   
 Query OK, 0 rows affected (0.00 sec)   
 Rows matched: 4  Changed: 0  Warnings: 0   
 mysql&amp;gt;quit &lt;/code&gt;&lt;/pre&gt;
@@ -716,7 +753,7 @@ mysql&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;hr /&gt;
 &lt;h3 id=&quot;github_&quot;&gt;github 提交记住用户名密码&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;git config --global credential.helper 'cache --timeout 3600'&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;git config --global credential.helper &amp;#39;cache --timeout 3600&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;hr /&gt;
 &lt;h3 id=&quot;ubunturesolvconf&quot;&gt;ubuntu重启后resolv.conf被清空&lt;/h3&gt;
 
@@ -756,16 +793,6 @@ nameserver 8.8.8.8&lt;/code&gt;&lt;/pre&gt;</content>
 &lt;p&gt;下午和程子学老师讨论了一些我们项目的事情。感觉没讨论出什么东西。但是吧，程子学老师对自己倒是挺欣赏的感觉。有点点受宠若惊的感觉，但是想着自己现在的状态，也不想多说什么，也觉得自己有点迷乱。不知道方向的感觉。或许该静下心来好好想想后面的生活该怎么过了。&lt;/p&gt;
 
 &lt;p&gt;加油和努力不是嘴巴说说就可以了。希望这几天能够找回工作的状态。不在迷乱。。。&lt;/p&gt;</content>
-    </entry>
-    
-    <entry>
-        <title></title>
-        <link href="http://dengbiao.github.io/blog/2013/10/08/none2.html"/>
-        <updated>2013-10-08T00:00:00+08:00</updated>
-        <id>http://dengbiao.github.io/blog/2013/10/08/none2</id>
-        <content type="html">&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/uploads/6598285826518510344.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;阿里巴巴宣讲会，听到了很多未知的技术，以及一些未知的大牛。 有点意思。 感觉到自己的渺小。 默默的奋斗吧，骚年。&lt;/p&gt;</content>
     </entry>
     
 
