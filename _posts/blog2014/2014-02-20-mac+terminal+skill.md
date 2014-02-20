@@ -1,7 +1,7 @@
 ---
 author: dengbiao
 comments: true
-image: mac.png
+image: /assets/uploads/images/mac.png
 layout: post
 title: mac terminal skills
 categories:
