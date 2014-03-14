@@ -15,7 +15,7 @@ layout: home
     <div class="post_item">
         {% if post.title != '' %}
             <div class="title">
-                <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+                <h1><a rel="nofollow"  href="{{ post.url }}">{{ post.title }}</a></h1>
             </div>
         {% endif %}
         {% if post.image %}
@@ -27,7 +27,7 @@ layout: home
             {{ post.content | split:'<!--more-->' | first }} 
         </div>
         <div class="link clearfix">
-            <a href="{{ post.url }}">全文链接</a>
+            <a rel="nofollow" href="{{ post.url }}">全文链接</a>
             <a class="post_comments" href="{{ post.url }}#page_comments">
                 <span class="ds-thread-count" data-thread-key="{{ post.id }}" data-count-type="comments">暂无评论</span>
             </a>
@@ -50,15 +50,15 @@ layout: home
     <li class="previous">
     {% if paginator.previous_page %}
     {% if paginator.previous_page == 1 %}
-        <a href="/" class="">&larr; Previous</a>
+        <a rel="nofollow"  href="/" class="">&larr; Previous</a>
     {% else %}
-        <a href="/page{{ paginator.previous_page }}" >&larr; Previous</a>
+        <a rel="nofollow" href="/page{{ paginator.previous_page }}" >&larr; Previous</a>
     {% endif %}
     {% endif %}
     </li>
     <li class="next">
     {% if paginator.next_page  %}
-        <a href="/page{{ paginator.next_page }}" class="">Next &rarr;</a>
+        <a rel="nofollow" href="/page{{ paginator.next_page }}" class="">Next &rarr;</a>
     {% endif %}
     </li>
 </ul>
