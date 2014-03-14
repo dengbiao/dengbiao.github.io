@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
     <title></title>
-    <link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="http://localhost:4000" rel="alternate" type="text/html" />
-    <updated>2014-03-14T17:16:30+08:00</updated>
-    <id>http://localhost:4000</id>
+    <link href="http://dengbiao.github.io/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="http://dengbiao.github.io" rel="alternate" type="text/html" />
+    <updated>2014-03-14T23:30:36+08:00</updated>
+    <id>http://dengbiao.github.io</id>
     <author>
         <name>dengbiao</name>
         <email>dengbiao123@gmail.com</email>
@@ -14,12 +14,12 @@
     
     <entry>
         <title>百度地图API key申请申请详细步骤</title>
-        <link href="http://localhost:4000/develop/android/2014-03-14-baidu-map-api-key.html"/>
+        <link href="http://dengbiao.github.io/develop/android/2014-03-14-baidu-map-api-key.html"/>
         <updated>2014-03-14T00:00:00+08:00</updated>
-        <id>http://localhost:4000/develop/android/baidu-map-api-key</id>
+        <id>http://dengbiao.github.io/develop/android/baidu-map-api-key</id>
         <content type="html">&lt;p&gt;开发移动app应用，经常会遇到定位与导航需求，开发者自己去实现不太可能，一个是工作量大，另一个是程序员世界最常用的话&lt;code&gt;不要重复制造轮子&lt;/code&gt;。百度在地图界混迹如此之久，积累的东西还是可以的。&lt;/p&gt;
 
-&lt;p&gt;最近开发一个景点相关的项目，借用百度地图提供的API来实现项目中的定位与导航需求。根据百度地图官方网站的引导，申请了开发者API。但是在请求路径规划的时候，总是遇到认证失败，error:102的错误。 因此，将百度地图API申请的相关流程记录下来。希望能够给需要用百度地图开发的程序员们一些引导。&lt;/p&gt;
+&lt;p&gt;最近开发一个景点相关的项目，借用百度地图提供的API来实现项目中的定位与导航需求。根据百度地图官方网站的引导，申请了开发者API。项目调试都一切顺利，但是当项目导出成APK，进行最后测试时，在请求路径规划的时候，总是遇到认证失败，error:102的错误,经过分析最后才找到问题的原因与解决办法。 因此，将百度地图API申请的相关流程记录下来。希望能够给需要用百度地图开发的程序员们一些借鉴。&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;h3 id=&quot;api&quot;&gt;申请API&lt;/h3&gt;
 
@@ -33,7 +33,7 @@
 
 &lt;p&gt;&lt;img src=&quot;http://dengbiao.github.io/assets/uploads/QQ20140314-2.png&quot; alt=&quot;创建应用&quot; title=&quot;创建应用&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;应用名称随便填写，应用类型选&lt;code&gt;for mobile&lt;/code&gt;, 禁用服务不用选择，关键问题就是安全码。如图所示，安全码为&lt;code&gt;Android签名证书的sha1值+“;”+packagename，即数字签名+分号+报名&lt;/code&gt;组成。我在这一步根据官网提供的两种获得安全码的办法，生成了自己的安全码，可是最后key认证失败了。 其实我感觉官网写的不是很清楚，当然也是因为自己对keystore机制不是很了解。这里具体说明一下。&lt;/p&gt;
+&lt;p&gt;应用名称随便填写，应用类型选&lt;code&gt;for mobile&lt;/code&gt;, 禁用服务不用选择，关键问题就是安全码。如图所示，安全码为&lt;code&gt;Android签名证书的sha1值+“;”+packagename，即数字签名+分号+包名&lt;/code&gt;组成。我在这一步根据官网提供的两种获得安全码的办法，生成了自己的安全码，可是最后key认证失败了。 其实我感觉官网写的不是很清楚，当然也是因为自己对keystore机制不是很了解。这里具体说明一下。&lt;/p&gt;
 
 &lt;p&gt;官网提供的两种方法都是针对系统默认的keystore来生成安全码的，那么当联机调试的时候，eclipse也是用默认的keystore来生成的应用，所以，key认证没有遇到问题，当用eclipse导出APK时，eclipse会询问使用现有的keystore还是重新生成一个keystore。我选择的是生成了一个新的keystore。结果这个keystore和前面获取sha1值使用的keysotre不是同一个，直接导致了百度地图key认证失败。&lt;/p&gt;
 
@@ -67,10 +67,52 @@
     </entry>
     
     <entry>
+        <title>PocketGuide掌上导游项目开发（一、平台介绍与搭建）</title>
+        <link href="http://dengbiao.github.io/develop/android/2014-03-14-PocketGuide-Project-Outline.html"/>
+        <updated>2014-03-14T00:00:00+08:00</updated>
+        <id>http://dengbiao.github.io/develop/android/PocketGuide-Project-Outline</id>
+        <content type="html">&lt;p&gt;前面的博客提到了最近要做一个手机景点导航的应用。到昨天已经完工，今天补加了一个分享功能。数了一下时间，正好20天，比预期的时间要久一些，不过整个过程中还是学到了很多的东西。本来的打算是边学习边写博客，来记录整个学习过程，但是由于某些原因，需要尽快完成应用的开发，所以没有一点点记录，只保留了学习过程中的一些笔记，现在回过头来根据这些笔记来整理博文。&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;h3 id=&quot;&quot;&gt;项目需求&lt;/h3&gt;
+
+&lt;p&gt;PocketGuide项目最终的需求是完成一个手机平台的景点导航软件。包括景点推荐、周边景点查询(定位，周边查询与距离排序)、景点地区归类、排序（按不同属性，包括人气、收藏、价格、评论等）、景点导航（定位与路径计算）、景点和应用分享等功能。 对项目需求进行分析与整理，PocketGuide项目主要分为三个部分，数据后台管理平台，数据访问接口以及手持设备端APP。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;数据后台管理平台 包含景点数据添加与管理、用户数据添加与管理等功能&lt;/li&gt;
+
+&lt;li&gt;数据访问接口 提供景点、地区、用户数据等统一访问接口&lt;/li&gt;
+
+&lt;li&gt;手持设备端APP 提供友好的用户界面，对接数据访问接口。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;_2&quot;&gt;平台选择&lt;/h3&gt;
+
+&lt;p&gt;由于对python产生了兴趣，这次开发没有选择自己最擅长的java来开发。其实很重要的原因是喜欢上了mac和vim，不喜欢用eclipse（虽然写android还是没有逃脱用eclipse的悲剧），感觉用vim很酷，慢慢习惯了之后也感觉到了效率的提升，终于理解以前认识的那些用vim的程序员们所说的用vim不是为了装逼，而是真的能提升工作效率。Nice。&lt;/p&gt;
+
+&lt;p&gt;最终，数据后台管理平台以及数据访问接口选择了在&lt;strong&gt;mac&lt;/strong&gt;下基于&lt;strong&gt;python&lt;/strong&gt;开发。其中用到的python框架有&lt;strong&gt;flask&lt;/strong&gt;，没有理由，就是以前在一个工作室实习的时候，别人介绍过TA，知道了TA。仅此而已。数据库选择的是&lt;strong&gt;mysql&lt;/strong&gt;，数据库持久化层框架用的是&lt;strong&gt;flask-sqlalchemy&lt;/strong&gt;。手持设备端APP选择了&lt;strong&gt;android&lt;/strong&gt;平台，为什么不选iphone，因为穷，没有测试机。人艰不拆。开发工具选择的是&lt;strong&gt;eclipse&lt;/strong&gt;。&lt;strong&gt;android studio&lt;/strong&gt;还没有用熟，这次由于时间问题，没有选择TA了。&lt;/p&gt;
+
+&lt;p&gt;另外要说明的是定位与周边查询用到了&lt;strong&gt;geohash&lt;/strong&gt;地理位置编码。具体原理可以查看&lt;a href=&quot;http://en.wikipedia.org/wiki/Geohash&quot;&gt;geohash维基百科&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;_3&quot;&gt;平台搭建&lt;/h3&gt;
+
+&lt;p&gt;接下来要讲的是项目开发平台搭建。由于开发选择的系统平台为&lt;strong&gt;MAC&lt;/strong&gt;，所以以下内容为MAC平台下的搭建流程。如果你选择的是windows或者linux，以下内容仅供参考。&lt;/p&gt;
+
+&lt;h4 id=&quot;pythonflask&quot;&gt;python+flask&lt;/h4&gt;
+
+&lt;p&gt;python在mac下已经自己集成了。不需要安装，但是各种版本可能会有不同。我使用的是&lt;strong&gt;Python 2.7.5&lt;/strong&gt;,虽然已经python3了，但是似乎还不够完善（不知正确与否，道听途说而已，没有验证）。可以通过在终端用命令&lt;code&gt;python -V&lt;/code&gt;查看版本号。&lt;/p&gt;
+
+&lt;p&gt;flask安装过程主要参考的是&lt;a href=&quot;http://flask.pocoo.org/docs/&quot;&gt;官网&lt;/a&gt;。中文版地址：&lt;a href=&quot;http://docs.jinkan.org/docs/flask/index.html&quot;&gt;flask中文版教程&lt;/a&gt;.有些地方翻译的不是很好，我英语不怎么好，都是两边照着看过来的。。。惭愧。。。&lt;/p&gt;
+
+&lt;h4 id=&quot;android&quot;&gt;android&lt;/h4&gt;
+
+&lt;p&gt;android的开发环境搭建，网上一抓一大把，这里就不详细介绍了。主要跟大家说一下用的sdk版本号。&lt;/p&gt;</content>
+    </entry>
+    
+    <entry>
         <title>vim自定义配色 参数含义说明</title>
-        <link href="http://localhost:4000/accumulation/vim/2014-02-23-vim%2Btheme.html"/>
+        <link href="http://dengbiao.github.io/accumulation/vim/2014-02-23-vim%2Btheme.html"/>
         <updated>2014-02-23T00:00:00+08:00</updated>
-        <id>http://localhost:4000/accumulation/vim/vim+theme</id>
+        <id>http://dengbiao.github.io/accumulation/vim/vim+theme</id>
         <content type="html">&lt;p&gt;vim颜色主题文件中，各个参数的含义说明如下：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;hi Cursor guifg=grey20 guibg=#00FFD7 gui=NONE &amp;quot;光标所在的字符
@@ -227,17 +269,17 @@ hi Todo ctermfg=lightgrey ctermbg=lightblue cterm=BOLD &amp;quot;任何需要特
     
     <entry>
         <title>python学习之路</title>
-        <link href="http://localhost:4000/2014-02-22-myattractions.html"/>
+        <link href="http://dengbiao.github.io/2014-02-22-myattractions.html"/>
         <updated>2014-02-22T00:00:00+08:00</updated>
-        <id>http://localhost:4000/myattractions</id>
+        <id>http://dengbiao.github.io/myattractions</id>
         <content type="html">&lt;p&gt;今天开始学习python，flask，SQLAchemy等。目标是完成一个小型的景点导航后台API。博文会记录下整个学习过程中遇到的问题和积累的技术。对自己是一个勉励，也希望能够达到抛砖引玉的效果。如果博文有错误之处，可以在博客中进行交流与沟通，Come on。&lt;/p&gt;</content>
     </entry>
     
     <entry>
         <title>mac terminal skills</title>
-        <link href="http://localhost:4000/accumulation/2014-02-20-mac%2Bterminal%2Bskill.html"/>
+        <link href="http://dengbiao.github.io/accumulation/2014-02-20-mac%2Bterminal%2Bskill.html"/>
         <updated>2014-02-20T00:00:00+08:00</updated>
-        <id>http://localhost:4000/accumulation/mac+terminal+skill</id>
+        <id>http://dengbiao.github.io/accumulation/mac+terminal+skill</id>
         <content type="html">&lt;p&gt;时隔半年的样子，重新装回了Mac OS。台式机由于显卡HD2500的原因没有安装成功，依旧使用自己的笔记本。感觉没有好好的维护，笔记本越来越不好使了，而且方向键也出了问题，不能使用。比较郁闷。&lt;/p&gt;
 
 &lt;p&gt;看了池建强老师的博客(http://macshuo.com),激起了自己对mac的兴趣。原来之前玩mac都是完成了一坨屎啊。看到老师推荐spotlight的时候，恨不得把自己给拍死。这么好用的东东，自己当时就tm的各种讨厌，各种不明所以好么。&lt;/p&gt;
@@ -272,9 +314,9 @@ Shift + Command + 鼠标双击    快速选中路径&lt;/code&gt;&lt;/pre&gt;
     
     <entry>
         <title>项目的一些文档说明</title>
-        <link href="http://localhost:4000/tc/documents/2014-01-23-tc-documents.html"/>
+        <link href="http://dengbiao.github.io/tc/documents/2014-01-23-tc-documents.html"/>
         <updated>2014-01-23T00:00:00+08:00</updated>
-        <id>http://localhost:4000/tc/documents/tc-documents</id>
+        <id>http://dengbiao.github.io/tc/documents/tc-documents</id>
         <content type="html">&lt;p&gt;nfs目录: &lt;code&gt;/home/csumt/nfsroot/android/&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;光盘上的系统nfs目录: &lt;code&gt;/home/csumt/nfsroot/android2/&lt;/code&gt;&lt;/p&gt;
@@ -286,9 +328,9 @@ Shift + Command + 鼠标双击    快速选中路径&lt;/code&gt;&lt;/pre&gt;
     
     <entry>
         <title>ubuntu 12.04 配置 VPN pptpd</title>
-        <link href="http://localhost:4000/ubuntu/vpn/pptpd/2014-01-22-ubuntu-vpn-pptpd.html"/>
+        <link href="http://dengbiao.github.io/ubuntu/vpn/pptpd/2014-01-22-ubuntu-vpn-pptpd.html"/>
         <updated>2014-01-22T00:00:00+08:00</updated>
-        <id>http://localhost:4000/ubuntu/vpn/pptpd/ubuntu-vpn-pptpd</id>
+        <id>http://dengbiao.github.io/ubuntu/vpn/pptpd/ubuntu-vpn-pptpd</id>
         <content type="html">&lt;p&gt;在 Ubuntu 中建立 pptp server 需要的软件包为 pptpd，用 apt-get 即可安装：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;sudo apt-get &amp;lt;abbr title=&amp;quot;Thanks zz!&amp;quot;&amp;gt;installabbr&amp;gt; pptpd&lt;/code&gt;&lt;/pre&gt;
@@ -369,9 +411,9 @@ ms-dns 208.67.222.222&lt;/code&gt;&lt;/pre&gt;
     
     <entry>
         <title>ubuntu进程管理方法</title>
-        <link href="http://localhost:4000/ubuntu/process/manager/2014-01-22-ubuntu-process-manager.html"/>
+        <link href="http://dengbiao.github.io/ubuntu/process/manager/2014-01-22-ubuntu-process-manager.html"/>
         <updated>2014-01-22T00:00:00+08:00</updated>
-        <id>http://localhost:4000/ubuntu/process/manager/ubuntu-process-manager</id>
+        <id>http://dengbiao.github.io/ubuntu/process/manager/ubuntu-process-manager</id>
         <content type="html">&lt;p&gt;转自：&lt;a href=&quot;http://www.cnblogs.com/xinzaibing/archive/2012/03/24/2415434.html&quot;&gt;http://www.cnblogs.com/xinzaibing/archive/2012/03/24/2415434.html&lt;/a&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;ps 显示当前进程  
@@ -481,9 +523,9 @@ killall httpd   &lt;/code&gt;&lt;/pre&gt;
     
     <entry>
         <title>something I want to say</title>
-        <link href="http://localhost:4000/accumulation/2014-01-16-something.html"/>
+        <link href="http://dengbiao.github.io/accumulation/2014-01-16-something.html"/>
         <updated>2014-01-16T00:00:00+08:00</updated>
-        <id>http://localhost:4000/accumulation/something</id>
+        <id>http://dengbiao.github.io/accumulation/something</id>
         <content type="html">&lt;p&gt;有些东西,你不去表达,别人是不会理解的.有的东西,你表达的太多,别人会理解错误的.所以,有人就会告诉你,不要在意别人的眼光.做好自己就可以了.但是真的是这样吗? 或许,真像别人说的那样,万事没有决定,何去何从,得靠自己来判断.对的,这又是别人的看法.人之所以为人,之所以能够立于动物之首,就是因为这个物种懂得学习,懂得吸取教训.&lt;/p&gt;
 
 &lt;p&gt;今天看到有人在讨论一个问题: 人为什么要工作? 论点是人为了工作,占用了自己的时间,不能陪伴亲人,不能照顾好孩子,不能去自己想去的地方,做自己想做的事情. 那你为什么要工作! 为了自己的那点存在感?还是为了取悦你的老板. 其实,我个人觉得问这样问题的都是傻逼. 先抛开什么梦想,什么追求不说. 在我看来,亲人,朋友,爱人.这些都是先于工作的.但是如果没有经济基础,你有能力去守护这些东西吗? 对的,你工作的理由就是为了守护自己心爱的东西,自己珍惜的东西.似乎我们找到了答案,并觉得自己在做着一件高尚的事情,可是,又有人要问了,为了守护自己珍爱的东西而去工作,可是工作确会让你伤害到它们,那你这又算什么. 是的,你永远没办法满足所有人.包括你自己. 所以何苦去思考这个问题呢. 人生一世,本以很艰难,何必难为自己,难为他人. 正所谓,人艰不拆.还是有一定的道理的.&lt;/p&gt;
@@ -507,9 +549,9 @@ killall httpd   &lt;/code&gt;&lt;/pre&gt;
     
     <entry>
         <title>十月感想</title>
-        <link href="http://localhost:4000/impression/2013-11-06-impression.html"/>
+        <link href="http://dengbiao.github.io/impression/2013-11-06-impression.html"/>
         <updated>2013-11-06T00:00:00+08:00</updated>
-        <id>http://localhost:4000/impression/impression</id>
+        <id>http://dengbiao.github.io/impression/impression</id>
         <content type="html">&lt;p&gt;十月，研二的第二个月。感觉时间在一点点的走过。但是这两个月来，一直没有找到自己的工作状态。实验室项目进展缓慢。专业基础也没有什么提升。看着师兄师姐们为找工作而忙碌着。自己确有点不知所措。用了将近一个星期的时间，将博客从lofter转移到了github上面。很多以前在wordpress上的博文直接放弃了。虽然有点不舍得，但是确实没有什么有用的珍藏价值，仅有的只是一些成长的记忆吧。丢就丢吧，虽然偶尔回想起的那句“中国人不怎么在意历史的保护”，确实是这样的，建筑拆了建，建了拆。一些古老的东西，慢慢的在消失着。清理了博客，给空间留给剩下的研二，写一些有意义的博文，有深度的博文。不要再是简单的错误笔记。&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;p&gt;写博客的时间，让自己找到了一些曾经写代码的感觉。曾经的那种斗志。熟悉的味道。&lt;/p&gt;
@@ -521,59 +563,6 @@ killall httpd   &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;这个月要开题了，还需要为张家界的会议作准备。事情挺多，保持激情。还有，学英语。。。&lt;/p&gt;
 
 &lt;p&gt;做一只有想法的鸟，朝着自己的那片天，飞去。。。&lt;/p&gt;</content>
-    </entry>
-    
-    <entry>
-        <title>音乐：其实我还好</title>
-        <link href="http://localhost:4000/music/2013-11-04-qishiwohaihao.html"/>
-        <updated>2013-11-04T00:00:00+08:00</updated>
-        <id>http://localhost:4000/music/qishiwohaihao</id>
-        <content type="html">&lt;p&gt;第一次听到这首歌是在ktv，和房角石的小伙伴们一起。曾经听说过俞灏明的事情，在新闻里面，因为本人不追星，所以也没有太去关注。当看到mv中，湖南卫视跨年演唱会上，他的演出。有一种感动和敬佩。不知道为什么，突然觉得他好帅，好man。&lt;/p&gt;
-
-&lt;p&gt;或许是第一次听到这首歌，感触颇深。对俞灏明也有了一个不错的印象。尤其是歌词：&lt;code&gt;被故事选中，没资格懵懂&lt;/code&gt;。很现实的一句话。联想到他的经历，不得不说，这短短的一句话深藏了多少的辛酸与痛苦。&lt;/p&gt;
-
-&lt;p&gt;总之，很喜欢这首歌。&lt;/p&gt;
-
-&lt;p&gt;&lt;audio controls=&#39;controls&#39; src=&#39;/assets/uploads/qishiwohaihao.mp3&#39;&gt;
-&lt;/audio&gt;&lt;/p&gt;
-&lt;!--more--&gt;&lt;hr /&gt;
-&lt;p&gt;以下是歌词：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;其实我还好
-
-作曲：俞灏明 作词：俞灏明 吴梦知
-演唱：俞灏明
-
-如果痛是一种形容
-我也会倔强到最终
-沉默是最完美的互动
-怕什么有我陪你疯
-平凡的苦衷说爱说痛都太笼统
-被故事选中没资格懵懂
-就算没观众自己第一个被感动
-我相信到最后一分钟
-如果狠是一种从容
-我也不肯选择被动
-如果有所谓的太贫穷
-不过是不敢再做梦
-
-平凡的苦衷说爱说痛都太笼统
-被故事选中没资格懵懂
-就算没观众自己第一个被感动
-我相信到最后一分钟
-但愿在茫茫人海中
-我的眼神你会懂
-但愿我们会温柔的目送
-那些没看过的繁荣
-那些理想的恢弘
-总会有一天和我们相逢
-
-平凡的苦衷说爱说痛都太笼统
-被故事选中没资格懵懂
-就算没观众自己第一个被感动
-我相信到最后一分钟
-太多不由衷不过是岁月的内容
-叹息过再继续向前走&lt;/code&gt;&lt;/pre&gt;</content>
     </entry>
     
 

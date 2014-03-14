@@ -6,10 +6,14 @@
         <meta name="renderer" content="webkit">
         <title>
               
-                十月感想 
+                PocketGuide掌上导游项目开发（一、平台介绍与搭建） 
             
         </title>
         
+            <meta name="description" content=" PocketGuide项目是一个基于android开发的移动景点导航app。本文对该项目的组织架构进行了完整的分析。包括项目前后台环境，应用层级结构，API接口说明等。 ">
+        
+        
+            <meta name="keywords" content="androidpythonflaskflask-sqlalchemysqlalchemypocket guideXListviewSlidingmenuumeng" >
         
         
             <meta name="author" content=" dengbiao ">
@@ -58,37 +62,61 @@
             <div class="page_container">
     <div class="date">
         <span class="day">
-            06
+            14
         </span>
         <span class="month">
-            11
+            03
         </span>
     </div>
     <div class="page_item">
         
         <div class="title">
-            <h1><a href="/impression/2013-11-06-impression.html">十月感想</a></h1>
+            <h1><a href="/develop/android/2014-03-14-PocketGuide-Project-Outline.html">PocketGuide掌上导游项目开发（一、平台介绍与搭建）</a></h1>
         </div>
         
         
         <div class="page_content">
-            <p><p>十月，研二的第二个月。感觉时间在一点点的走过。但是这两个月来，一直没有找到自己的工作状态。实验室项目进展缓慢。专业基础也没有什么提升。看着师兄师姐们为找工作而忙碌着。自己确有点不知所措。用了将近一个星期的时间，将博客从lofter转移到了github上面。很多以前在wordpress上的博文直接放弃了。虽然有点不舍得，但是确实没有什么有用的珍藏价值，仅有的只是一些成长的记忆吧。丢就丢吧，虽然偶尔回想起的那句“中国人不怎么在意历史的保护”，确实是这样的，建筑拆了建，建了拆。一些古老的东西，慢慢的在消失着。清理了博客，给空间留给剩下的研二，写一些有意义的博文，有深度的博文。不要再是简单的错误笔记。</p>
+            <p><p>前面的博客提到了最近要做一个手机景点导航的应用。到昨天已经完工，今天补加了一个分享功能。数了一下时间，正好20天，比预期的时间要久一些，不过整个过程中还是学到了很多的东西。本来的打算是边学习边写博客，来记录整个学习过程，但是由于某些原因，需要尽快完成应用的开发，所以没有一点点记录，只保留了学习过程中的一些笔记，现在回过头来根据这些笔记来整理博文。</p>
 <!--more-->
-<p>写博客的时间，让自己找到了一些曾经写代码的感觉。曾经的那种斗志。熟悉的味道。</p>
+<h3 id="">项目需求</h3>
 
-<p>二姐一直在建议着我要多出去走走，说外面的世界，没出去过永远都不知道会有多好，也永远都不知道自己的视野是多么的狭隘。 最近见到了小马哥本人，还是有点点激动的。第一次见到这样的名人。 现场听了小马哥的一个访谈，对他的感觉：实在，有深度。挺不错的一个人。总的来说比较喜欢他的风格。当谈到一些比较尖锐的话题时，小马哥的回答总是那么的直接，不含糊，而且有自己的理解与一定的深度。佩服。在学校生存久了，听到的都是一些套话，一些没意义的，没营养的话。相比之下，为什么在中国企业的效率比高校的要高，情理之中。</p>
+<p>PocketGuide项目最终的需求是完成一个手机平台的景点导航软件。包括景点推荐、周边景点查询(定位，周边查询与距离排序)、景点地区归类、排序（按不同属性，包括人气、收藏、价格、评论等）、景点导航（定位与路径计算）、景点和应用分享等功能。 对项目需求进行分析与整理，PocketGuide项目主要分为三个部分，数据后台管理平台，数据访问接口以及手持设备端APP。</p>
 
-<p>从小马哥的奋斗史中，我的总结是：能够保持自己的想法，能够坚持自己的原则，能够为了自己的梦想而努力。fighting！！！ 给力，小马哥。</p>
+<ol>
+<li>数据后台管理平台 包含景点数据添加与管理、用户数据添加与管理等功能</li>
 
-<p>这个月要开题了，还需要为张家界的会议作准备。事情挺多，保持激情。还有，学英语。。。</p>
+<li>数据访问接口 提供景点、地区、用户数据等统一访问接口</li>
 
-<p>做一只有想法的鸟，朝着自己的那片天，飞去。。。</p></p> 
+<li>手持设备端APP 提供友好的用户界面，对接数据访问接口。</li>
+</ol>
+
+<h3 id="_2">平台选择</h3>
+
+<p>由于对python产生了兴趣，这次开发没有选择自己最擅长的java来开发。其实很重要的原因是喜欢上了mac和vim，不喜欢用eclipse（虽然写android还是没有逃脱用eclipse的悲剧），感觉用vim很酷，慢慢习惯了之后也感觉到了效率的提升，终于理解以前认识的那些用vim的程序员们所说的用vim不是为了装逼，而是真的能提升工作效率。Nice。</p>
+
+<p>最终，数据后台管理平台以及数据访问接口选择了在<strong>mac</strong>下基于<strong>python</strong>开发。其中用到的python框架有<strong>flask</strong>，没有理由，就是以前在一个工作室实习的时候，别人介绍过TA，知道了TA。仅此而已。数据库选择的是<strong>mysql</strong>，数据库持久化层框架用的是<strong>flask-sqlalchemy</strong>。手持设备端APP选择了<strong>android</strong>平台，为什么不选iphone，因为穷，没有测试机。人艰不拆。开发工具选择的是<strong>eclipse</strong>。<strong>android studio</strong>还没有用熟，这次由于时间问题，没有选择TA了。</p>
+
+<p>另外要说明的是定位与周边查询用到了<strong>geohash</strong>地理位置编码。具体原理可以查看<a href="http://en.wikipedia.org/wiki/Geohash">geohash维基百科</a></p>
+
+<h3 id="_3">平台搭建</h3>
+
+<p>接下来要讲的是项目开发平台搭建。由于开发选择的系统平台为<strong>MAC</strong>，所以以下内容为MAC平台下的搭建流程。如果你选择的是windows或者linux，以下内容仅供参考。</p>
+
+<h4 id="pythonflask">python+flask</h4>
+
+<p>python在mac下已经自己集成了。不需要安装，但是各种版本可能会有不同。我使用的是<strong>Python 2.7.5</strong>,虽然已经python3了，但是似乎还不够完善（不知正确与否，道听途说而已，没有验证）。可以通过在终端用命令<code>python -V</code>查看版本号。</p>
+
+<p>flask安装过程主要参考的是<a href="http://flask.pocoo.org/docs/">官网</a>。中文版地址：<a href="http://docs.jinkan.org/docs/flask/index.html">flask中文版教程</a>.有些地方翻译的不是很好，我英语不怎么好，都是两边照着看过来的。。。惭愧。。。</p>
+
+<h4 id="android">android</h4>
+
+<p>android的开发环境搭建，网上一抓一大把，这里就不详细介绍了。主要跟大家说一下用的sdk版本号。</p></p> 
         </div>
 
 
         <div class="page_comments" id="page_comments">
             <!-- Duoshuo Comment BEGIN -->
-            <div class="ds-thread" data-thread-key="/impression/impression" data-title="十月感想" ></div>
+            <div class="ds-thread" data-thread-key="/develop/android/PocketGuide-Project-Outline" data-title="PocketGuide掌上导游项目开发（一、平台介绍与搭建）" ></div>
             <script type="text/javascript">
                 var duoshuoQuery = {short_name:"dengbiao"};
 (function() {

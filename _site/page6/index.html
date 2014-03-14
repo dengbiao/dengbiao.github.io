@@ -49,13 +49,51 @@
             </form>
 
             <ul class="sidelist">
-                <li><a rel="nofollow"  href="http://localhost:4000/atom.xml" class="rss" title="订阅"></a></li>
-                <li><a rel="nofollow" href="http://localhost:4000/pages/archive.html" class="archive" title="归档"></a></li>
+                <li><a rel="nofollow"  href="http://dengbiao.github.io/atom.xml" class="rss" title="订阅"></a></li>
+                <li><a rel="nofollow" href="http://dengbiao.github.io/pages/archive.html" class="archive" title="归档"></a></li>
             </ul>
             </header>
 
             <article>
             <ul class="entries">
+    
+    <li class="entry_item">
+    <div class="date">
+        <span class="day">
+            16
+        </span>
+        <span class="month">
+            04
+        </span>
+    </div>
+    <div class="post_item">
+        
+            <div class="title">
+                <h1><a rel="nofollow"  href="/accumulation/android/2012-04-16-android-e9809ae794a8-usb-e9a9b1e58aa8-e79c9fe69cbae5bc80e58f91-e8b083e8af95.html">android 通用 usb 驱动  --真机开发 调试</a></h1>
+            </div>
+        
+        
+        <div class="post_content">
+            <p>用的是国产的山寨pad 系统为4.0.3 想用来做真机开发，找了很久却找不到合适的驱动。相当的郁闷。功夫不负苦心人啊，终于找到办法解决不认识的android设备的驱动问题。其实方法很简单，就是在google官方的驱动配置文件中添加支持的设备，将自己的设备信息添加进去。具体的方法便是修改 android_winusb.inf 文件。</p>
+
+<p>文件位置：<code>android-sdk-windows\extras\google\usb_driver\android_winusb.inf</code></p>
+
+<p><code>要注意你的系统是32位的还是64位的哦  这个很重要。</code></p>
+
+<p>修改完成后呢，就在你的设备上点击右键，更新设备驱动，选择从列表或者指定位置安装，然后选择路径到<code>..\android-sdk-windows\extras\google\usb_driver\</code>点击确定就好了。</p>
+ 
+        </div>
+        <div class="link clearfix">
+            <a rel="nofollow" href="/accumulation/android/2012-04-16-android-e9809ae794a8-usb-e9a9b1e58aa8-e79c9fe69cbae5bc80e58f91-e8b083e8af95.html">全文链接</a>
+            <a class="post_comments" href="/accumulation/android/2012-04-16-android-e9809ae794a8-usb-e9a9b1e58aa8-e79c9fe69cbae5bc80e58f91-e8b083e8af95.html#page_comments">
+                <span class="ds-thread-count" data-thread-key="/accumulation/android/android-e9809ae794a8-usb-e9a9b1e58aa8-e79c9fe69cbae5bc80e58f91-e8b083e8af95" data-count-type="comments">暂无评论</span>
+            </a>
+            
+        </div>
+
+    </div>
+    </li>
+    <div class="clear"></div>
     
     <li class="entry_item">
     <div class="date">

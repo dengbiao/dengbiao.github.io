@@ -49,8 +49,8 @@
             </form>
 
             <ul class="sidelist">
-                <li><a rel="nofollow"  href="http://localhost:4000/atom.xml" class="rss" title="订阅"></a></li>
-                <li><a rel="nofollow" href="http://localhost:4000/pages/archive.html" class="archive" title="归档"></a></li>
+                <li><a rel="nofollow"  href="http://dengbiao.github.io/atom.xml" class="rss" title="订阅"></a></li>
+                <li><a rel="nofollow" href="http://dengbiao.github.io/pages/archive.html" class="archive" title="归档"></a></li>
             </ul>
             </header>
 
@@ -80,7 +80,7 @@
         <div class="post_content">
             <p>开发移动app应用，经常会遇到定位与导航需求，开发者自己去实现不太可能，一个是工作量大，另一个是程序员世界最常用的话<code>不要重复制造轮子</code>。百度在地图界混迹如此之久，积累的东西还是可以的。</p>
 
-<p>最近开发一个景点相关的项目，借用百度地图提供的API来实现项目中的定位与导航需求。根据百度地图官方网站的引导，申请了开发者API。但是在请求路径规划的时候，总是遇到认证失败，error:102的错误。 因此，将百度地图API申请的相关流程记录下来。希望能够给需要用百度地图开发的程序员们一些引导。</p>
+<p>最近开发一个景点相关的项目，借用百度地图提供的API来实现项目中的定位与导航需求。根据百度地图官方网站的引导，申请了开发者API。项目调试都一切顺利，但是当项目导出成APK，进行最后测试时，在请求路径规划的时候，总是遇到认证失败，error:102的错误,经过分析最后才找到问题的原因与解决办法。 因此，将百度地图API申请的相关流程记录下来。希望能够给需要用百度地图开发的程序员们一些借鉴。</p>
  
         </div>
         <div class="link clearfix">
@@ -100,6 +100,38 @@
             <span>key</span>
             
             </div>
+            
+        </div>
+
+    </div>
+    </li>
+    <div class="clear"></div>
+    
+    <li class="entry_item">
+    <div class="date">
+        <span class="day">
+            14
+        </span>
+        <span class="month">
+            03
+        </span>
+    </div>
+    <div class="post_item">
+        
+            <div class="title">
+                <h1><a rel="nofollow"  href="/develop/android/2014-03-14-PocketGuide-Project-Outline.html">PocketGuide掌上导游项目开发（一、平台介绍与搭建）</a></h1>
+            </div>
+        
+        
+        <div class="post_content">
+            <p>前面的博客提到了最近要做一个手机景点导航的应用。到昨天已经完工，今天补加了一个分享功能。数了一下时间，正好20天，比预期的时间要久一些，不过整个过程中还是学到了很多的东西。本来的打算是边学习边写博客，来记录整个学习过程，但是由于某些原因，需要尽快完成应用的开发，所以没有一点点记录，只保留了学习过程中的一些笔记，现在回过头来根据这些笔记来整理博文。</p>
+ 
+        </div>
+        <div class="link clearfix">
+            <a rel="nofollow" href="/develop/android/2014-03-14-PocketGuide-Project-Outline.html">全文链接</a>
+            <a class="post_comments" href="/develop/android/2014-03-14-PocketGuide-Project-Outline.html#page_comments">
+                <span class="ds-thread-count" data-thread-key="/develop/android/PocketGuide-Project-Outline" data-count-type="comments">暂无评论</span>
+            </a>
             
         </div>
 
@@ -240,43 +272,6 @@ Shift + Command + 鼠标双击    快速选中路径</code></pre>
             <a rel="nofollow" href="/accumulation/2014-02-20-mac%2Bterminal%2Bskill.html">全文链接</a>
             <a class="post_comments" href="/accumulation/2014-02-20-mac%2Bterminal%2Bskill.html#page_comments">
                 <span class="ds-thread-count" data-thread-key="/accumulation/mac+terminal+skill" data-count-type="comments">暂无评论</span>
-            </a>
-            
-        </div>
-
-    </div>
-    </li>
-    <div class="clear"></div>
-    
-    <li class="entry_item">
-    <div class="date">
-        <span class="day">
-            23
-        </span>
-        <span class="month">
-            01
-        </span>
-    </div>
-    <div class="post_item">
-        
-            <div class="title">
-                <h1><a rel="nofollow"  href="/tc/documents/2014-01-23-tc-documents.html">项目的一些文档说明</a></h1>
-            </div>
-        
-        
-        <div class="post_content">
-            <p>nfs目录: <code>/home/csumt/nfsroot/android/</code></p>
-
-<p>光盘上的系统nfs目录: <code>/home/csumt/nfsroot/android2/</code></p>
-
-<p>android源码目录: <code>/home/csumt/soft/pandaboard/sourcecode/android/</code></p>
-
-<p>模块编译方法: 进入到android源码目录(<code>cd /home/csumt/soft/pandaboard/sourcecode/android/</code>),执行 <code>source ./build/envsetup.sh</code>命令和<code>source ./build/myBuild.sh</code>)命令, 然后进入到具体的模块目录(<code>cd frameworks/base/services/java/com/android/server/pm/</code>) 直接运行 <code>mm</code>命令即可.</p> 
-        </div>
-        <div class="link clearfix">
-            <a rel="nofollow" href="/tc/documents/2014-01-23-tc-documents.html">全文链接</a>
-            <a class="post_comments" href="/tc/documents/2014-01-23-tc-documents.html#page_comments">
-                <span class="ds-thread-count" data-thread-key="/tc/documents/tc-documents" data-count-type="comments">暂无评论</span>
             </a>
             
         </div>
