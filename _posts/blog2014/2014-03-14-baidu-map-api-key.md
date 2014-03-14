@@ -36,7 +36,7 @@ image: /assets/uploads/baidumapapi.png
 
 ####key的获取
 
-讲了很多废话，回头才发现没有讲具体怎么获取key。这里只讲一种简单的用eclipse获取sha1值与packageName值生成key的办法。至于那些使用keytool的程序员们，你们应该能够自己解决的，就不多说了。
+讲了很多废话，回头才发现没有讲具体怎么获取key。这里只讲一种简单的用eclipse获取sha1值与packageName值生成key的办法。至于那些使用keytool的程序员们，`keytool -list -v -keysotre your_keystore_file -storepass your_keystore_passwordl`,你们应该懂得，就不多说了。
 
 #####1.获取keysotre的sha1值
 

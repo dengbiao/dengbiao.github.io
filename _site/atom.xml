@@ -4,7 +4,7 @@
     <title></title>
     <link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://localhost:4000" rel="alternate" type="text/html" />
-    <updated>2014-03-14T16:43:15+08:00</updated>
+    <updated>2014-03-14T16:47:55+08:00</updated>
     <id>http://localhost:4000</id>
     <author>
         <name>dengbiao</name>
@@ -41,7 +41,7 @@
 
 &lt;h4 id=&quot;key&quot;&gt;key的获取&lt;/h4&gt;
 
-&lt;p&gt;讲了很多废话，回头才发现没有讲具体怎么获取key。这里只讲一种简单的用eclipse获取sha1值与packageName值生成key的办法。至于那些使用keytool的程序员们，你们应该能够自己解决的，就不多说了。&lt;/p&gt;
+&lt;p&gt;讲了很多废话，回头才发现没有讲具体怎么获取key。这里只讲一种简单的用eclipse获取sha1值与packageName值生成key的办法。至于那些使用keytool的程序员们，&lt;code&gt;keytool -list -v -keysotre your_keystore_file -storepass your_keystore_passwordl&lt;/code&gt;,你们应该懂得，就不多说了。&lt;/p&gt;
 
 &lt;h5 id=&quot;1keysotresha1&quot;&gt;1.获取keysotre的sha1值&lt;/h5&gt;
 
