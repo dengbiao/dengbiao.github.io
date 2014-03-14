@@ -42,13 +42,128 @@
             </form>
 
             <ul class="sidelist">
-                <li><a href="http://dengbiao.github.io/atom.xml" class="rss" title="订阅"></a></li>
-                <li><a href="http://dengbiao.github.io/pages/archive.html" class="archive" title="归档"></a></li>
+                <li><a href="http://localhost:4000/atom.xml" class="rss" title="订阅"></a></li>
+                <li><a href="http://localhost:4000/pages/archive.html" class="archive" title="归档"></a></li>
             </ul>
             </header>
 
             <article>
             <ul class="entries">
+    
+    <li class="entry_item">
+    <div class="date">
+        <span class="day">
+            22
+        </span>
+        <span class="month">
+            01
+        </span>
+    </div>
+    <div class="post_item">
+        
+            <div class="title">
+                <h1><a href="/ubuntu/vpn/pptpd/2014-01-22-ubuntu-vpn-pptpd.html">ubuntu 12.04 配置 VPN pptpd</a></h1>
+            </div>
+        
+        
+        <div class="post_content">
+            <p>在 Ubuntu 中建立 pptp server 需要的软件包为 pptpd，用 apt-get 即可安装：</p>
+
+<pre><code>sudo apt-get &lt;abbr title=&quot;Thanks zz!&quot;&gt;installabbr&gt; pptpd</code></pre>
+
+<p>系统会自动解决依赖关系，安装好后，需要进行一番设置。首先编辑 <code>/etc/pptpd.conf</code></p>
+
+<pre><code>sudo nano /etc/pptpd.conf</code></pre>
+
+<p>去掉文件最末端的 localip 和 remoteip 两个参数的注释，并进行相应修改。这里，localip 是 VPN 连通后服务器的 ip 地址，而 remoteip 则是客户端的可分配 ip 地址。下面是我的配置：</p>
+
+<pre><code>localip 10.100.0.1
+remoteip 10.100.0.2-10</code></pre>
+ 
+        </div>
+        <div class="link clearfix">
+            <a href="/ubuntu/vpn/pptpd/2014-01-22-ubuntu-vpn-pptpd.html">全文链接</a>
+            <a class="post_comments" href="/ubuntu/vpn/pptpd/2014-01-22-ubuntu-vpn-pptpd.html#page_comments">
+                <span class="ds-thread-count" data-thread-key="/ubuntu/vpn/pptpd/ubuntu-vpn-pptpd" data-count-type="comments">暂无评论</span>
+            </a>
+            
+            <div class="tags">
+            
+            <span>ubuntu</span>
+            
+            <span>vpn</span>
+            
+            <span>pptpd</span>
+            
+            </div>
+            
+        </div>
+
+    </div>
+    </li>
+    <div class="clear"></div>
+    
+    <li class="entry_item">
+    <div class="date">
+        <span class="day">
+            22
+        </span>
+        <span class="month">
+            01
+        </span>
+    </div>
+    <div class="post_item">
+        
+            <div class="title">
+                <h1><a href="/ubuntu/process/manager/2014-01-22-ubuntu-process-manager.html">ubuntu进程管理方法</a></h1>
+            </div>
+        
+        
+        <div class="post_content">
+            <p>转自：<a href="http://www.cnblogs.com/xinzaibing/archive/2012/03/24/2415434.html">http://www.cnblogs.com/xinzaibing/archive/2012/03/24/2415434.html</a></p>
+
+<pre><code>ps 显示当前进程  
+ps -l 显示详细信息   
+ps -u 以用户的格式显示</code></pre>
+
+<h4 id="">相关字段说明</h4>
+
+<pre><code>VF 进程状态标志   
+S 进程状态代码   
+UID 进程执行者ID   
+PPID 父进程标识(parent process ID)   
+PRI 进程执行的优先级(priority)   
+NI 进程执行优先级的nice值,负值表示其优先级较高   
+SZ 进程占用的内存大小   
+WCHAN 进程或系统调用等待时的地址  
+%CPU cpu使用百分比   
+%MEM 内存使用百分比   
+VSZ 占用虚拟内存大小   
+RSS 占用物理内存大小   
+START 进程开始时间</code></pre>
+ 
+        </div>
+        <div class="link clearfix">
+            <a href="/ubuntu/process/manager/2014-01-22-ubuntu-process-manager.html">全文链接</a>
+            <a class="post_comments" href="/ubuntu/process/manager/2014-01-22-ubuntu-process-manager.html#page_comments">
+                <span class="ds-thread-count" data-thread-key="/ubuntu/process/manager/ubuntu-process-manager" data-count-type="comments">暂无评论</span>
+            </a>
+            
+            <div class="tags">
+            
+            <span>ubuntu</span>
+            
+            <span>process</span>
+            
+            <span>manager</span>
+            
+            </div>
+            
+        </div>
+
+    </div>
+    </li>
+    <div class="clear"></div>
     
     <li class="entry_item">
     <div class="date">
@@ -62,7 +177,7 @@
     <div class="post_item">
         
             <div class="title">
-                <h1><a href="/accumulation/2014/01/16/something.html">something I want to say</a></h1>
+                <h1><a href="/accumulation/2014-01-16-something.html">something I want to say</a></h1>
             </div>
         
         
@@ -73,9 +188,9 @@
  
         </div>
         <div class="link clearfix">
-            <a href="/accumulation/2014/01/16/something.html">全文链接</a>
-            <a class="post_comments" href="/accumulation/2014/01/16/something.html#page_comments">
-                <span class="ds-thread-count" data-thread-key="/accumulation/2014/01/16/something" data-count-type="comments">暂无评论</span>
+            <a href="/accumulation/2014-01-16-something.html">全文链接</a>
+            <a class="post_comments" href="/accumulation/2014-01-16-something.html#page_comments">
+                <span class="ds-thread-count" data-thread-key="/accumulation/something" data-count-type="comments">暂无评论</span>
             </a>
             
         </div>
@@ -96,7 +211,7 @@
     <div class="post_item">
         
             <div class="title">
-                <h1><a href="/impression/2013/11/06/impression.html">十月感想</a></h1>
+                <h1><a href="/impression/2013-11-06-impression.html">十月感想</a></h1>
             </div>
         
         
@@ -105,9 +220,9 @@
  
         </div>
         <div class="link clearfix">
-            <a href="/impression/2013/11/06/impression.html">全文链接</a>
-            <a class="post_comments" href="/impression/2013/11/06/impression.html#page_comments">
-                <span class="ds-thread-count" data-thread-key="/impression/2013/11/06/impression" data-count-type="comments">暂无评论</span>
+            <a href="/impression/2013-11-06-impression.html">全文链接</a>
+            <a class="post_comments" href="/impression/2013-11-06-impression.html#page_comments">
+                <span class="ds-thread-count" data-thread-key="/impression/impression" data-count-type="comments">暂无评论</span>
             </a>
             
             <div class="tags">
@@ -134,7 +249,7 @@
     <div class="post_item">
         
             <div class="title">
-                <h1><a href="/music/2013/11/04/qishiwohaihao.html">音乐：其实我还好</a></h1>
+                <h1><a href="/music/2013-11-04-qishiwohaihao.html">音乐：其实我还好</a></h1>
             </div>
         
         
@@ -150,9 +265,9 @@
  
         </div>
         <div class="link clearfix">
-            <a href="/music/2013/11/04/qishiwohaihao.html">全文链接</a>
-            <a class="post_comments" href="/music/2013/11/04/qishiwohaihao.html#page_comments">
-                <span class="ds-thread-count" data-thread-key="/music/2013/11/04/qishiwohaihao" data-count-type="comments">暂无评论</span>
+            <a href="/music/2013-11-04-qishiwohaihao.html">全文链接</a>
+            <a class="post_comments" href="/music/2013-11-04-qishiwohaihao.html#page_comments">
+                <span class="ds-thread-count" data-thread-key="/music/qishiwohaihao" data-count-type="comments">暂无评论</span>
             </a>
             
             <div class="tags">
@@ -160,91 +275,6 @@
             <span>music</span>
             
             </div>
-            
-        </div>
-
-    </div>
-    </li>
-    <div class="clear"></div>
-    
-    <li class="entry_item">
-    <div class="date">
-        <span class="day">
-            28
-        </span>
-        <span class="month">
-            10
-        </span>
-    </div>
-    <div class="post_item">
-        
-            <div class="title">
-                <h1><a href="/2013/10/28/problem-summary-ubuntu.html">ubuntu问题汇总贴</a></h1>
-            </div>
-        
-        
-        <div class="post_content">
-            <p>在使用ubuntu的过程中经常遇到各种各样的小问题，有时候觉得问题比较小，很容易通过google就解决了。但是，这些小问题其实挺消耗时间的。所以建立这个问题汇总贴。在使用ubuntu中遇到的各种小问题进行汇总。希望能够帮助遇到同样问题的人找到解决办法。同时，也是给自己的学习历程留下痕迹。</p>
-<hr />
-<h3 id="ubuntu">ubuntu用户添加</h3>
-
-<p>以这段代码进行分析：<code>sudo useradd db -g tcteam -m -s /bin/bash</code></p>
-<div class='highlight'><pre><code class='console'><span class='go'>db: 用户名 </span>
-<span class='go'>tcteam: 用户组名  </span>
-<span class='go'>-m: 同时创建用户目录  </span>
-<span class='go'>-s /bin/bash : 指定shell为bash  </span>
-</code></pre></div> 
-        </div>
-        <div class="link clearfix">
-            <a href="/2013/10/28/problem-summary-ubuntu.html">全文链接</a>
-            <a class="post_comments" href="/2013/10/28/problem-summary-ubuntu.html#page_comments">
-                <span class="ds-thread-count" data-thread-key="/2013/10/28/problem-summary-ubuntu" data-count-type="comments">暂无评论</span>
-            </a>
-            
-            <div class="tags">
-            
-            <span>ubuntu</span>
-            
-            <span>problems</span>
-            
-            <span>summary</span>
-            
-            </div>
-            
-        </div>
-
-    </div>
-    </li>
-    <div class="clear"></div>
-    
-    <li class="entry_item">
-    <div class="date">
-        <span class="day">
-            17
-        </span>
-        <span class="month">
-            10
-        </span>
-    </div>
-    <div class="post_item">
-        
-            <div class="title">
-                <h1><a href="/blog/2013/10/17/none.html"></a></h1>
-            </div>
-        
-        
-        <div class="post_content">
-            <p>最近没什么工作动态。基本干的也都是些烦人的杂活，或者是没干活。心有点烦。烦烦烦</p>
-
-<p>下午和程子学老师讨论了一些我们项目的事情。感觉没讨论出什么东西。但是吧，程子学老师对自己倒是挺欣赏的感觉。有点点受宠若惊的感觉，但是想着自己现在的状态，也不想多说什么，也觉得自己有点迷乱。不知道方向的感觉。或许该静下心来好好想想后面的生活该怎么过了。</p>
-
-<p>加油和努力不是嘴巴说说就可以了。希望这几天能够找回工作的状态。不在迷乱。。。</p> 
-        </div>
-        <div class="link clearfix">
-            <a href="/blog/2013/10/17/none.html">全文链接</a>
-            <a class="post_comments" href="/blog/2013/10/17/none.html#page_comments">
-                <span class="ds-thread-count" data-thread-key="/blog/2013/10/17/none" data-count-type="comments">暂无评论</span>
-            </a>
             
         </div>
 

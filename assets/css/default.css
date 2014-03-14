@@ -320,6 +320,7 @@ article {
 }
 
 .post_content p img {
+    max-width:725px;
     padding: 10px 10px;
 }
 

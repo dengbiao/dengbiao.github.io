@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
     <title></title>
-    <link href="http://dengbiao.github.io/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="http://dengbiao.github.io" rel="alternate" type="text/html" />
-    <updated>2014-02-22T15:12:48+08:00</updated>
-    <id>http://dengbiao.github.io</id>
+    <link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="http://localhost:4000" rel="alternate" type="text/html" />
+    <updated>2014-03-14T16:36:39+08:00</updated>
+    <id>http://localhost:4000</id>
     <author>
         <name>dengbiao</name>
         <email>dengbiao123@gmail.com</email>
@@ -13,18 +13,231 @@
 
     
     <entry>
+        <title>百度地图API key申请申请详细步骤</title>
+        <link href="http://localhost:4000/develop/android/2014-03-14-baidu-map-api-key.html"/>
+        <updated>2014-03-14T00:00:00+08:00</updated>
+        <id>http://localhost:4000/develop/android/baidu-map-api-key</id>
+        <content type="html">&lt;p&gt;开发移动app应用，经常会遇到定位与导航需求，开发者自己去实现不太可能，一个是工作量大，另一个是程序员世界最常用的话&lt;code&gt;不要重复制造轮子&lt;/code&gt;。百度在地图界混迹如此之久，积累的东西还是可以的。&lt;/p&gt;
+
+&lt;p&gt;最近开发一个景点相关的项目，借用百度地图提供的API来实现项目中的定位与导航需求。根据百度地图官方网站的引导，申请了开发者API。但是在请求路径规划的时候，总是遇到认证失败，error:102的错误。 因此，将百度地图API申请的相关流程记录下来。希望能够给需要用百度地图开发的程序员们一些引导。&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;h3 id=&quot;api&quot;&gt;申请API&lt;/h3&gt;
+
+&lt;p&gt;百度地图Android平台API申请链接当前为&lt;a href=&quot;http://lbsyun.baidu.com/apiconsole/key&quot;&gt;http://lbsyun.baidu.com/apiconsole/key&lt;/a&gt;（&lt;code&gt;注：随时可能变动，已百度地图API首页最新链接为准&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://dengbiao.github.io/assets/uploads/QQ20140314-1.png&quot; alt=&quot;API Key申请页面&quot; title=&quot;APIkey申请页面&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;&quot;&gt;创建应用&lt;/h4&gt;
+
+&lt;p&gt;进入API链接申请页面后，点击创建应用：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://dengbiao.github.io/assets/uploads/QQ20140314-2.png&quot; alt=&quot;创建应用&quot; title=&quot;创建应用&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;应用名称随便填写，应用类型选&lt;code&gt;for mobile&lt;/code&gt;, 禁用服务不用选择，关键问题就是安全码。如图所示，安全码为&lt;code&gt;Android签名证书的sha1值+“;”+packagename，即数字签名+分号+报名&lt;/code&gt;组成。我在这一步根据官网提供的两种获得安全码的办法，生成了自己的安全码，可是最后key认证失败了。 其实我感觉官网写的不是很清楚，当然也是因为自己对keystore机制不是很了解。这里具体说明一下。&lt;/p&gt;
+
+&lt;p&gt;官网提供的两种方法都是针对系统默认的keystore来生成安全码的，那么当联机调试的时候，eclipse也是用默认的keystore来生成的应用，所以，key认证没有遇到问题，当用eclipse导出APK时，eclipse会询问使用现有的keystore还是重新生成一个keystore。我选择的是生成了一个新的keystore。结果这个keystore和前面获取sha1值使用的keysotre不是同一个，直接导致了百度地图key认证失败。&lt;/p&gt;
+
+&lt;p&gt;所以，当发现问题之后，我的尝试了在eclipse导入我自己的keystore，但是没有成功，最后选用的办法是申请两个APIkey，分别与eclipse默认的keystore和自己生成的keystore对应，开发的时候使用默认keystore，当需要导出的时候，将代码中的key替换成与自己生成的keystore对应的key。&lt;/p&gt;
+
+&lt;h4 id=&quot;key&quot;&gt;key的获取&lt;/h4&gt;
+
+&lt;p&gt;讲了很多废话，回头才发现没有讲具体怎么获取key。这里只讲一种简单的用eclipse获取sha1值与packageName值生成key的办法。至于那些使用keytool的程序员们，你们应该能够自己解决的，就不多说了。&lt;/p&gt;
+
+&lt;h5 id=&quot;1keysotresha1&quot;&gt;1.获取keysotre的sha1值&lt;/h5&gt;
+
+&lt;p&gt;我使用的版本mac下的eclipse，查看方法是依次进入如下路径： &lt;code&gt;ADT-&amp;gt;Prefrence-&amp;gt;Android-&amp;gt;Build&lt;/code&gt;,然后在设置面板的右边可以看到sha1值的具体信息，如下图。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://dengbiao.github.io/assets/uploads/QQ20140314-3.png&quot; alt=&quot;eclipse查看keystore sha1&quot; title=&quot;eclipse查看keystore sha1值&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;2packagename&quot;&gt;2.获取PackageName&lt;/h5&gt;
+
+&lt;p&gt;eclipse中，打开项目的AndroidMenifest.xml文件，头部的Manifest标签中的package对应的内容就是我们需要的，如下图&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://dengbiao.github.io/assets/uploads/QQ20140314-4.png&quot; alt=&quot;eclipse查看packageName&quot; title=&quot;eclipse查看packageName&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;2apikey&quot;&gt;2.生成百度地图API开发者key&lt;/h5&gt;
+
+&lt;p&gt;将上面获得的sha1值与packageName一起按格式&lt;code&gt;sha1;packageName&lt;/code&gt;的形式填入到本文前面&lt;code&gt;创建应用&lt;/code&gt;一节中图片中的安全码位置。然后点击确定，系统会提示创建成功，然后系统会为你的应用生成一个专门的字符串，即key，如下图所示。将其配置到自己的应用中使用即可。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://dengbiao.github.io/assets/uploads/QQ20140314-5.png&quot; alt=&quot;系统生成key&quot; title=&quot;系统生成key&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;_2&quot;&gt;总结&lt;/h3&gt;
+
+&lt;p&gt;到此，本文结束了，生命在于折腾。。。&lt;/p&gt;</content>
+    </entry>
+    
+    <entry>
+        <title>vim自定义配色 参数含义说明</title>
+        <link href="http://localhost:4000/accumulation/vim/2014-02-23-vim%2Btheme.html"/>
+        <updated>2014-02-23T00:00:00+08:00</updated>
+        <id>http://localhost:4000/accumulation/vim/vim+theme</id>
+        <content type="html">&lt;p&gt;vim颜色主题文件中，各个参数的含义说明如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hi Cursor guifg=grey20 guibg=#00FFD7 gui=NONE &amp;quot;光标所在的字符
+hi CursorColumn guibg=grey20 gui=NONE &amp;quot;光标所在的屏幕列
+hi CursorLine  guibg=#666666  gui=NONE &amp;quot;光标所在的屏幕行
+hi Directory  guifg=#FF3F3F  guibg=grey20 gui=NONE &amp;quot;目录名
+hi DiffAdd  guibg=#7F7F00 gui=NONE &amp;quot;diff: 增加的行
+hi DiffChange  guibg=#7F007F gui=NONE &amp;quot;diff: 改变的行
+hi DiffDelete  guibg=#007F7F gui=NONE &amp;quot;diff: 删除的行
+hi DiffText  guifg=#007F00  guibg=grey20 gui=NONE &amp;quot;diff: 改变行里的改动文本
+hi ErrorMsg  guifg=#FF3F3F  guibg=grey20 gui=NONE &amp;quot;命令行上的错误信息&lt;/code&gt;&lt;/pre&gt;
+&lt;!--more--&gt;
+&lt;pre&gt;&lt;code&gt;hi VertSplit  guifg=#FF3F3F  guibg=#3F3FFF gui=NONE &amp;quot;分离垂直分割窗口的列
+hi Folded guifg=#7FFF00  guibg=#7F7F00 gui=NONE &amp;quot;用于关闭的折叠的行
+hi IncSearch  guifg=redguibg=plum gui=NONE &amp;quot;&amp;#39;incsearch&amp;#39; 高亮
+hi LineNr guifg=#FFFF00  guibg=grey20 gui=NONE &amp;quot;置位 number 选项时的行号
+hi MatchParen guifg=#FF7F3F  guibg=grey20 gui=NONE &amp;quot;配对的括号
+hi MatchParen guifg=#FFFF00  guibg=#FF0000 gui=NONE &amp;quot;配对的括号
+hi ModeMsg guifg=#FF7F00  guibg=grey20 gui=NONE &amp;quot;showmode 消息(INSERT)
+hi MoreMsg guifg=#BFBF3F  guibg=grey20 gui=NONE &amp;quot;|more-prompt|
+hi NonText guifg=#007FFF  guibg=grey20 gui=NONE &amp;quot;窗口尾部的&amp;#39;~&amp;#39;和 &amp;#39;@&amp;#39;
+hi Normal guifg=#BFBFBF  guibg=grey20 gui=NONE &amp;quot;正常内容
+hi Pmenu  guifg=#FFFFFF  guibg=#3F3FFF gui=NONE &amp;quot;弹出菜单普通项目
+hi PmenuSel  guifg=#FFFF00  guibg=#FF3F3F gui=NONE &amp;quot;弹出菜单选中项目
+hi PmenuSbar  guifg=#3F3FFF  guibg=grey20 gui=NONE &amp;quot;弹出菜单滚动条。
+hi PmenuThumb guifg=grey20 guibg=#3FFF3F gui=NONE &amp;quot;弹出菜单滚动条的拇指
+hi Question  guifg=#7F7F7F  guibg=grey20 gui=NONE &amp;quot;提示和 yes/no 问题
+hi Search guifg=#FFFF66  guibg=#6887FF gui=NONE &amp;quot;最近搜索模式的高亮
+hi SpecialKey guifg=#FF7F00  guibg=grey20 gui=NONE &amp;quot;特殊键，字符和&amp;#39;listchars&amp;#39;
+hi SpellBad  guifg=#FF0000  guibg=grey20 gui=NONE &amp;quot;拼写检查器不能识别的单词
+hi SpellCap  guifg=#BF0000  guibg=grey20 gui=NONE &amp;quot;应该大写字母开头的单词
+hi SpellLocal guifg=#FF00FF  guibg=grey20 gui=NONE &amp;quot;只在其它区域使用的单词
+hi SpellRare  guifg=#FF7FFF  guibg=grey20 gui=NONE &amp;quot;很少使用的单词
+hi StatusLine guifg=thistle  guibg=dimgraygui=NONE &amp;quot;当前窗口的状态行
+hi StatusLineNC  guifg=#FFFFFF  guibg=#3F3F3F gui=NONE &amp;quot;非当前窗口的状态行
+hi TabLine guifg=grey20 guibg=#BFBFBF gui=NONE &amp;quot;非活动标签页标签
+hi TabLineFill guifg=grey20 guibg=#FFFFFF gui=NONE &amp;quot;没有标签的地方
+hi TabLineSel guifg=#FFFF00  guibg=#0000FF gui=NONE &amp;quot;活动标签页标签
+hi Title  guifg=#007FBF  guibg=grey20 gui=NONE &amp;quot;:set all 等输出的标题
+hi Visual guifg=darkslategrayguibg=lightblue
+gui=NONE &amp;quot;可视模式的选择区
+hi WarningMsg guifg=#FF003F  guibg=grey20 gui=NONE &amp;quot;警告消息
+hi WildMenu  guifg=#FF7F00  guibg=#0000FF gui=NONE &amp;quot;wildmenu补全的当前匹配
+hi Comment guifg=skyblue  guibg=grey20 gui=NONE &amp;quot;任何注释
+hi Constant  guifg=#BF007F  guibg=grey20 gui=NONE &amp;quot;任何常数
+hi String guifg=#FF7F7F  guibg=grey20 gui=NONE &amp;quot;一个字符串常数: &amp;quot;字符串&amp;quot;
+hi Character  guifg=#FF3F3F  guibg=grey20 gui=NONE &amp;quot;一个字符常数: &amp;#39;c&amp;#39;、&amp;#39;\n&amp;#39;
+hi Number guifg=#FF7F3F  guibg=grey20 gui=NONE &amp;quot;一个数字常数: 234、0xff
+hi Float  guifg=#FF7F3F  guibg=grey20 gui=NONE &amp;quot;一个浮点常数: 2.3e10
+hi Boolean guifg=#FF0000  guibg=grey20 gui=NONE &amp;quot;一个布尔型常数: TRUE、false
+hi Identifier guifg=#007FBF  guibg=grey20 gui=NONE &amp;quot;任何变量名
+hi Function  guifg=#00BFBF  guibg=grey20 gui=NONE &amp;quot;函数名 (也包括: 类的方法名)
+hi Statement  guifg=#FFFF7F  guibg=grey20 gui=NONE &amp;quot;任何语句
+hi Conditional guifg=#FFFF00  guibg=grey20 gui=NONE &amp;quot;if、then、else、endif、switch
+hi Repeat guifg=#FFBF00  guibg=grey20 gui=NONE &amp;quot;for、do、while 等
+hi Label  guifg=#FF7F00  guibg=grey20 gui=NONE &amp;quot;case、default 等
+hi Operator  guifg=#BFFF00  guibg=grey20 gui=NONE &amp;quot;&amp;quot;sizeof&amp;quot;、&amp;quot;+&amp;quot;、&amp;quot;*&amp;quot; 等
+hi Keyword guifg=#BFBF00  guibg=grey20 gui=NONE &amp;quot;任何其它关键字
+hi Exception  guifg=#BF7F00  guibg=grey20 gui=NONE &amp;quot;try、catch、throw
+hi PreProc guifg=#FF63FF  guibg=grey20 gui=NONE &amp;quot;通用预处理命令
+hi Include guifg=#FF00FF  guibg=grey20 gui=NONE &amp;quot;预处理命令 #include
+hi Define guifg=#BF3FBF  guibg=grey20 gui=NONE &amp;quot;预处理命令 #define
+hi Macro  guifg=#7F00BF  guibg=grey20 gui=NONE &amp;quot;等同于 Define
+hi PreCondit  guifg=#FF007F  guibg=grey20 gui=NONE &amp;quot;预处理命令 #if、#else、#endif
+hi Type guifg=limegreen guibg=grey20 gui=NONE &amp;quot;int、long、char 等
+hi StorageClass  guifg=#7FFF00  guibg=grey20 gui=NONE &amp;quot;static、register、volatile 等
+hi Structure  guifg=#00FF7F  guibg=grey20 gui=NONE &amp;quot;struct、union、enum 等
+hi Typedef guifg=#3FFF3F  guibg=grey20 gui=NONE &amp;quot;一个 typedef
+hi Special guifg=#BFBF3F  guibg=grey20 gui=NONE &amp;quot;任何特殊符号
+hi SpecialChar guifg=#FFBF3F  guibg=grey20 gui=NONE &amp;quot;常数中的特殊字符
+hi Tag guifg=#BFFF3F  guibg=grey20 gui=NONE &amp;quot;这里可以使用 CTRL-]
+hi Delimiter  guifg=#FF3F00  guibg=grey20 gui=NONE &amp;quot;需要注意的字符
+hi SpecialComment guifg=#FF00BF  guibg=grey20 gui=NONE &amp;quot;注释里的特殊字符
+hi Debug  guifg=#BF00FF  guibg=grey20 gui=NONE &amp;quot;调试语句
+hi Underlined guifg=#3F3FFF  guibg=grey20 gui=UNDERLINE  &amp;quot;需要突出的文本，HTML 链接
+hi Ignore guifg=#7F7F7F  guibg=grey20 gui=NONE &amp;quot;留空，被隐藏
+hi Error  guifg=#FFFF00  guibg=#FF0000 gui=NONE &amp;quot;任何有错的构造
+hi Todo guifg=#FFFFFF  guibg=#0000FF gui=NONE &amp;quot;任何需要特殊注意的部分
+hi Cursor ctermfg=black ctermbg=lightgreen cterm=BOLD &amp;quot;光标所在的字符
+hi CursorColumn  ctermbg=black  cterm=BOLD &amp;quot;光标所在的屏幕列
+hi CursorLine ctermbg=black  cterm=BOLD &amp;quot;光标所在的屏幕行
+hi Directory  ctermfg=lightmagenta ctermbg=black  cterm=BOLD &amp;quot;目录名
+hi DiffAdd ctermbg=lightgreen cterm=BOLD &amp;quot;diff: 增加的行
+hi DiffChange ctermbg=lightcyan cterm=BOLD &amp;quot;diff: 改变的行
+hi DiffDelete ctermbg=lightcyan cterm=BOLD &amp;quot;diff: 删除的行
+hi DiffText  ctermfg=lightgreen  ctermbg=black  cterm=BOLD &amp;quot;diff: 改变行里的改动文本
+hi ErrorMsg  ctermfg=lightmagenta ctermbg=black  cterm=BOLD &amp;quot;命令行上的错误信息
+hi VertSplit  ctermfg=lightmagenta ctermbg=lightblue cterm=BOLD &amp;quot;分离垂直分割窗口的列
+hi Folded ctermfg=lightgrey ctermbg=lightgreen cterm=BOLD &amp;quot;用于关闭的折叠的行
+hi IncSearch  ctermfg=yellow ctermbg=lightblue cterm=BOLD &amp;quot;&amp;#39;incsearch&amp;#39; 高亮
+hi LineNr ctermfg=yellow ctermbg=black  cterm=BOLD &amp;quot;置位 number 选项时的行号
+hi MatchParen ctermfg=lightred ctermbg=black  cterm=BOLD &amp;quot;配对的括号
+hi MatchParen ctermfg=yellow ctermbg=lightred  cterm=BOLD &amp;quot;配对的括号
+hi ModeMsg ctermfg=lightgreen  ctermbg=black  cterm=BOLD &amp;quot;showmode 消息(INSERT)
+hi MoreMsg ctermfg=lightcyan ctermbg=black  cterm=BOLD &amp;quot;|more-prompt|
+hi NonText ctermfg=lightcyan ctermbg=black  cterm=BOLD &amp;quot;窗口尾部的&amp;#39;~&amp;#39;和 &amp;#39;@&amp;#39;
+hi Normal ctermfg=lightgrey ctermbg=black  cterm=BOLD &amp;quot;正常内容
+hi Pmenu  ctermfg=lightgrey ctermbg=lightblue cterm=BOLD &amp;quot;弹出菜单普通项目
+hi PmenuSel  ctermfg=yellow ctermbg=lightmagenta  cterm=BOLD &amp;quot;弹出菜单选中项目
+hi PmenuSbar  ctermfg=lightcyan ctermbg=black  cterm=BOLD &amp;quot;弹出菜单滚动条。
+hi PmenuThumb ctermfg=black ctermbg=lightgreen cterm=BOLD &amp;quot;弹出菜单滚动条的拇指
+hi Question  ctermfg=yellow ctermbg=black  cterm=BOLD &amp;quot;提示和 yes/no 问题
+hi Search ctermfg=yellow ctermbg=lightblue cterm=BOLD &amp;quot;最近搜索模式的高亮
+hi SpecialKey ctermfg=lightgreen  ctermbg=black  cterm=BOLD &amp;quot;特殊键，字符和&amp;#39;listchars&amp;#39;
+hi SpellBad  ctermfg=lightred ctermbg=black  cterm=BOLD &amp;quot;拼写检查器不能识别的单词
+hi SpellCap  ctermfg=lightred ctermbg=black  cterm=BOLD &amp;quot;应该大写字母开头的单词
+hi SpellLocal ctermfg=lightcyan ctermbg=black  cterm=BOLD &amp;quot;只在其它区域使用的单词
+hi SpellRare  ctermfg=lightcyan ctermbg=black  cterm=BOLD &amp;quot;很少使用的单词
+hi StatusLine ctermfg=yellow ctermbg=lightblue cterm=BOLD &amp;quot;当前窗口的状态行
+hi StatusLineNC  ctermfg=yellow ctermbg=black  cterm=BOLD &amp;quot;非当前窗口的状态行
+hi TabLine ctermfg=black ctermbg=black  cterm=BOLD &amp;quot;非活动标签页标签
+hi TabLineFill ctermfg=black ctermbg=lightgrey cterm=BOLD &amp;quot;没有标签的地方
+hi TabLineSel ctermfg=yellow ctermbg=lightblue cterm=BOLD &amp;quot;活动标签页标签
+hi Title  ctermfg=lightmagenta ctermbg=black  cterm=BOLD &amp;quot;:set all 等输出的标题
+hi Visual ctermfg=yellow ctermbg=lightblue cterm=BOLD &amp;quot;可视模式的选择区
+hi WarningMsg ctermfg=lightmagenta ctermbg=black  cterm=BOLD &amp;quot;警告消息
+hi WildMenu  ctermfg=lightgreen  ctermbg=lightblue cterm=BOLD &amp;quot;wildmenu补全的当前匹配
+hi Comment ctermfg=yellow ctermbg=black  cterm=BOLD &amp;quot;任何注释
+hi Constant  ctermfg=brown ctermbg=black  cterm=BOLD &amp;quot;任何常数
+hi String ctermfg=lightmagenta ctermbg=black  cterm=BOLD &amp;quot;一个字符串常数: &amp;quot;字符串&amp;quot;
+hi Character  ctermfg=lightmagenta ctermbg=black  cterm=BOLD &amp;quot;一个字符常数: &amp;#39;c&amp;#39;、&amp;#39;\n&amp;#39;
+hi Number ctermfg=lightgreen  ctermbg=black  cterm=BOLD &amp;quot;一个数字常数: 234、0xff
+hi Float  ctermfg=lightgreen  ctermbg=black  cterm=BOLD &amp;quot;一个浮点常数: 2.3e10
+hi Boolean ctermfg=lightmagenta ctermbg=black  cterm=BOLD &amp;quot;一个布尔型常数: TRUE、false
+hi Identifier ctermfg=lightcyan ctermbg=black  cterm=BOLD &amp;quot;任何变量名
+hi Function  ctermfg=lightcyan ctermbg=black  cterm=BOLD &amp;quot;函数名 (也包括: 类的方法名)
+hi Statement  ctermfg=yellow ctermbg=black  cterm=BOLD &amp;quot;任何语句
+hi Conditional ctermfg=yellow ctermbg=black  cterm=BOLD &amp;quot;if、then、else、endif、switch
+hi Repeat ctermfg=yellow ctermbg=black  cterm=BOLD &amp;quot;for、do、while 等
+hi Label  ctermfg=yellow ctermbg=black  cterm=BOLD &amp;quot;case、default 等
+hi Operator  ctermfg=yellow ctermbg=black  cterm=BOLD &amp;quot;&amp;quot;sizeof&amp;quot;、&amp;quot;+&amp;quot;、&amp;quot;*&amp;quot; 等
+hi Keyword ctermfg=yellow ctermbg=black  cterm=BOLD &amp;quot;任何其它关键字
+hi Exception  ctermfg=lightred ctermbg=black  cterm=BOLD &amp;quot;try、catch、throw
+hi PreProc ctermfg=lightmagenta ctermbg=black  cterm=BOLD &amp;quot;通用预处理命令
+hi Include ctermfg=lightmagenta ctermbg=black  cterm=BOLD &amp;quot;预处理命令 #include
+hi Define ctermfg=lightmagenta ctermbg=black  cterm=BOLD &amp;quot;预处理命令 #define
+hi Macro  ctermfg=lightmagenta ctermbg=black  cterm=BOLD &amp;quot;等同于 Define
+hi PreCondit  ctermfg=lightred ctermbg=black  cterm=BOLD &amp;quot;预处理命令 #if、#else、#endif
+hi Type ctermfg=lightgreen  ctermbg=black  cterm=BOLD &amp;quot;int、long、char 等
+hi StorageClass  ctermfg=lightmagenta ctermbg=black  cterm=BOLD &amp;quot;static、register、volatile 等
+hi Structure  ctermfg=lightgreen  ctermbg=black  cterm=BOLD &amp;quot;struct、union、enum 等
+hi Typedef ctermfg=lightcyan ctermbg=black  cterm=BOLD &amp;quot;一个 typedef
+hi Special ctermfg=brown ctermbg=black  cterm=BOLD &amp;quot;任何特殊符号
+hi SpecialChar ctermfg=brown ctermbg=black  cterm=BOLD &amp;quot;常数中的特殊字符
+hi Tag ctermfg=lightcyan ctermbg=black  cterm=BOLD &amp;quot;这里可以使用 CTRL-]
+hi Delimiter  ctermfg=lightgreen  ctermbg=black  cterm=BOLD &amp;quot;需要注意的字符
+hi SpecialComment ctermfg=lightred ctermbg=black  cterm=BOLD &amp;quot;注释里的特殊字符
+hi Debug  ctermfg=lightcyan ctermbg=black  cterm=BOLD &amp;quot;调试语句
+hi Underlined ctermfg=lightcyan ctermbg=black  cterm=BOLD &amp;quot;需要突出的文本，HTML 链接
+hi Ignore ctermfg=darkgrey ctermbg=black  cterm=NONE &amp;quot;留空，被隐藏
+hi Error  ctermfg=yellow ctermbg=lightred  cterm=BOLD &amp;quot;任何有错的构造
+hi Todo ctermfg=lightgrey ctermbg=lightblue cterm=BOLD &amp;quot;任何需要特殊注意的部分&lt;/code&gt;&lt;/pre&gt;</content>
+    </entry>
+    
+    <entry>
         <title>python学习之路</title>
-        <link href="http://dengbiao.github.io/python/flask/2014/02/22/myattractions.html"/>
+        <link href="http://localhost:4000/2014-02-22-myattractions.html"/>
         <updated>2014-02-22T00:00:00+08:00</updated>
-        <id>http://dengbiao.github.io/python/flask/2014/02/22/myattractions</id>
+        <id>http://localhost:4000/myattractions</id>
         <content type="html">&lt;p&gt;今天开始学习python，flask，SQLAchemy等。目标是完成一个小型的景点导航后台API。博文会记录下整个学习过程中遇到的问题和积累的技术。对自己是一个勉励，也希望能够达到抛砖引玉的效果。如果博文有错误之处，可以在博客中进行交流与沟通，Come on。&lt;/p&gt;</content>
     </entry>
     
     <entry>
         <title>mac terminal skills</title>
-        <link href="http://dengbiao.github.io/accumulation/2014/02/20/mac%2Bterminal%2Bskill.html"/>
+        <link href="http://localhost:4000/accumulation/2014-02-20-mac%2Bterminal%2Bskill.html"/>
         <updated>2014-02-20T00:00:00+08:00</updated>
-        <id>http://dengbiao.github.io/accumulation/2014/02/20/mac+terminal+skill</id>
+        <id>http://localhost:4000/accumulation/mac+terminal+skill</id>
         <content type="html">&lt;p&gt;时隔半年的样子，重新装回了Mac OS。台式机由于显卡HD2500的原因没有安装成功，依旧使用自己的笔记本。感觉没有好好的维护，笔记本越来越不好使了，而且方向键也出了问题，不能使用。比较郁闷。&lt;/p&gt;
 
 &lt;p&gt;看了池建强老师的博客(http://macshuo.com),激起了自己对mac的兴趣。原来之前玩mac都是完成了一坨屎啊。看到老师推荐spotlight的时候，恨不得把自己给拍死。这么好用的东东，自己当时就tm的各种讨厌，各种不明所以好么。&lt;/p&gt;
@@ -59,9 +272,9 @@ Shift + Command + 鼠标双击    快速选中路径&lt;/code&gt;&lt;/pre&gt;
     
     <entry>
         <title>项目的一些文档说明</title>
-        <link href="http://dengbiao.github.io/tc/documents/2014/01/23/tc-documents.html"/>
+        <link href="http://localhost:4000/tc/documents/2014-01-23-tc-documents.html"/>
         <updated>2014-01-23T00:00:00+08:00</updated>
-        <id>http://dengbiao.github.io/tc/documents/2014/01/23/tc-documents</id>
+        <id>http://localhost:4000/tc/documents/tc-documents</id>
         <content type="html">&lt;p&gt;nfs目录: &lt;code&gt;/home/csumt/nfsroot/android/&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;光盘上的系统nfs目录: &lt;code&gt;/home/csumt/nfsroot/android2/&lt;/code&gt;&lt;/p&gt;
@@ -73,9 +286,9 @@ Shift + Command + 鼠标双击    快速选中路径&lt;/code&gt;&lt;/pre&gt;
     
     <entry>
         <title>ubuntu 12.04 配置 VPN pptpd</title>
-        <link href="http://dengbiao.github.io/ubuntu/vpn/pptpd/2014/01/22/ubuntu-vpn-pptpd.html"/>
+        <link href="http://localhost:4000/ubuntu/vpn/pptpd/2014-01-22-ubuntu-vpn-pptpd.html"/>
         <updated>2014-01-22T00:00:00+08:00</updated>
-        <id>http://dengbiao.github.io/ubuntu/vpn/pptpd/2014/01/22/ubuntu-vpn-pptpd</id>
+        <id>http://localhost:4000/ubuntu/vpn/pptpd/ubuntu-vpn-pptpd</id>
         <content type="html">&lt;p&gt;在 Ubuntu 中建立 pptp server 需要的软件包为 pptpd，用 apt-get 即可安装：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;sudo apt-get &amp;lt;abbr title=&amp;quot;Thanks zz!&amp;quot;&amp;gt;installabbr&amp;gt; pptpd&lt;/code&gt;&lt;/pre&gt;
@@ -156,9 +369,9 @@ ms-dns 208.67.222.222&lt;/code&gt;&lt;/pre&gt;
     
     <entry>
         <title>ubuntu进程管理方法</title>
-        <link href="http://dengbiao.github.io/ubuntu/process/manager/2014/01/22/ubuntu-process-manager.html"/>
+        <link href="http://localhost:4000/ubuntu/process/manager/2014-01-22-ubuntu-process-manager.html"/>
         <updated>2014-01-22T00:00:00+08:00</updated>
-        <id>http://dengbiao.github.io/ubuntu/process/manager/2014/01/22/ubuntu-process-manager</id>
+        <id>http://localhost:4000/ubuntu/process/manager/ubuntu-process-manager</id>
         <content type="html">&lt;p&gt;转自：&lt;a href=&quot;http://www.cnblogs.com/xinzaibing/archive/2012/03/24/2415434.html&quot;&gt;http://www.cnblogs.com/xinzaibing/archive/2012/03/24/2415434.html&lt;/a&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;ps 显示当前进程  
@@ -268,9 +481,9 @@ killall httpd   &lt;/code&gt;&lt;/pre&gt;
     
     <entry>
         <title>something I want to say</title>
-        <link href="http://dengbiao.github.io/accumulation/2014/01/16/something.html"/>
+        <link href="http://localhost:4000/accumulation/2014-01-16-something.html"/>
         <updated>2014-01-16T00:00:00+08:00</updated>
-        <id>http://dengbiao.github.io/accumulation/2014/01/16/something</id>
+        <id>http://localhost:4000/accumulation/something</id>
         <content type="html">&lt;p&gt;有些东西,你不去表达,别人是不会理解的.有的东西,你表达的太多,别人会理解错误的.所以,有人就会告诉你,不要在意别人的眼光.做好自己就可以了.但是真的是这样吗? 或许,真像别人说的那样,万事没有决定,何去何从,得靠自己来判断.对的,这又是别人的看法.人之所以为人,之所以能够立于动物之首,就是因为这个物种懂得学习,懂得吸取教训.&lt;/p&gt;
 
 &lt;p&gt;今天看到有人在讨论一个问题: 人为什么要工作? 论点是人为了工作,占用了自己的时间,不能陪伴亲人,不能照顾好孩子,不能去自己想去的地方,做自己想做的事情. 那你为什么要工作! 为了自己的那点存在感?还是为了取悦你的老板. 其实,我个人觉得问这样问题的都是傻逼. 先抛开什么梦想,什么追求不说. 在我看来,亲人,朋友,爱人.这些都是先于工作的.但是如果没有经济基础,你有能力去守护这些东西吗? 对的,你工作的理由就是为了守护自己心爱的东西,自己珍惜的东西.似乎我们找到了答案,并觉得自己在做着一件高尚的事情,可是,又有人要问了,为了守护自己珍爱的东西而去工作,可是工作确会让你伤害到它们,那你这又算什么. 是的,你永远没办法满足所有人.包括你自己. 所以何苦去思考这个问题呢. 人生一世,本以很艰难,何必难为自己,难为他人. 正所谓,人艰不拆.还是有一定的道理的.&lt;/p&gt;
@@ -294,9 +507,9 @@ killall httpd   &lt;/code&gt;&lt;/pre&gt;
     
     <entry>
         <title>十月感想</title>
-        <link href="http://dengbiao.github.io/impression/2013/11/06/impression.html"/>
+        <link href="http://localhost:4000/impression/2013-11-06-impression.html"/>
         <updated>2013-11-06T00:00:00+08:00</updated>
-        <id>http://dengbiao.github.io/impression/2013/11/06/impression</id>
+        <id>http://localhost:4000/impression/impression</id>
         <content type="html">&lt;p&gt;十月，研二的第二个月。感觉时间在一点点的走过。但是这两个月来，一直没有找到自己的工作状态。实验室项目进展缓慢。专业基础也没有什么提升。看着师兄师姐们为找工作而忙碌着。自己确有点不知所措。用了将近一个星期的时间，将博客从lofter转移到了github上面。很多以前在wordpress上的博文直接放弃了。虽然有点不舍得，但是确实没有什么有用的珍藏价值，仅有的只是一些成长的记忆吧。丢就丢吧，虽然偶尔回想起的那句“中国人不怎么在意历史的保护”，确实是这样的，建筑拆了建，建了拆。一些古老的东西，慢慢的在消失着。清理了博客，给空间留给剩下的研二，写一些有意义的博文，有深度的博文。不要再是简单的错误笔记。&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;p&gt;写博客的时间，让自己找到了一些曾经写代码的感觉。曾经的那种斗志。熟悉的味道。&lt;/p&gt;
@@ -312,9 +525,9 @@ killall httpd   &lt;/code&gt;&lt;/pre&gt;
     
     <entry>
         <title>音乐：其实我还好</title>
-        <link href="http://dengbiao.github.io/music/2013/11/04/qishiwohaihao.html"/>
+        <link href="http://localhost:4000/music/2013-11-04-qishiwohaihao.html"/>
         <updated>2013-11-04T00:00:00+08:00</updated>
-        <id>http://dengbiao.github.io/music/2013/11/04/qishiwohaihao</id>
+        <id>http://localhost:4000/music/qishiwohaihao</id>
         <content type="html">&lt;p&gt;第一次听到这首歌是在ktv，和房角石的小伙伴们一起。曾经听说过俞灏明的事情，在新闻里面，因为本人不追星，所以也没有太去关注。当看到mv中，湖南卫视跨年演唱会上，他的演出。有一种感动和敬佩。不知道为什么，突然觉得他好帅，好man。&lt;/p&gt;
 
 &lt;p&gt;或许是第一次听到这首歌，感触颇深。对俞灏明也有了一个不错的印象。尤其是歌词：&lt;code&gt;被故事选中，没资格懵懂&lt;/code&gt;。很现实的一句话。联想到他的经历，不得不说，这短短的一句话深藏了多少的辛酸与痛苦。&lt;/p&gt;
@@ -361,254 +574,6 @@ killall httpd   &lt;/code&gt;&lt;/pre&gt;
 我相信到最后一分钟
 太多不由衷不过是岁月的内容
 叹息过再继续向前走&lt;/code&gt;&lt;/pre&gt;</content>
-    </entry>
-    
-    <entry>
-        <title>ubuntu问题汇总贴</title>
-        <link href="http://dengbiao.github.io/2013/10/28/problem-summary-ubuntu.html"/>
-        <updated>2013-10-28T00:00:00+08:00</updated>
-        <id>http://dengbiao.github.io/2013/10/28/problem-summary-ubuntu</id>
-        <content type="html">&lt;p&gt;在使用ubuntu的过程中经常遇到各种各样的小问题，有时候觉得问题比较小，很容易通过google就解决了。但是，这些小问题其实挺消耗时间的。所以建立这个问题汇总贴。在使用ubuntu中遇到的各种小问题进行汇总。希望能够帮助遇到同样问题的人找到解决办法。同时，也是给自己的学习历程留下痕迹。&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3 id=&quot;ubuntu&quot;&gt;ubuntu用户添加&lt;/h3&gt;
-
-&lt;p&gt;以这段代码进行分析：&lt;code&gt;sudo useradd db -g tcteam -m -s /bin/bash&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;console&#39;&gt;&lt;span class=&#39;go&#39;&gt;db: 用户名 &lt;/span&gt;
-&lt;span class=&#39;go&#39;&gt;tcteam: 用户组名  &lt;/span&gt;
-&lt;span class=&#39;go&#39;&gt;-m: 同时创建用户目录  &lt;/span&gt;
-&lt;span class=&#39;go&#39;&gt;-s /bin/bash : 指定shell为bash  &lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!--more--&gt;&lt;hr /&gt;
-&lt;h3 id=&quot;ubuntu_vi&quot;&gt;ubuntu vi配置文件&lt;/h3&gt;
-
-&lt;p&gt;直接提供链接下载：&lt;a href=&quot;/assets/uploads/vimrc.txt&quot;&gt;ubuntu-vimrc&lt;/a&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3 id=&quot;ubuntu_&quot;&gt;ubuntu 终端忽略大小写&lt;/h3&gt;
-
-&lt;p&gt;在终端输入以下命令:&lt;code&gt;echo &amp;quot;set completion-ignore-case on&amp;quot;&amp;gt;&amp;gt;~/.inputrc&lt;/code&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3 id=&quot;ubuntu_1210_dropbox_&quot;&gt;ubuntu 12.10 安装dropbox失败 解决办法&lt;/h3&gt;
-
-&lt;p&gt;万恶的gfw。&lt;/p&gt;
-
-&lt;p&gt;ubuntu软件中心下载的dropbox安装完成后，用命令sudo dropbox start -i 安装失败。提示：&lt;/p&gt;
-&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;console&#39;&gt;&lt;span class=&#39;gp&#39;&gt;csumt@vivi-pc:~/Desktop$&lt;/span&gt; sudo dropbox start -i
-&lt;span class=&#39;go&#39;&gt;Starting Dropbox&lt;/span&gt;
-&lt;span class=&#39;go&#39;&gt;Dropbox is the easiest way to share and store your files online. Want to learn more? Head to http://www.dropbox.com/&lt;/span&gt;
-&lt;span class=&#39;go&#39;&gt;Error: Trouble connecting to Dropbox servers. Maybe your internet connection is down, or you need to set your http_proxy environment variable.&lt;/span&gt;
-&lt;span class=&#39;go&#39;&gt;URL that failed to download: http://www.dropbox.com/download?plat=lnx.x86_64&lt;/span&gt;
-&lt;span class=&#39;go&#39;&gt;Error: [Errno 104] Connection reset by peer&lt;/span&gt;
-&lt;span class=&#39;go&#39;&gt;The installation of Dropbox failed.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;顿时头痛不已。这么好用的东西难道就不能用？&lt;/p&gt;
-
-&lt;p&gt;万恶的GFW&lt;/p&gt;
-
-&lt;p&gt;google之。方法如下：&lt;/p&gt;
-&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;console&#39;&gt;&lt;span class=&#39;go&#39;&gt;1.去官网下载drobox安装包。我的是dropbox_1.4.0_amd64.deb  &lt;/span&gt;
-&lt;span class=&#39;go&#39;&gt;2.然后下载dropbox-lnx.x86-1.6.17.tar。  &lt;/span&gt;
-&lt;span class=&#39;go&#39;&gt;3.解压缩 dropbox-linux.tar.gz ，并将解压出来的 .dropbox-dist 文件夹放入你的 根目录，也就是 /home/你的名字 目录下（新版本的放到/var/lib/dropbox中，不然安装不了）  &lt;/span&gt;
-&lt;span class=&#39;go&#39;&gt;4.安装dropbox_1.4.0_amd64.deb。  &lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;ok到此安装完毕。&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3 id=&quot;ubuntu__uamp&quot;&gt;ubuntu 下配置 uamp&lt;/h3&gt;
-
-&lt;h4 id=&quot;1&quot;&gt;1.准备工作&lt;/h4&gt;
-
-&lt;p&gt;如果之前安装过LAMP，不完整或者有错误，可以依照如下方式卸除：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#apt-get remove --purge apache2 apache2-mpm-prefork apache2-utils apache2.2-common libapache2-mod-php5 #apt-get remove --purge libapr1 libaprutil1 libdbd-mysql-perl libdbi-perl libmysqlclient15off #apt-get remove --purge libnet-daemon-perl libplrpc-perl libpq5 mysql-client-5.0 mysql-common #apt-get remove --purge mysql-server mysql-server-5.0 php5-common php5-mysql  &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;这将卸除一切LAMP有关的软件安装以及配置文件。然后执行：&lt;/p&gt;
-&lt;!--more--&gt;
-&lt;pre&gt;&lt;code&gt;# rm -R /etc/php5&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;将可能存在的php5的目录删除。&lt;/p&gt;
-
-&lt;p&gt;执行自动移除和清理：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# apt-get autoremove   
-# apt-get autoclean&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&quot;2lamp&quot;&gt;2.安装LAMP&lt;/h4&gt;
-
-&lt;p&gt;在新立的里勾选LAMP SERVER即可。如果分布安装，则执行下面的命令：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# apt-get install apache2  
-# apt-get install php5   
-# apt-get install mysql-server libapache2-mod-auth-mysql php5-mysql&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;这将自动安装并默认配置apache2、php5以及mysql。安装期间mysql会需求管理员账户密码。&lt;/p&gt;
-
-&lt;p&gt;apache2的默认的目录为/var/www，安装完后为root拥有。可以修改其权限：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# chmod -R 777 /var/www&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;重新设置目录和apache2的更多配置信息，参阅Linux中配置apache2或参阅apache2官方http://www.apache.org/ 的文档。&lt;/p&gt;
-
-&lt;p&gt;设置php解析：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# apt-get install libapache2-mod-php5  
-# a2enmod php5&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;重启apache2：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# /etc/init.d/apache2 restart&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;安装完成。&lt;/p&gt;
-
-&lt;h4 id=&quot;3phpmyadmin&quot;&gt;3.安装phpmyadmin&lt;/h4&gt;
-
-&lt;p&gt;可以到官网下载phpmyadmin：&lt;a href=&quot;http://www.phpmyadmin.net/home_page/index.php&quot;&gt;http://www.phpmyadmin.net/home_page/index.php&lt;/a&gt; 或者直接获取：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# wget http://downloads.sourceforge.net/sourceforge/phpmyadmin/phpMyAdmin-3.2.0.1-all-languages.tar.gz&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;将其解压到/var/www/下，复制其配置范例到配置文件：&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3 id=&quot;ubuntudropbox&quot;&gt;ubuntu安装dropbox&lt;/h3&gt;
-
-&lt;p&gt;在网上或者源里面下载dropbox之后，安装不成功。貌似是被墙了。google告诉我们在terminal中直接下载以下内容 并解压之后即可&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd ~ &amp;amp;&amp;amp; wget -O - &amp;quot;https://www.dropbox.com/download?plat=lnx.x86_64&amp;quot; | tar xzf   &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;新版本的0.7.1-12&lt;code&gt;https://dl-web.dropbox.com/u/17/dropbox-lnx.x86-1.6.17.tar.gz&lt;/code&gt;在这个地址下载后要解压到&lt;code&gt;/var/lib/dropbox&lt;/code&gt;下面&lt;/p&gt;
-
-&lt;p&gt;下载好之后可以用&lt;code&gt;~/.dropbox-dist/dropboxd&lt;/code&gt; 便可运行&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3 id=&quot;ubuntu__2&quot;&gt;ubuntu触摸板失灵 解决办法&lt;/h3&gt;
-
-&lt;p&gt;在终端输入以下代码&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo modprobe -r psmouse  
-sudo modprobe psmouse proto=imps    &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;然后打开options文件：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo gedit /etc/modprobe.d/options    &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;添加 &lt;code&gt;options psmouse proto=imps&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;保存改动重启。&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3 id=&quot;ubuntu_server_1204_mysql&quot;&gt;ubuntu server 12.04 忘记mysql密码&lt;/h3&gt;
-
-&lt;p&gt;忘了mysql密码，从网上找到的解决方案记录在这里。 编辑mysql的配置文件&lt;code&gt;/etc/mysql/my.cnf&lt;/code&gt;，在[mysqld]段下加入一行&lt;code&gt;&amp;quot;skip-grant-tables&amp;quot;&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;重启mysql服务&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;abbuggy@abbuggy-ubuntu:~$ sudo service mysql restart  
-mysql stop/waiting  
-mysql start/running, process 18669  &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;用空密码进入mysql管理命令行，切换到mysql库。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;abbuggy@abbuggy-ubuntu:~$ mysql  
-Welcome to the MySQL monitor.  Commands end with ; or \g. 
-mysql&amp;gt; use mysql 
-Database changed &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;执行&lt;code&gt;update user set password=PASSWORD(&amp;quot;new_pass&amp;quot;) where user=&amp;#39;root&amp;#39;&lt;/code&gt;; 把密码重置为&lt;code&gt;new_pass&lt;/code&gt;。退出数据库管理。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;mysql&amp;gt; update user set password=PASSWORD(&amp;quot;new_pass&amp;quot;) where user=&amp;#39;root&amp;#39;;   
-Query OK, 0 rows affected (0.00 sec)   
-Rows matched: 4  Changed: 0  Warnings: 0   
-mysql&amp;gt;quit &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;回到&lt;code&gt;vim /etc/mysql/my.cnf&lt;/code&gt;，把刚才加入的那一行&lt;code&gt;&amp;quot;skip-grant-tables&amp;quot;&lt;/code&gt;注释或删除掉。&lt;/p&gt;
-
-&lt;p&gt;再次重启mysql服务sudo service mysql restart，使用新的密码登陆，修改成功。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;abbuggy@abbuggy-ubuntu:~$ mysql -uroot -pnew_pass 
-Welcome to the MySQL monitor.  Commands end with ; or \g. 
-mysql&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;hr /&gt;
-&lt;h3 id=&quot;ubuntu_gd__&quot;&gt;ubuntu 支持GD 图形 水印&lt;/h3&gt;
-
-&lt;p&gt;ubuntu 支持GD 图形 水印 为支持更高级的图片显示功能需要安装GD图形支持&lt;/p&gt;
-
-&lt;p&gt;在ubuntu Server 下，装gd，命令为：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo apt-get install php5-gd  &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;重启apache：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/etc/init.d/apache2 restart&lt;/code&gt;&lt;/pre&gt;
-&lt;hr /&gt;
-&lt;h3 id=&quot;ubuntu_unzip_&quot;&gt;ubuntu unzip 安装以及命令参数说明&lt;/h3&gt;
-
-&lt;p&gt;安装命令：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo apt-get install unzip&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;解压.zip文件命令：&lt;code&gt;unzip&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;unzip命令能够将被winzip压缩的文件解压。&lt;/p&gt;
-
-&lt;p&gt;unzip命令的执行方式为：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;unzip [-选项]  压缩文件名.zip&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;例如想将file1.zip文件在当前目录下解压，则执行命令为：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;unzip  file1.zip&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;如果只想查看压缩文件里的文件目录，但是并不想解压，则执行命令为：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# unzip -v file1.zip&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;将file1.zip文件在/home/zip目录中进行解压，但是如有相同的文件则并不覆盖原文件，执行命令为：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;unzip -n file1.zip -d /home/zip &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;unzip命令的选项参数说明:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;-v 查看文件目录列表，但不解压  
--d 将文件解压到指定目录中  
--n 不覆盖原来已经存在的文件  
--o 覆盖已存在的文件并且不需要用户确认  &lt;/code&gt;&lt;/pre&gt;
-&lt;hr /&gt;
-&lt;h3 id=&quot;github_&quot;&gt;github 提交记住用户名密码&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;git config --global credential.helper &amp;#39;cache --timeout 3600&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;hr /&gt;
-&lt;h3 id=&quot;ubunturesolvconf&quot;&gt;ubuntu重启后resolv.conf被清空&lt;/h3&gt;
-
-&lt;p&gt;其实这个问题很简单.resolv.conf文件是一个软链接,指向的是&lt;code&gt;/run/resolvconf/resolv.conf&lt;/code&gt;文件.而这个文件的内容只有两行&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#Dynamic resolv.conf(5) file for glibc resolver(3) generated by resolvconf(8)
-#DO NOT EDIT THIS FILE BY HAND -- YOUR CHANGES WILL BE OVERWRITTEN&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;注意到这里的话,其实它很明确的告诉了我们不要手动去修改它,因为他会被覆盖的.&lt;/p&gt;
-
-&lt;p&gt;所以留给我们的办法就只有两个:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;1.修改`/etc/network/interfaces`文件的时候加入指定`nameserver`的记录
-2.修改会用来覆盖resolv.conf文件的base文件(`/etc/resolvconf/resolv.conf.d/base`)&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;第一种方法修改&lt;code&gt;etc/network/interface&lt;/code&gt;文件内容,示例如下:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;iface eth0 inet static 
-address 192.168.1.100 
-netmask 255.255.255.0 
-gateway 192.168.1.1 
-dns-nameservers 202.197.64.6 8.8.8.8 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;第二种方法修改&lt;code&gt;/etc/resolvconf/resolv.conf.d/base&lt;/code&gt;文件内容,示例如下:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;nameserver 202.197.64.6
-nameserver 8.8.8.8&lt;/code&gt;&lt;/pre&gt;</content>
-    </entry>
-    
-    <entry>
-        <title></title>
-        <link href="http://dengbiao.github.io/blog/2013/10/17/none.html"/>
-        <updated>2013-10-17T00:00:00+08:00</updated>
-        <id>http://dengbiao.github.io/blog/2013/10/17/none</id>
-        <content type="html">&lt;p&gt;最近没什么工作动态。基本干的也都是些烦人的杂活，或者是没干活。心有点烦。烦烦烦&lt;/p&gt;
-
-&lt;p&gt;下午和程子学老师讨论了一些我们项目的事情。感觉没讨论出什么东西。但是吧，程子学老师对自己倒是挺欣赏的感觉。有点点受宠若惊的感觉，但是想着自己现在的状态，也不想多说什么，也觉得自己有点迷乱。不知道方向的感觉。或许该静下心来好好想想后面的生活该怎么过了。&lt;/p&gt;
-
-&lt;p&gt;加油和努力不是嘴巴说说就可以了。希望这几天能够找回工作的状态。不在迷乱。。。&lt;/p&gt;</content>
     </entry>
     
 

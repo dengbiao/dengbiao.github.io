@@ -5,7 +5,7 @@
         <meta charset=utf-8 />
         <title>
              邓彪的博客   
-             | 关于我 
+             | wordpress is_home() 函数失效解决方案 
         </title>
         <link rel="shortcut icon" type="image/ico" href="/assets/images/portrait.jpg">
         <link rel="stylesheet" href="/assets/css/clear.css" />
@@ -49,28 +49,65 @@
 
             <article>
             <div class="page_container">
-    <div class="page_content2">
-        <h2 id="about_me">About me</h2>
+    <div class="date">
+        <span class="day">
+            08
+        </span>
+        <span class="month">
+            09
+        </span>
+    </div>
+    <div class="page_item">
+        
+        <div class="title">
+            <h1><a href="/accumulation/2012-09-08-wordpress-is_home-e587bde695b0e5a4b1e69588e8a7a3e586b3e696b9e6a188.html">wordpress is_home() 函数失效解决方案</a></h1>
+        </div>
+        
+        
+        <div class="page_content">
+            <p><p>尝试着修改一个自己的wordpress主题，可是却在用到is_home()函数的时候遇到了问题，总是判断错误，返回false，google一下，发现问题为自己之前利用wordpress的新特性 将首页设置成了静态页面导致函数失效。修改回来即可。</p>
 
-<p>邓彪。性格外向、开朗、喜好交友。对IT技术与computer前沿发展有着浓厚兴趣。</p>
+<p>该文章内容如下：<a href="http://down.chinaz.com/try/201108/904_1.htm">http://down.chinaz.com/try/201108/904_1.htm</a></p>
+<!-- more -->
+<p>利用is_home()判断是否为首页，如果不起作用，大致有如下两个常见原因：</p>
 
-<p>本科:Central South University</p>
+<p><strong>第一种：</strong></p>
 
-<p>研究生:Central South University</p>
+<p>　　当你的首页不是默认的index.php的时候，而是在后台指定了一个page页面。这种情况下is_home()会失效，也就是说这样子的情况下就不能再用is_home()来判断。</p>
 
-<p>专业:Computer Science</p>
+<p>　　is_front_page()是判断当前页是不是指定的首页，我们在上面描述的情况下需要的就是这个函数。</p>
+<?php if (is_home() || is_front_page()) { ?>
+<pre><code>我只会在首页显示</code></pre>
+<?php } ?>
+<p>　　ps：我在使用多站点wordpress进行二次开发时，需要所有的站点均指定一个page作为首页来显示；而且，该page作为首页显示时，页头还要显示一个banner图片。这就需要对所有theme主题的page.php文件内使用上述代码以判断是否首页。</p>
 
-<p>兴趣、方向：Cloud Computing、Android、OpenGL</p>
-<hr />
-<h2 id="life_motto">Life Motto</h2>
+<p><strong>第二种：</strong></p>
 
-<p>just be yourself</p>
+<p>　　如果is_home()之前有个 query_posts()，则会让它本身判断失效。原因是 is_home() 函数在首页的时候会返回一个 true 来判断，而 query_posts()会阻断这一判断。</p>
 
-<p><img src="http://farm8.staticflickr.com/7322/10532345515_4370309226_o.png" alt="dengbiao" /></p>
-<hr />
-<h2 id="contact">Contact</h2>
+<p>　　解决方案是在 is_home()之前加一个 wp_reset_query()。</p>
+<?php wp_reset_query(); if ( is_home() ) { ?>
+<pre><code>我只会在首页显示</code></pre>
+<?php } ?></p> 
+        </div>
 
-<p>E-mail：<a href="mailto:dengbiao123@gmail.com">dengbiao123@gmail.com</a></p>
+
+        <div class="page_comments" id="page_comments">
+            <!-- Duoshuo Comment BEGIN -->
+            <div class="ds-thread" data-thread-key="/accumulation/wordpress-is_home-e587bde695b0e5a4b1e69588e8a7a3e586b3e696b9e6a188" data-title="wordpress is_home() 函数失效解决方案" ></div>
+            <script type="text/javascript">
+                var duoshuoQuery = {short_name:"dengbiao"};
+(function() {
+ var ds = document.createElement('script');
+ ds.type = 'text/javascript';ds.async = true;
+ ds.src = 'http://static.duoshuo.com/embed.js';
+ ds.charset = 'UTF-8';
+ (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+ })();
+</script>
+<!-- Duoshuo Comment END -->
+    </div>
     </div>
 </div>
 <div class="clear"></div>

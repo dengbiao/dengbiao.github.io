@@ -5,7 +5,7 @@
         <meta charset=utf-8 />
         <title>
              邓彪的博客   
-             | 关于我 
+             | Qt   QLine 线条颜色渐变 
         </title>
         <link rel="shortcut icon" type="image/ico" href="/assets/images/portrait.jpg">
         <link rel="stylesheet" href="/assets/css/clear.css" />
@@ -49,28 +49,48 @@
 
             <article>
             <div class="page_container">
-    <div class="page_content2">
-        <h2 id="about_me">About me</h2>
+    <div class="date">
+        <span class="day">
+            02
+        </span>
+        <span class="month">
+            05
+        </span>
+    </div>
+    <div class="page_item">
+        
+        <div class="title">
+            <h1><a href="/accumulation/coding/qt/2012-05-02-qt-qline-e7babfe69da1e9a29ce889b2e6b890e58f98.html">Qt   QLine 线条颜色渐变</a></h1>
+        </div>
+        
+        
+        <div class="page_content">
+            <p><pre><code>QLineF line(sourcePoint, destPoint);
+QLinearGradient gradient(sourcePoint.x(), sourcePoint.y(), destPoint.x(), destPoint.y());
+gradient.setColorAt(0.0, Qt::white);
+gradient.setColorAt(0.5, color);
+gradient.setColorAt(1.0, Qt::black);
+painter-&gt;setPen(QPen(QBrush(gradient), width, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
+painter-&gt;drawLine(line);</code></pre></p> 
+        </div>
 
-<p>邓彪。性格外向、开朗、喜好交友。对IT技术与computer前沿发展有着浓厚兴趣。</p>
 
-<p>本科:Central South University</p>
-
-<p>研究生:Central South University</p>
-
-<p>专业:Computer Science</p>
-
-<p>兴趣、方向：Cloud Computing、Android、OpenGL</p>
-<hr />
-<h2 id="life_motto">Life Motto</h2>
-
-<p>just be yourself</p>
-
-<p><img src="http://farm8.staticflickr.com/7322/10532345515_4370309226_o.png" alt="dengbiao" /></p>
-<hr />
-<h2 id="contact">Contact</h2>
-
-<p>E-mail：<a href="mailto:dengbiao123@gmail.com">dengbiao123@gmail.com</a></p>
+        <div class="page_comments" id="page_comments">
+            <!-- Duoshuo Comment BEGIN -->
+            <div class="ds-thread" data-thread-key="/accumulation/coding/qt/qt-qline-e7babfe69da1e9a29ce889b2e6b890e58f98" data-title="Qt   QLine 线条颜色渐变" ></div>
+            <script type="text/javascript">
+                var duoshuoQuery = {short_name:"dengbiao"};
+(function() {
+ var ds = document.createElement('script');
+ ds.type = 'text/javascript';ds.async = true;
+ ds.src = 'http://static.duoshuo.com/embed.js';
+ ds.charset = 'UTF-8';
+ (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+ })();
+</script>
+<!-- Duoshuo Comment END -->
+    </div>
     </div>
 </div>
 <div class="clear"></div>

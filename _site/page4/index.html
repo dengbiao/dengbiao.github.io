@@ -42,13 +42,103 @@
             </form>
 
             <ul class="sidelist">
-                <li><a href="http://dengbiao.github.io/atom.xml" class="rss" title="订阅"></a></li>
-                <li><a href="http://dengbiao.github.io/pages/archive.html" class="archive" title="归档"></a></li>
+                <li><a href="http://localhost:4000/atom.xml" class="rss" title="订阅"></a></li>
+                <li><a href="http://localhost:4000/pages/archive.html" class="archive" title="归档"></a></li>
             </ul>
             </header>
 
             <article>
             <ul class="entries">
+    
+    <li class="entry_item">
+    <div class="date">
+        <span class="day">
+            11
+        </span>
+        <span class="month">
+            09
+        </span>
+    </div>
+    <div class="post_item">
+        
+            <div class="title">
+                <h1><a href="/2013-09-11-ubuntu%2Bconsole%2Bencode%2Bfault.html">ubuntu终端显示乱码问题</a></h1>
+            </div>
+        
+        
+        <div class="post_content">
+            <p>已经几次遇到这个问题了。每次安装完ubuntu之后，各种编码问题，很头疼。今天又遇到了。把找到的方法写下来。下次查阅方便。</p>
+
+<p><code>sudo vi /var/lib/locales/supported.d/local</code></p>
+
+<p>将文件内容修改如下：</p>
+<div class='highlight'><pre><code class='console'><span class='go'>en_US.UTF-8 UTF-8  </span>
+<span class='go'>zh_CN.UTF-8 UTF-8  </span>
+<span class='go'>zh_CN.GBK GBK  </span>
+<span class='go'>zh_CN GB2312  </span>
+</code></pre></div> 
+        </div>
+        <div class="link clearfix">
+            <a href="/2013-09-11-ubuntu%2Bconsole%2Bencode%2Bfault.html">全文链接</a>
+            <a class="post_comments" href="/2013-09-11-ubuntu%2Bconsole%2Bencode%2Bfault.html#page_comments">
+                <span class="ds-thread-count" data-thread-key="/ubuntu+console+encode+fault" data-count-type="comments">暂无评论</span>
+            </a>
+            
+            <div class="tags">
+            
+            <span>ubuntu</span>
+            
+            <span>console</span>
+            
+            <span>charset</span>
+            
+            </div>
+            
+        </div>
+
+    </div>
+    </li>
+    <div class="clear"></div>
+    
+    <li class="entry_item">
+    <div class="date">
+        <span class="day">
+            10
+        </span>
+        <span class="month">
+            09
+        </span>
+    </div>
+    <div class="post_item">
+        
+            <div class="title">
+                <h1><a href="/2013-09-10-win7%2Bssh%2Bvirtualbox%2Bubuntu.html">windows 7下用ssh连接virtualbox中的ubuntu</a></h1>
+            </div>
+        
+        
+        <div class="post_content">
+            <p>首先讲一下自己的环境和应用场景。</p>
+
+<p>之前是用的vagrant配置好的ubuntu环境。速度是很快，但是后来发现在学习过程中不太合适，因为经常要安装很多软件。vagrant更加适合于大家协同工作的时候有一个相同的测试环境。相当于一台装了还原卡的电脑。所以，想了想，用virtualbox装了一个ubuntu12.04server 64bit版。然后用ssh连接，不就达到了可修改的vagrant效果么。其实，你会发现直接用virtualbox提供的界面操作也是一样的，根本不需要用ssh连接。对，是这样的。不过个人表示不太喜欢那个界面。所以应用场景就出现了。</p>
+ 
+        </div>
+        <div class="link clearfix">
+            <a href="/2013-09-10-win7%2Bssh%2Bvirtualbox%2Bubuntu.html">全文链接</a>
+            <a class="post_comments" href="/2013-09-10-win7%2Bssh%2Bvirtualbox%2Bubuntu.html#page_comments">
+                <span class="ds-thread-count" data-thread-key="/win7+ssh+virtualbox+ubuntu" data-count-type="comments">暂无评论</span>
+            </a>
+            
+            <div class="tags">
+            
+            <span>win7 ssh virtualbox ubuntu</span>
+            
+            </div>
+            
+        </div>
+
+    </div>
+    </li>
+    <div class="clear"></div>
     
     <li class="entry_item">
     <div class="date">
@@ -62,7 +152,7 @@
     <div class="post_item">
         
             <div class="title">
-                <h1><a href="/accumulation/python/2013/02/21/vagrant-e585a5e997a8.html">Vagrant 入门</a></h1>
+                <h1><a href="/accumulation/python/2013-02-21-vagrant-e585a5e997a8.html">Vagrant 入门</a></h1>
             </div>
         
         
@@ -79,9 +169,9 @@
  
         </div>
         <div class="link clearfix">
-            <a href="/accumulation/python/2013/02/21/vagrant-e585a5e997a8.html">全文链接</a>
-            <a class="post_comments" href="/accumulation/python/2013/02/21/vagrant-e585a5e997a8.html#page_comments">
-                <span class="ds-thread-count" data-thread-key="/accumulation/python/2013/02/21/vagrant-e585a5e997a8" data-count-type="comments">暂无评论</span>
+            <a href="/accumulation/python/2013-02-21-vagrant-e585a5e997a8.html">全文链接</a>
+            <a class="post_comments" href="/accumulation/python/2013-02-21-vagrant-e585a5e997a8.html#page_comments">
+                <span class="ds-thread-count" data-thread-key="/accumulation/python/vagrant-e585a5e997a8" data-count-type="comments">暂无评论</span>
             </a>
             
         </div>
@@ -102,7 +192,7 @@
     <div class="post_item">
         
             <div class="title">
-                <h1><a href="/accumulation/2013/01/09/teleport-pro-tppabse6a087e7adbee689b9e9878fe588a0e999a4.html">teleport pro tppabs标签批量删除</a></h1>
+                <h1><a href="/accumulation/2013-01-09-teleport-pro-tppabse6a087e7adbee689b9e9878fe588a0e999a4.html">teleport pro tppabs标签批量删除</a></h1>
             </div>
         
         
@@ -114,9 +204,9 @@
 3. 替换css文件中的tpa标签，使用Dreamweaver查找/\*tpa=.*\*/替换为空即可。</code></pre> 
         </div>
         <div class="link clearfix">
-            <a href="/accumulation/2013/01/09/teleport-pro-tppabse6a087e7adbee689b9e9878fe588a0e999a4.html">全文链接</a>
-            <a class="post_comments" href="/accumulation/2013/01/09/teleport-pro-tppabse6a087e7adbee689b9e9878fe588a0e999a4.html#page_comments">
-                <span class="ds-thread-count" data-thread-key="/accumulation/2013/01/09/teleport-pro-tppabse6a087e7adbee689b9e9878fe588a0e999a4" data-count-type="comments">暂无评论</span>
+            <a href="/accumulation/2013-01-09-teleport-pro-tppabse6a087e7adbee689b9e9878fe588a0e999a4.html">全文链接</a>
+            <a class="post_comments" href="/accumulation/2013-01-09-teleport-pro-tppabse6a087e7adbee689b9e9878fe588a0e999a4.html#page_comments">
+                <span class="ds-thread-count" data-thread-key="/accumulation/teleport-pro-tppabse6a087e7adbee689b9e9878fe588a0e999a4" data-count-type="comments">暂无评论</span>
             </a>
             
         </div>
@@ -137,7 +227,7 @@
     <div class="post_item">
         
             <div class="title">
-                <h1><a href="/accumulation/2012/11/15/e5ae89e8a385mac-e7a7afe7b4afe79a84e5b08fe78ea9e6848f.html">安装mac 积累的小玩意</a></h1>
+                <h1><a href="/accumulation/2012-11-15-e5ae89e8a385mac-e7a7afe7b4afe79a84e5b08fe78ea9e6848f.html">安装mac 积累的小玩意</a></h1>
             </div>
         
         
@@ -158,103 +248,9 @@
  
         </div>
         <div class="link clearfix">
-            <a href="/accumulation/2012/11/15/e5ae89e8a385mac-e7a7afe7b4afe79a84e5b08fe78ea9e6848f.html">全文链接</a>
-            <a class="post_comments" href="/accumulation/2012/11/15/e5ae89e8a385mac-e7a7afe7b4afe79a84e5b08fe78ea9e6848f.html#page_comments">
-                <span class="ds-thread-count" data-thread-key="/accumulation/2012/11/15/e5ae89e8a385mac-e7a7afe7b4afe79a84e5b08fe78ea9e6848f" data-count-type="comments">暂无评论</span>
-            </a>
-            
-        </div>
-
-    </div>
-    </li>
-    <div class="clear"></div>
-    
-    <li class="entry_item">
-    <div class="date">
-        <span class="day">
-            08
-        </span>
-        <span class="month">
-            09
-        </span>
-    </div>
-    <div class="post_item">
-        
-            <div class="title">
-                <h1><a href="/accumulation/2012/09/08/wordpress-is_home-e587bde695b0e5a4b1e69588e8a7a3e586b3e696b9e6a188.html">wordpress is_home() 函数失效解决方案</a></h1>
-            </div>
-        
-        
-        <div class="post_content">
-            <p>尝试着修改一个自己的wordpress主题，可是却在用到is_home()函数的时候遇到了问题，总是判断错误，返回false，google一下，发现问题为自己之前利用wordpress的新特性 将首页设置成了静态页面导致函数失效。修改回来即可。</p>
-
-<p>该文章内容如下：<a href="http://down.chinaz.com/try/201108/904_1.htm">http://down.chinaz.com/try/201108/904_1.htm</a></p>
-<!-- more -->
-<p>利用is_home()判断是否为首页，如果不起作用，大致有如下两个常见原因：</p>
-
-<p><strong>第一种：</strong></p>
-
-<p>　　当你的首页不是默认的index.php的时候，而是在后台指定了一个page页面。这种情况下is_home()会失效，也就是说这样子的情况下就不能再用is_home()来判断。</p>
-
-<p>　　is_front_page()是判断当前页是不是指定的首页，我们在上面描述的情况下需要的就是这个函数。</p>
-<?php if (is_home() || is_front_page()) { ?>
-<pre><code>我只会在首页显示</code></pre>
-<?php } ?>
-<p>　　ps：我在使用多站点wordpress进行二次开发时，需要所有的站点均指定一个page作为首页来显示；而且，该page作为首页显示时，页头还要显示一个banner图片。这就需要对所有theme主题的page.php文件内使用上述代码以判断是否首页。</p>
-
-<p><strong>第二种：</strong></p>
-
-<p>　　如果is_home()之前有个 query_posts()，则会让它本身判断失效。原因是 is_home() 函数在首页的时候会返回一个 true 来判断，而 query_posts()会阻断这一判断。</p>
-
-<p>　　解决方案是在 is_home()之前加一个 wp_reset_query()。</p>
-<?php wp_reset_query(); if ( is_home() ) { ?>
-<pre><code>我只会在首页显示</code></pre>
-<?php } ?> 
-        </div>
-        <div class="link clearfix">
-            <a href="/accumulation/2012/09/08/wordpress-is_home-e587bde695b0e5a4b1e69588e8a7a3e586b3e696b9e6a188.html">全文链接</a>
-            <a class="post_comments" href="/accumulation/2012/09/08/wordpress-is_home-e587bde695b0e5a4b1e69588e8a7a3e586b3e696b9e6a188.html#page_comments">
-                <span class="ds-thread-count" data-thread-key="/accumulation/2012/09/08/wordpress-is_home-e587bde695b0e5a4b1e69588e8a7a3e586b3e696b9e6a188" data-count-type="comments">暂无评论</span>
-            </a>
-            
-        </div>
-
-    </div>
-    </li>
-    <div class="clear"></div>
-    
-    <li class="entry_item">
-    <div class="date">
-        <span class="day">
-            29
-        </span>
-        <span class="month">
-            08
-        </span>
-    </div>
-    <div class="post_item">
-        
-            <div class="title">
-                <h1><a href="/accumulation/2012/08/29/google-chromee6b58fe8a788e599a8e8b083e8af95.html">Google Chrome浏览器调试</a></h1>
-            </div>
-        
-        
-        <div class="post_content">
-            <p>【原文地址：<a href="http://www.cnblogs.com/QLeelulu/archive/2011/08/28/2156402.html">http://www.cnblogs.com/QLeelulu/archive/2011/08/28/2156402.html</a> 】</p>
-
-<p>在Google Chrome浏览器出来之前，我一直使用FireFox，因为FireFox的插件非常丰富，更因为FireFox有强大的Firebug，对于前端开发可谓神器。</p>
-
-<p>在Chrome出来的时候，我就喜欢上它的简洁、快速，无论是启动速度还是页面解析速度还是Javascript执行速度（现在的FireFox4也比之前的FireFox3有很大的进步）。不过当时由于Chrome的开发者工具还不是很完善，而我又不是很熟悉，加之对于Firebug的好感和依赖，当时还是用回FireFox作为我的主浏览器。</p>
-
-<p>后来由于开发Chrome的插件(现在的FaWave)，就一直使用Google Chrom作为我的主浏览器，渐渐熟悉Chrome的开发者工具，而Chrome也一直在快速迭代，快速进步中，到现在，Chrome已经绝对成为我的主浏览器，Chrome的开发者工具，我也认为比Firebug更好用。</p>
-
-<p>得益于Google V8的快速，和对HTML5和CSS3的支持也算比较完善，html类的富客户端应用Chrome上无论是流畅性还是呈现的效果，都是比较出色的，这对于开发者，特别是对于那些喜欢研究前沿技术的前端开发者来说，是很重要的。</p>
- 
-        </div>
-        <div class="link clearfix">
-            <a href="/accumulation/2012/08/29/google-chromee6b58fe8a788e599a8e8b083e8af95.html">全文链接</a>
-            <a class="post_comments" href="/accumulation/2012/08/29/google-chromee6b58fe8a788e599a8e8b083e8af95.html#page_comments">
-                <span class="ds-thread-count" data-thread-key="/accumulation/2012/08/29/google-chromee6b58fe8a788e599a8e8b083e8af95" data-count-type="comments">暂无评论</span>
+            <a href="/accumulation/2012-11-15-e5ae89e8a385mac-e7a7afe7b4afe79a84e5b08fe78ea9e6848f.html">全文链接</a>
+            <a class="post_comments" href="/accumulation/2012-11-15-e5ae89e8a385mac-e7a7afe7b4afe79a84e5b08fe78ea9e6848f.html#page_comments">
+                <span class="ds-thread-count" data-thread-key="/accumulation/e5ae89e8a385mac-e7a7afe7b4afe79a84e5b08fe78ea9e6848f" data-count-type="comments">暂无评论</span>
             </a>
             
         </div>
