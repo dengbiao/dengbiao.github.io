@@ -4,7 +4,7 @@
     <title></title>
     <link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://localhost:4000" rel="alternate" type="text/html" />
-    <updated>2014-03-14T16:39:01+08:00</updated>
+    <updated>2014-03-14T16:41:02+08:00</updated>
     <id>http://localhost:4000</id>
     <author>
         <name>dengbiao</name>
@@ -45,7 +45,7 @@
 
 &lt;h5 id=&quot;1keysotresha1&quot;&gt;1.获取keysotre的sha1值&lt;/h5&gt;
 
-&lt;p&gt;我使用的版本mac下的eclipse，查看方法是依次进入如下路径： &lt;code&gt;ADT-&amp;gt;Prefrence-&amp;gt;Android-&amp;gt;Build&lt;/code&gt;,然后在设置面板的右边可以看到sha1值的具体信息，如下图。&lt;/p&gt;
+&lt;p&gt;我使用的版本mac下的eclipse，查看方法是依次进入如下路径： &lt;code&gt;ADT-&amp;gt;Prefrence-&amp;gt;Android-&amp;gt;Build&lt;/code&gt;,windows版本eclipse进入路径：&lt;code&gt;winows -&amp;gt; preferance -&amp;gt; android -&amp;gt; build&lt;/code&gt;,然后在设置面板的右边可以看到sha1值的具体信息，如下图。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://dengbiao.github.io/assets/uploads/QQ20140314-3.png&quot; alt=&quot;eclipse查看keystore sha1&quot; title=&quot;eclipse查看keystore sha1值&quot; /&gt;&lt;/p&gt;
 

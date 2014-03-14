@@ -40,7 +40,7 @@ image: /assets/uploads/baidumapapi.png
 
 #####1.获取keysotre的sha1值
 
-我使用的版本mac下的eclipse，查看方法是依次进入如下路径： `ADT->Prefrence->Android->Build`,然后在设置面板的右边可以看到sha1值的具体信息，如下图。
+我使用的版本mac下的eclipse，查看方法是依次进入如下路径： `ADT->Prefrence->Android->Build`,windows版本eclipse进入路径：`winows -> preferance -> android -> build`,然后在设置面板的右边可以看到sha1值的具体信息，如下图。
 
 ![eclipse查看keystore sha1](http://dengbiao.github.io/assets/uploads/QQ20140314-3.png "eclipse查看keystore sha1值")
 
