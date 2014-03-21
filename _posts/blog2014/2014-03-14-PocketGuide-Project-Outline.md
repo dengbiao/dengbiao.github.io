@@ -1,12 +1,12 @@
 ---
 layout: post
-title: PocketGuide掌上导游项目开发（一、平台介绍与搭建）
+title: PocketGuide掌上导游项目开发第1篇-平台介绍与搭建
 author: dengbiao
 categories:
 - develop
 - android
-keywords: [android,python,flask,flask-sqlalchemy,sqlalchemy,pocket guide,XListview,Slidingmenu,umeng]
-description: PocketGuide项目是一个基于android开发的移动景点导航app。本文对该项目的组织架构进行了完整的分析。包括项目前后台环境，应用层级结构，API接口说明等。
+keywords: [掌上导航,安卓,景点导航,android,python,flask,flask-sqlalchemy,sqlalchemy,pocket guide,XListview,Slidingmenu,umeng]
+description: PocketGuide（掌上导航）项目是一个基于android开发的移动景点导航app。本文对该项目的组织架构进行了完整的分析。包括项目前后台环境，应用层级结构，API接口说明等。
 
 ---
 
@@ -36,10 +36,10 @@ PocketGuide项目最终的需求是完成一个手机平台的景点导航软件
 python在mac下已经自己集成了。不需要安装，但是各种版本可能会有不同。我使用的是**Python 2.7.5**,虽然已经python3了，但是似乎还不够完善（不知正确与否，道听途说而已，没有验证）。可以通过在终端用命令`python -V`查看版本号。
 
 
-flask安装过程主要参考的是[官网](http://flask.pocoo.org/docs/)。中文版地址：[flask中文版教程](http://docs.jinkan.org/docs/flask/index.html).有些地方翻译的不是很好，我英语不怎么好，都是两边照着看过来的。。。惭愧。。。
+flask安装过程主要参考的是[官网](http://flask.pocoo.org/docs/)。中文版地址：[flask中文版教程](http://docs.jinkan.org/docs/flask/index.html).有些地方翻译的不是很好，我英语不怎么好，都是两边照着看过来的。。。惭愧。。。具体的Flask、Flask-sqlalchemy环境搭建将在下一篇中进行说明。
 
 #### android
-android的开发环境搭建，网上一抓一大把，这里就不详细介绍了。主要跟大家说一下用的sdk版本号。
+android的开发环境搭建，网上一抓一大把，这里就不详细介绍了。主要跟大家说一下用的sdk版本号。***eclipse+SDK Tool22.3+Android4.0.3 API15***. 
 
 
 
