@@ -25,11 +25,14 @@ ubuntu的使用用户安装python命令如下：`sudo apt-get install python`  �
 
 ####第一步： 安装virtualenv  
 
-其实这一步对于只用一个版本的python的人来说是可有可无的，甚至有的时候你会很奇怪为什么环境配置好了之后，下次来运行又说缺少包，其实是因为自己没有进入到这个virtualenv的环境中。但是还是强烈建议安装virtualenv，因为你不知道你下一个应用安装的版本和插件会不会和这个应用的冲突。简单的说，牛人的做法，当你还不是牛人的时候，先学着吧，等你牛了，别人就来学你的了。 
-mac用户命令（推荐）： 
-    sudo pip install virtualenv  
+其实这一步对于只用一个版本的python的人来说是可有可无的，甚至有的时候你会很奇怪为什么环境配置好了之后，下次来运行又说缺少包，其实是因为自己没有进入到这个virtualenv的环境中。但是还是强烈建议安装virtualenv，因为你不知道你下一个应用安装的版本和插件会不会和这个应用的冲突。简单的说，牛人的做法，当你还不是牛人的时候，先学着吧，等你牛了，别人就来学你的了。  
 
-或者（不推荐）：
+mac用户命令（推荐）：  
+
+    sudo pip install virtualenv  
+ 
+或者（不推荐）：  
+
     sudo easy_install virtualenv
 
 至于pip和easy_install的区别，stackoverflow上有人有具体分析，网址:<http://stackoverflow.com/questions/3220404/why-use-pip-over-easy-install>,内容如下：
@@ -54,13 +57,13 @@ mac用户命令（推荐）：
 
 其中要说明的是参数问题：上面的三个命令中 ***myproject*** 和 ***venv***为用户自定义参数，可以按照自己需求修改。特别是***venv***跟第三步的步骤相关。请带着思考的头脑跟进，不然你会在这个上面浪费很多时间。原谅我自己在这上面犯傻了。。。  
 
-###第三步：激活virtualenv环境
+####第三步：激活virtualenv环境
 
     $ . venv/bin/activate
 
 其中的***venv*** 为第二步中使用的参数。
 
-###第四步：安装Flask 
+####第四步：安装Flask 
 
     pip install Flask
 

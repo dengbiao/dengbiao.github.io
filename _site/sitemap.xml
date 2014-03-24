@@ -3,6 +3,15 @@
 
     
     <url>
+        <loc>http://dengbiao.github.io/develop/python/2014-03-20-PocketGuide-Porject-Platform-Configuration.html</loc>
+        
+        <lastmod>2014-03-20T00:00:00+08:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
         <loc>http://dengbiao.github.io/develop/android/2014-03-14-baidu-map-api-key.html</loc>
         
         <lastmod>2014-03-14T00:00:00+08:00</lastmod>
@@ -231,15 +240,6 @@
         <loc>http://dengbiao.github.io/accumulation/android/2012-04-16-android-e9809ae794a8-usb-e9a9b1e58aa8-e79c9fe69cbae5bc80e58f91-e8b083e8af95.html</loc>
         
         <lastmod>2012-04-16T12:49:16Z</lastmod>
-        
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    
-    <url>
-        <loc>http://dengbiao.github.io/home/2012-04-12-e5889be696b0e5b7a5e59cba-e794b5e8af9de99da2e8af95-androide6b8b8e6888fe5bc80e58f91.html</loc>
-        
-        <lastmod>2012-04-12T13:43:08Z</lastmod>
         
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>

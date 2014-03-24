@@ -1,16 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-    <title></title>
+    <title>邓彪的博客</title>
     <link href="http://dengbiao.github.io/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://dengbiao.github.io" rel="alternate" type="text/html" />
-    <updated>2014-03-14T23:30:36+08:00</updated>
+    <updated>2014-03-24T16:27:32+08:00</updated>
     <id>http://dengbiao.github.io</id>
     <author>
         <name>dengbiao</name>
         <email>dengbiao123@gmail.com</email>
     </author>
 
+    
+    <entry>
+        <title>PocketGuide掌上导游项目开发第2篇-后台环境搭建</title>
+        <link href="http://dengbiao.github.io/develop/python/2014-03-20-PocketGuide-Porject-Platform-Configuration.html"/>
+        <updated>2014-03-20T00:00:00+08:00</updated>
+        <id>http://dengbiao.github.io/develop/python/PocketGuide-Porject-Platform-Configuration</id>
+        <content type="html">&lt;p&gt;千里之行，始于足下。本文将讲解掌上导航项目（PocketGuide)的后台环境搭建。但是本文的内容并不会包含整个后台需要使用到的平台或者插件。因为很多东西是在使用过程中需要用到才会去安装的。暂时不会用到的东西咱们先不讲。不然你也看不懂不是。&lt;/p&gt;
+
+&lt;h3 id=&quot;python&quot;&gt;Python安装&lt;/h3&gt;
+
+&lt;p&gt;Python在Mac下是自带的，并不需要安装。所以使用mac的同学和朋友们并不需要这一步。直接跳过即可。&lt;br /&gt;ubuntu的使用用户安装python命令如下：&lt;code&gt;sudo apt-get install python&lt;/code&gt; 。然后等待安装完成即可。&lt;br /&gt;如果你想自己安装python，&lt;a href=&quot;http://legacy.python.org/ftp//python/&quot;&gt;http://legacy.python.org/ftp//python/&lt;/a&gt;这个链接里面有各个版本的安装包，下载下来然后自己配置安装即可。具体操作请自行google。参考方法&lt;a href=&quot;http://blog.csdn.net/huhui_cs/article/details/8748419&quot;&gt;http://blog.csdn.net/huhui_cs/article/details/8748419&lt;/a&gt;。注意：本文不负责所有教学，也不提倡做一个伸手党。能力的提升靠的是一点点的积累，从不知道到知道，而不是简单的全部从别处索取。这样只会让人越来越愚钝。&lt;strong&gt;&lt;em&gt;个人观点，不喜勿喷&lt;/em&gt;&lt;/strong&gt;。&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;h3 id=&quot;flask&quot;&gt;Flask安装&lt;/h3&gt;
+
+&lt;p&gt;这个很简单，我也是参照官网来的，上链接&lt;a href=&quot;http://flask.pocoo.org/docs/installation/#installation&quot;&gt;http://flask.pocoo.org/docs/installation/#installation&lt;/a&gt;,中文版链接&lt;a href=&quot;http://docs.jinkan.org/docs/flask/installation.html&quot;&gt;http://docs.jinkan.org/docs/flask/installation.html&lt;/a&gt;，推荐看英文的，因为很多地方中文翻译的有问题，不是很好理解。当然，你也可以直接看中文的，这个个人喜好，不强求。 &lt;br /&gt;因为安装这个的时候，我自己有些地方没理解好，遇到了些小问题。这里我自己粗略总结下流程：&lt;/p&gt;
+
+&lt;h4 id=&quot;_virtualenv&quot;&gt;第一步： 安装virtualenv&lt;/h4&gt;
+
+&lt;p&gt;其实这一步对于只用一个版本的python的人来说是可有可无的，甚至有的时候你会很奇怪为什么环境配置好了之后，下次来运行又说缺少包，其实是因为自己没有进入到这个virtualenv的环境中。但是还是强烈建议安装virtualenv，因为你不知道你下一个应用安装的版本和插件会不会和这个应用的冲突。简单的说，牛人的做法，当你还不是牛人的时候，先学着吧，等你牛了，别人就来学你的了。&lt;/p&gt;
+
+&lt;p&gt;mac用户命令（推荐）：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo pip install virtualenv  &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;或者（不推荐）：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo easy_install virtualenv&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;至于pip和easy_install的区别，stackoverflow上有人有具体分析，网址:&lt;a href=&quot;http://stackoverflow.com/questions/3220404/why-use-pip-over-easy-install&quot;&gt;http://stackoverflow.com/questions/3220404/why-use-pip-over-easy-install&lt;/a&gt;,内容如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;1.All packages are downloaded before installation. Partially-completed installation doesn’t occur as a result.
+2.Care is taken to present useful output on the console.
+3.The reasons for actions are kept track of. For instance, if a package is being installed, pip keeps track of why that package was required.
+4.Error messages should be useful.
+5.The code is relatively concise and cohesive, making it easier to use programmatically.
+6.Packages don’t have to be installed as egg archives, they can be installed flat (while keeping the egg metadata).
+7.Native support for other version control systems (Git, Mercurial and Bazaar)
+8.Uninstallation of packages.
+9.Simple to define fixed sets of requirements and reliably reproduce a set of packages.&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;virtualenv&quot;&gt;第二步：使用virtualenv&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;$ mkdir myproject
+$ cd myproject
+$ virtualenv venv
+New python executable in venv/bin/python
+Installing distribute............done.&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;其中要说明的是参数问题：上面的三个命令中 &lt;strong&gt;&lt;em&gt;myproject&lt;/em&gt;&lt;/strong&gt; 和 &lt;strong&gt;&lt;em&gt;venv&lt;/em&gt;&lt;/strong&gt;为用户自定义参数，可以按照自己需求修改。特别是&lt;strong&gt;&lt;em&gt;venv&lt;/em&gt;&lt;/strong&gt;跟第三步的步骤相关。请带着思考的头脑跟进，不然你会在这个上面浪费很多时间。原谅我自己在这上面犯傻了。。。&lt;/p&gt;
+
+&lt;h4 id=&quot;virtualenv_2&quot;&gt;第三步：激活virtualenv环境&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;$ . venv/bin/activate&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;其中的&lt;strong&gt;&lt;em&gt;venv&lt;/em&gt;&lt;/strong&gt; 为第二步中使用的参数。&lt;/p&gt;
+
+&lt;h4 id=&quot;flask_2&quot;&gt;第四步：安装Flask&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;pip install Flask&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;完毕。&lt;/p&gt;
+
+&lt;h3 id=&quot;mysqldb&quot;&gt;安装mysqldb模块&lt;/h3&gt;
+
+&lt;p&gt;后面的程序会用到该模块，如果没有安装会遇到错误：&lt;strong&gt;&lt;em&gt;No module named MySQLdb&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;mac系统用户：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pip install mysql-python&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ubuntu系统用户：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install  python-mysqldb&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;mysql&quot;&gt;安装mysql&lt;/h3&gt;
+
+&lt;p&gt;装数据库插件之前，保证数据库已经装上，并且启动服务。&lt;/p&gt;
+
+&lt;p&gt;mac命令安装：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;brew install mysql &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ubuntu命令安装：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install mysql&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;配置教程自行google.这里仅仅说一下mac下mysql配置。 &lt;br /&gt;用&lt;code&gt;brew install mysql&lt;/code&gt;安装成功之后，会出现以下提示：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;To connect:
+mysql -uroot
+
+To have launchd start mysql at login:
+ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
+Then to load mysql now:
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
+Or, if you do not want/need launchctl, you can just run:
+mysql.server start  &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;翻译成中文就是可以使用&lt;code&gt;mysql -uroot&lt;/code&gt;进行连接。默认密码为空。 然后就是如果你想设置开机自动启动的操作步骤。如果你只希望在使用的时候启动mysql，则使用命令&lt;code&gt;mysql.server start&lt;/code&gt;开启即可。&lt;/p&gt;
+
+&lt;p&gt;如果想设置mysql密码，可是使用命令&lt;code&gt;mysql_secure_installation  mysql&lt;/code&gt;，提示输入root密码，直接回车即可，然后输入新密码，剩下的全部选择&lt;strong&gt;&lt;em&gt;Y&lt;/em&gt;&lt;/strong&gt;即可。&lt;/p&gt;
+
+&lt;h3 id=&quot;flasksqlalchemy&quot;&gt;安装Flask-SQLAlchemy&lt;/h3&gt;
+
+&lt;p&gt;Flask-SQLAlchemy是机遇SQLAlchemy的一个flask插件。还挺好用的。官网地址：&lt;a href=&quot;http://flask.pocoo.org/docs/patterns/sqlalchemy/&quot;&gt;http://flask.pocoo.org/docs/patterns/sqlalchemy/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;mac安装命令,如果没有安装sqlalchemy，pip会自动帮你下载好：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo pip install flask-sqlalchemy&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ubuntu下apt-get没有找到对应的包，所以从官网上下载了Flask-SQLAlchemy的安装包，解压，用命令&lt;code&gt;sudo python setup.py install&lt;/code&gt;安装即可。中间遇到了问题&lt;code&gt;No module named setuptools&lt;/code&gt;,很明显缺少了setuptoolls包， 安装命令跟上&lt;code&gt;sudo pip install setuptools&lt;/code&gt;.&lt;/p&gt;</content>
+    </entry>
     
     <entry>
         <title>百度地图API key申请申请详细步骤</title>
@@ -67,7 +179,7 @@
     </entry>
     
     <entry>
-        <title>PocketGuide掌上导游项目开发（一、平台介绍与搭建）</title>
+        <title>PocketGuide掌上导游项目开发第1篇-平台介绍与搭建</title>
         <link href="http://dengbiao.github.io/develop/android/2014-03-14-PocketGuide-Project-Outline.html"/>
         <updated>2014-03-14T00:00:00+08:00</updated>
         <id>http://dengbiao.github.io/develop/android/PocketGuide-Project-Outline</id>
@@ -101,11 +213,11 @@
 
 &lt;p&gt;python在mac下已经自己集成了。不需要安装，但是各种版本可能会有不同。我使用的是&lt;strong&gt;Python 2.7.5&lt;/strong&gt;,虽然已经python3了，但是似乎还不够完善（不知正确与否，道听途说而已，没有验证）。可以通过在终端用命令&lt;code&gt;python -V&lt;/code&gt;查看版本号。&lt;/p&gt;
 
-&lt;p&gt;flask安装过程主要参考的是&lt;a href=&quot;http://flask.pocoo.org/docs/&quot;&gt;官网&lt;/a&gt;。中文版地址：&lt;a href=&quot;http://docs.jinkan.org/docs/flask/index.html&quot;&gt;flask中文版教程&lt;/a&gt;.有些地方翻译的不是很好，我英语不怎么好，都是两边照着看过来的。。。惭愧。。。&lt;/p&gt;
+&lt;p&gt;flask安装过程主要参考的是&lt;a href=&quot;http://flask.pocoo.org/docs/&quot;&gt;官网&lt;/a&gt;。中文版地址：&lt;a href=&quot;http://docs.jinkan.org/docs/flask/index.html&quot;&gt;flask中文版教程&lt;/a&gt;.有些地方翻译的不是很好，我英语不怎么好，都是两边照着看过来的。。。惭愧。。。具体的Flask、Flask-sqlalchemy环境搭建将在下一篇中进行说明。&lt;/p&gt;
 
 &lt;h4 id=&quot;android&quot;&gt;android&lt;/h4&gt;
 
-&lt;p&gt;android的开发环境搭建，网上一抓一大把，这里就不详细介绍了。主要跟大家说一下用的sdk版本号。&lt;/p&gt;</content>
+&lt;p&gt;android的开发环境搭建，网上一抓一大把，这里就不详细介绍了。主要跟大家说一下用的sdk版本号。&lt;strong&gt;&lt;em&gt;eclipse+SDK Tool22.3+Android4.0.3 API15&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;</content>
     </entry>
     
     <entry>
@@ -545,24 +657,6 @@ killall httpd   &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;有的时候很听话,有的时候又很叛逆. 别人说这是在成长. 或许吧. 我只知道,我在慢慢经历. 也许有一天, 我有能力的那一天. 我可以主宰自己的生活. 不被别人牵制着.&lt;/p&gt;
 
 &lt;p&gt;中二病么? 得治!&lt;/p&gt;</content>
-    </entry>
-    
-    <entry>
-        <title>十月感想</title>
-        <link href="http://dengbiao.github.io/impression/2013-11-06-impression.html"/>
-        <updated>2013-11-06T00:00:00+08:00</updated>
-        <id>http://dengbiao.github.io/impression/impression</id>
-        <content type="html">&lt;p&gt;十月，研二的第二个月。感觉时间在一点点的走过。但是这两个月来，一直没有找到自己的工作状态。实验室项目进展缓慢。专业基础也没有什么提升。看着师兄师姐们为找工作而忙碌着。自己确有点不知所措。用了将近一个星期的时间，将博客从lofter转移到了github上面。很多以前在wordpress上的博文直接放弃了。虽然有点不舍得，但是确实没有什么有用的珍藏价值，仅有的只是一些成长的记忆吧。丢就丢吧，虽然偶尔回想起的那句“中国人不怎么在意历史的保护”，确实是这样的，建筑拆了建，建了拆。一些古老的东西，慢慢的在消失着。清理了博客，给空间留给剩下的研二，写一些有意义的博文，有深度的博文。不要再是简单的错误笔记。&lt;/p&gt;
-&lt;!--more--&gt;
-&lt;p&gt;写博客的时间，让自己找到了一些曾经写代码的感觉。曾经的那种斗志。熟悉的味道。&lt;/p&gt;
-
-&lt;p&gt;二姐一直在建议着我要多出去走走，说外面的世界，没出去过永远都不知道会有多好，也永远都不知道自己的视野是多么的狭隘。 最近见到了小马哥本人，还是有点点激动的。第一次见到这样的名人。 现场听了小马哥的一个访谈，对他的感觉：实在，有深度。挺不错的一个人。总的来说比较喜欢他的风格。当谈到一些比较尖锐的话题时，小马哥的回答总是那么的直接，不含糊，而且有自己的理解与一定的深度。佩服。在学校生存久了，听到的都是一些套话，一些没意义的，没营养的话。相比之下，为什么在中国企业的效率比高校的要高，情理之中。&lt;/p&gt;
-
-&lt;p&gt;从小马哥的奋斗史中，我的总结是：能够保持自己的想法，能够坚持自己的原则，能够为了自己的梦想而努力。fighting！！！ 给力，小马哥。&lt;/p&gt;
-
-&lt;p&gt;这个月要开题了，还需要为张家界的会议作准备。事情挺多，保持激情。还有，学英语。。。&lt;/p&gt;
-
-&lt;p&gt;做一只有想法的鸟，朝着自己的那片天，飞去。。。&lt;/p&gt;</content>
     </entry>
     
 
