@@ -4,7 +4,7 @@ pagination_path: "/page:num"
 
 blogname: 邓彪的博客
 motto: 有一种东西叫做梦想
-tilte: 邓彪的博客
+title: 邓彪的博客
 url: http://dengbiao.github.io
 permalink: /:categories/:year-:month-:day-:title.html
 

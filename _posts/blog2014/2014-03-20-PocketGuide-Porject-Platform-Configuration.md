@@ -12,12 +12,12 @@ description: 掌上导航项目后台开发环境搭建
 
 千里之行，始于足下。本文将讲解掌上导航项目（PocketGuide)的后台环境搭建。但是本文的内容并不会包含整个后台需要使用到的平台或者插件。因为很多东西是在使用过程中需要用到才会去安装的。暂时不会用到的东西咱们先不讲。不然你也看不懂不是。
 
-<!--more-->
-
 ### Python安装
 Python在Mac下是自带的，并不需要安装。所以使用mac的同学和朋友们并不需要这一步。直接跳过即可。  
 ubuntu的使用用户安装python命令如下：`sudo apt-get install python`  。然后等待安装完成即可。  
 如果你想自己安装python，<http://legacy.python.org/ftp//python/>这个链接里面有各个版本的安装包，下载下来然后自己配置安装即可。具体操作请自行google。参考方法<http://blog.csdn.net/huhui_cs/article/details/8748419>。注意：本文不负责所有教学，也不提倡做一个伸手党。能力的提升靠的是一点点的积累，从不知道到知道，而不是简单的全部从别处索取。这样只会让人越来越愚钝。***个人观点，不喜勿喷***。  
+
+<!--more-->
 
 ###Flask安装
 这个很简单，我也是参照官网来的，上链接<http://flask.pocoo.org/docs/installation/#installation>,中文版链接<http://docs.jinkan.org/docs/flask/installation.html>，推荐看英文的，因为很多地方中文翻译的有问题，不是很好理解。当然，你也可以直接看中文的，这个个人喜好，不强求。   
