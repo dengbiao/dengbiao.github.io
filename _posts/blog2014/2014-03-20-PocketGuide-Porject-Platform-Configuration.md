@@ -116,7 +116,10 @@ mac安装命令,如果没有安装sqlalchemy，pip会自动帮你下载好：
 
     sudo pip install flask-sqlalchemy
 
-ubuntu下apt-get没有找到对应的包，所以从官网上下载了Flask-SQLAlchemy的安装包，解压，用命令`sudo python setup.py install`安装即可。中间遇到了问题`No module named setuptools`,很明显缺少了setuptoolls包， 安装命令跟上`sudo pip install setuptools`. 
+ubuntu下apt-get没有找到对应的包，所以从官网上下载了Flask-SQLAlchemy的安装包，解压，用命令`sudo python setup.py install`安装即可(mac用户也适用，如果您觉得pip下载速度慢，可以试试自己下载与安装)。中间遇到了问题`No module named setuptools`,很明显缺少了setuptoolls包， 安装命令跟上`sudo pip install setuptools`. 
 
+###测试
+
+到此，基本环境搭建完毕，后面将继续介绍后台项目结构和数据库设计等内容。
 
 
