@@ -5,12 +5,12 @@ author: dengbiao
 categories:
 - develop
 - python
-keywords: [掌上导航,安卓,景点导航,掌上导航后台环境搭建,android,python,flask,flask-sqlalchemy,sqlalchemy]
-description: 掌上导航项目后台开发环境搭建
+keywords: [掌上导游,安卓,景点导航,掌上导游后台环境搭建,android,python,flask,flask-sqlalchemy,sqlalchemy]
+description: 掌上导游项目后台开发环境搭建
 
 ---
 
-千里之行，始于足下。本文将讲解掌上导航项目（PocketGuide)的后台环境搭建。但是本文的内容并不会包含整个后台需要使用到的平台或者插件。因为很多东西是在使用过程中需要用到才会去安装的。暂时不会用到的东西咱们先不讲。不然你也看不懂不是。
+千里之行，始于足下。本文将讲解掌上导游项目（PocketGuide)的后台环境搭建。但是本文的内容并不会包含整个后台需要使用到的平台或者插件。因为很多东西是在使用过程中需要用到才会去安装的。暂时不会用到的东西咱们先不讲。不然你也看不懂不是。
 
 ### Python安装
 Python在Mac下是自带的，并不需要安装。所以使用mac的同学和朋友们并不需要这一步。直接跳过即可。  
@@ -118,7 +118,7 @@ mac安装命令,如果没有安装sqlalchemy，pip会自动帮你下载好：
 
 ubuntu下apt-get没有找到对应的包，所以从官网上下载了Flask-SQLAlchemy的安装包，解压，用命令`sudo python setup.py install`安装即可(mac用户也适用，如果您觉得pip下载速度慢，可以试试自己下载与安装)。中间遇到了问题`No module named setuptools`,很明显缺少了setuptoolls包， 安装命令跟上`sudo pip install setuptools`. 
 
-###测试
+###结束语
 
 到此，基本环境搭建完毕，后面将继续介绍后台项目结构和数据库设计等内容。
 
