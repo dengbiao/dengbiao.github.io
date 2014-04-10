@@ -7,6 +7,7 @@ motto: 有一种东西叫做梦想
 title: 邓彪的博客
 url: http://dengbiao.github.io
 permalink: /:categories/:year-:month-:day-:title.html
+keywords: 邓彪,博客,邓彪的博客,IT技术分享,个人感悟
 
 pygments: true
 

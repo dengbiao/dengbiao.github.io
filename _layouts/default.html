@@ -16,6 +16,8 @@
         {% endif %}
         {% if page.keywords %}
             <meta name="keywords" content="{{ page.keywords }}" >
+        {% else if site.keywords %}
+            <meta name="keywords" content="{{ site.keywords }}" >
         {% endif %}
         {% if site.author.name %}
             <meta name="author" content=" {{ site.author.name }} ">

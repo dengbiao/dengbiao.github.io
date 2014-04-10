@@ -5,7 +5,7 @@ author: dengbiao
 categories:
 - develop
 - android
-keywords: [掌上导游,安卓,景点导航,android,python,flask,flask-sqlalchemy,sqlalchemy,pocket guide,XListview,Slidingmenu,umeng]
+keywords: 掌上导游,安卓,景点导航,android,python,flask,flask-sqlalchemy,sqlalchemy,pocket guide,XListview,Slidingmenu,umeng
 description: PocketGuide（掌上导游）项目是一个基于android开发的移动景点导航app。本文对该项目的组织架构进行了完整的分析。包括项目前后台环境，应用层级结构，API接口说明等。
 
 ---
