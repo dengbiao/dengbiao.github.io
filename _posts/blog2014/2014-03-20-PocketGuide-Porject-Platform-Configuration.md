@@ -5,7 +5,7 @@ author: dengbiao
 categories:
 - develop
 - python
-keywords: 掌上导游,安卓,景点导航,掌上导游后台环境搭建,android,python,flask,flask-sqlalchemy,sqlalchemy
+keywords: 掌上导游,安卓,景点导航,掌上导游后台环境搭建,android,python,flask,flask-sqlalchemy,sqlalchemy,基于android的手机景点导航
 description: 掌上导游项目后台开发环境搭建
 
 ---
